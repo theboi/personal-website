@@ -1,19 +1,19 @@
 {
-  "short_name": "personal-website",
-  "name": "My Personal Portfolio Website",
+  "short_name": "Ryan's Website",
+  "name": "Ryan's Personal Portfolio Website",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "favicon-light.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "logo192-light.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "logo512-light.png",
       "type": "image/png",
       "sizes": "512x512"
     }
