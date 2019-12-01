@@ -6,9 +6,13 @@ import content from '../../assets/content/content';
 const NavHeader = () => {
     return (
         <div>
-            {content.NavLinks.map(cont => {
-                return <NavHeaderLink cont={cont}/>
-            })}
+            <nav>
+                <ul>
+                    {content.NavLinks.map(cont => {
+                        return <NavHeaderLink cont={cont} key={cont.name} />
+                    })}
+                </ul>
+            </nav>
         </div>
     );
 }
