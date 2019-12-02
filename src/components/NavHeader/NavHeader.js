@@ -45,7 +45,7 @@ const NavHeader = (props) => {
     return (
         <div className={style.navheader}>
             <div className={style.bar}>
-                <Link to="Home">
+                <Link to="home">
                     <img className={style.icon} src={require('../../assets/images/icon.png')} alt="icon" />
                 </Link>
                 <span className={hamState.join(' ')} onClick={toggleHam} />
