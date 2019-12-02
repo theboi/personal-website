@@ -111,26 +111,28 @@ MOBILE
 .frontarrow {
   position: absolute;
   left: 45vw;
-  top: 0;
+  top: 50%;
+  transform: translateY(-60%);
   height: 0;
   width: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent; 
-  border-left: 10px solid var(--col1_2);
-  border-right: 10px solid transparent;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent; 
+  border-left: 7px solid var(--col1_2);
+  border-right: 7px solid transparent;
   pointer-events: none;
 }
 
 .backarrow {
   position: absolute;
   left: 43vw;
-  top: 0;
+  top: 50%;
+  transform: translateY(-60%);
   height: 0;
   width: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent; 
-  border-right: 10px solid var(--col1_2);
-  border-left: 10px solid transparent;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent; 
+  border-right: 7px solid var(--col1_2);
+  border-left: 7px solid transparent;
   pointer-events: none;
 }
 
