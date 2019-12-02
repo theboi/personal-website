@@ -1,0 +1,139 @@
+/* /////////////////////////////////////////////////////////////////////////////
+MOBILE
+//////////////////////////////////////////////////////////////////////////////*/
+
+.bar {
+  height: 65px;
+  background: var(--grad_1);
+  margin-bottom: 20px;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  height: 37px;
+  width: 37px;
+  margin: 14px 18px;
+}
+
+/* Ham */
+.ham {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 31.5px 20px; /* (65-2)/2 = 31.5 */
+  right: 0;
+}
+
+.ham,
+.ham::before,
+.ham::after {
+  position: absolute;
+  display: block;
+  background-color: var(--col2_1);
+  height: 2px;
+  width: 2em;
+  border-radius: 10px;
+  transition: transform ease-in-out 250ms;
+}
+
+.ham::before,
+.ham::after {
+  content: " ";
+}
+
+.ham::before {
+  bottom: 9px;
+}
+
+.ham::after {
+  top: 9px;
+}
+
+/* Cross */
+.ham.cross {
+  transform: rotate(-135deg);
+}
+
+.ham.cross::before {
+  bottom: 0;
+  transform: rotate(90deg);
+}
+
+.ham.cross::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Links */
+.anchor {
+  font-size: 19px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--col2_1);
+  display: block;
+  widows: 100%;
+}
+
+.link {
+  margin: 0 0 30px 20px;
+  position: relative;
+}
+
+.link::after {
+  content: ' ';
+  position: absolute;
+  height: 2px;
+  width: 50vw;
+  top: 150%;
+  left: 0;
+  background-color: var(--col1_1);
+  opacity: 0.1;
+}
+
+.nav {
+  position: absolute;
+  text-align: left;
+  left: -100%;
+  width: 100%;
+  transform: scale(1, 0.5);
+  transform-origin: top;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+
+.nav.open {
+  left: 0;
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.frontarrow {
+  position: absolute;
+  left: 45vw;
+  top: 0;
+  height: 0;
+  width: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  border-left: 10px solid var(--col1_2);
+  border-right: 10px solid transparent;
+  pointer-events: none;
+}
+
+.backarrow {
+  position: absolute;
+  left: 43vw;
+  top: 0;
+  height: 0;
+  width: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  border-right: 10px solid var(--col1_2);
+  border-left: 10px solid transparent;
+  pointer-events: none;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+DESKTOP
+//////////////////////////////////////////////////////////////////////////////*/

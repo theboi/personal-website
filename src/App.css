@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900&display=swap');
 /* /////////////////////////////////////////////////////////////////////////////
 Variables
 //////////////////////////////////////////////////////////////////////////////*/
-
 :root {
   /* col1 - Black/White (Natural) */
   --col1_1: #090909;
@@ -23,27 +23,80 @@ Variables
   --col3_2: #EC554B;
   --col3_3: #FFA09A;
 
+  /* grad - Gradient */
+  --grad_1: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
 }
 
-.App {
-  text-align: center;
+/* /////////////////////////////////////////////////////////////////////////////
+Reset
+//////////////////////////////////////////////////////////////////////////////*/
+* {
+	font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+}
+ul {
+	list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img { border: none; }
+
+html {
+	height: 101%;
+	box-sizing: border-box;
 }
 
-.App-link {
-  color: #09d3ac;
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+a {
+	font-style: none;
+}
+
+*:focus {
+	outline: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+}
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+-webkit-appearance: none;
 }
