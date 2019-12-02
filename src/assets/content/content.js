@@ -1,12 +1,14 @@
 const content = {
     NavLinks: [
-        {name: 'Home', link: 'Link'},
-        {name: 'Portfolio', link: 'Link', branch: [
-            {name: 'Timeline', link: 'Link'},
-            {name: 'Projects', link: 'Link'}
-        ]},
-        {name: 'Experience', link: 'Link'},
-        {name: 'Print', link: 'Link'}
+        { name: 'Home', link: 'home' },
+        {
+            name: 'Portfolio', link: 'portfolio', branch: [
+                { name: 'Timeline', link: 'timeline' },
+                { name: 'Projects', link: 'projects' }
+            ]
+        },
+        { name: 'Experience', link: 'experience' },
+        { name: 'Print', link: 'print' }
     ]
 };
 
