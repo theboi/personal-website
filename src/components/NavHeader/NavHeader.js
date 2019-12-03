@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import NavHeaderLink from './NavHeaderList/NavHeaderLink/NavHeaderLink';
 import NavHeaderList from './NavHeaderList/NavHeaderList';
 import content from '../../assets/content/content';
 import style from './NavHeader.module.css';

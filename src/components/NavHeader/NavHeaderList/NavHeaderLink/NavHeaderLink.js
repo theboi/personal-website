@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import style from '../../NavHeader.module.css';
 
@@ -15,7 +15,7 @@ const NavHeaderLink = (props) => {
         )
     } else if (cont.branch == null) {
         return (
-            <li className={style.link}><Link to={cont.link} className={style.anchor}>{cont.name}</Link></li>
+            <li className={style.link}><NavLink to={cont.link} className={style.anchor}>{cont.name}</NavLink></li>
         )
     } else {
         return (

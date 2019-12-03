@@ -81,6 +81,10 @@ MOBILE
   width: 100%;
 }
 
+.anchor:global(.active) {  /* global prevents active class from being modified when rendered by css modules */
+  color: var(--col2_3);
+}
+
 .linklist {
   list-style: none;
 }
