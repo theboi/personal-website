@@ -1,0 +1,24 @@
+/* s1 */
+.s1 {
+    height: 100vh;
+    font-size: 25px;
+    line-height: 60px;
+}
+.s1 .lines {
+    margin-left: 8vw;
+}
+.s1 .w900 {
+    font-weight: 900;
+}
+
+.s1 .w800 {
+    font-weight: 800;
+}
+
+.s1 .w700 {
+    font-weight: 700;
+}
+
+.s1 .w600 {
+    font-weight: 600;
+}

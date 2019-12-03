@@ -52,6 +52,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+
 ul {
 	list-style: none;
 }
@@ -60,7 +61,6 @@ blockquote {
 	quotes: none;
 }
 blockquote:before, blockquote:after {
-	content: '';
 	content: none;
 }
 del {
@@ -73,7 +73,7 @@ table {
 a img { border: none; }
 
 html {
-	height: 101%;
+	height: 100%;
 	box-sizing: border-box;
 }
 

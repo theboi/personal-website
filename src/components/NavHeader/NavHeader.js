@@ -33,7 +33,6 @@ const NavHeader = (props) => {
         if (index != null) {
             newNavlistState = [...content.NavLinks[index].branch];
             newNavlistState.unshift({ name: "Back" });
-            console.log(newNavlistState);
         } else {
             newNavlistState = content.NavLinks;
         }
@@ -47,15 +46,18 @@ const NavHeader = (props) => {
                     <img className={style.icon} src={require('../../assets/images/icon.png')} alt="icon" />
                 </Link>
                 <div className={style.hamarea} onClick={toggleHam}>
-                    <span className={hamState.join(' ')}/>
+                    <span className={hamState.join(' ')} />
                 </div>
             </div>
-            <nav>
+            <nav className={style.navbox} >
+                <div
+                    className={style.navclickarea + " " + (hamIsOpen ? style.open : style.close)}
+                    onClick={() => toggleHam()} />
                 <NavHeaderList
+                    toggleHam={toggleHam}
                     hamIsOpen={hamIsOpen}
                     content={navlistState}
-                    update={setNavlistState}
-                />
+                    update={setNavlistState} />
             </nav>
         </div>
     );

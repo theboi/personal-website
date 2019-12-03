@@ -15,7 +15,7 @@ const NavHeaderLink = (props) => {
         )
     } else if (cont.branch == null) {
         return (
-            <li className={style.link}><NavLink to={cont.link} className={style.anchor}>{cont.name}</NavLink></li>
+            <li className={style.link}><NavLink to={cont.link} className={style.anchor} onClick={props.toggleHam}>{cont.name}</NavLink></li>
         )
     } else {
         return (
