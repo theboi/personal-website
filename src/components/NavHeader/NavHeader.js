@@ -13,6 +13,10 @@ const NavHeader = (props) => {
     const [hamState, updateHam] = useState([style.ham]);
     let newHamState;
     const toggleHam = () => {
+        if (window.innerWidth > 768) {
+            hamIsOpen = true;
+        }
+        
         if (hamIsOpen) {
             newHamState = [...hamState];
             newHamState.pop();
@@ -24,6 +28,10 @@ const NavHeader = (props) => {
             updateHam(newHamState);
         }
         hamIsOpen = !hamIsOpen;
+    }
+
+    if (window.innerWidth > "768px") {
+        hamIsOpen = true;
     }
 
     // navlistState
@@ -41,7 +49,7 @@ const NavHeader = (props) => {
 
     return (
         <div className={style.navheader}>
-            <div className={style.bar}>
+            <div className={style.bar + " " + (hamIsOpen ? style.open : style.close)}>
                 <Link to="home">
                     <img className={style.icon} src={require('../../assets/images/icon.png')} alt="icon" />
                 </Link>
@@ -53,11 +61,13 @@ const NavHeader = (props) => {
                 <div
                     className={style.navclickarea + " " + (hamIsOpen ? style.open : style.close)}
                     onClick={() => toggleHam()} />
-                <NavHeaderList
-                    toggleHam={toggleHam}
-                    hamIsOpen={hamIsOpen}
-                    content={navlistState}
-                    update={setNavlistState} />
+                <div className={style.navlistbg + " " + (hamIsOpen ? style.open : style.close)}>
+                    <NavHeaderList
+                        toggleHam={toggleHam}
+                        hamIsOpen={hamIsOpen}
+                        content={navlistState}
+                        update={setNavlistState} />
+                </div>
             </nav>
         </div>
     );
