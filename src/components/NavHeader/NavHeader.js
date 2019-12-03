@@ -5,7 +5,6 @@ import NavHeaderLink from './NavHeaderList/NavHeaderLink/NavHeaderLink';
 import NavHeaderList from './NavHeaderList/NavHeaderList';
 import content from '../../assets/content/content';
 import style from './NavHeader.module.css';
-import { delay } from 'q';
 
 let hamIsOpen = false;
 
@@ -34,7 +33,7 @@ const NavHeader = (props) => {
     const setNavlistState = (index) => {
         if (index != null) {
             newNavlistState = [...content.NavLinks[index].branch];
-            newNavlistState.unshift({name: "Back"});
+            newNavlistState.unshift({ name: "Back" });
             console.log(newNavlistState);
         } else {
             newNavlistState = content.NavLinks;
@@ -48,7 +47,9 @@ const NavHeader = (props) => {
                 <Link to="home">
                     <img className={style.icon} src={require('../../assets/images/icon.png')} alt="icon" />
                 </Link>
-                <span className={hamState.join(' ')} onClick={toggleHam} />
+                <div className={style.hamarea} onClick={toggleHam}>
+                    <span className={hamState.join(' ')}/>
+                </div>
             </div>
             <nav>
                 <NavHeaderList

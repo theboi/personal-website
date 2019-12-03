@@ -17,6 +17,12 @@ MOBILE
 }
 
 /* Ham */
+.hamarea {
+  height: 65px;
+  width: 70px;
+  float: right;
+}
+
 .ham {
   position: relative;
   display: flex;
@@ -33,7 +39,6 @@ MOBILE
   background-color: var(--col2_1);
   height: 2px;
   width: 2em;
-  border-radius: 10px;
   transition: transform ease-in-out 250ms;
 }
 
@@ -67,12 +72,17 @@ MOBILE
 
 /* Links */
 .anchor {
+  cursor: pointer;
   font-size: 19px;
   font-weight: 500;
   text-transform: uppercase;
   color: var(--col2_1);
   display: block;
-  widows: 100%;
+  width: 100%;
+}
+
+.linklist {
+  list-style: none;
 }
 
 .link {
@@ -139,3 +149,67 @@ MOBILE
 /* /////////////////////////////////////////////////////////////////////////////
 DESKTOP
 //////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (min-width: 768px)  {
+  .icon {
+    margin: 14px 40px;
+  }
+
+  .ham {
+    display: none;
+  }
+
+  .hamarea {
+    display: none;
+  }
+
+  .linklist {
+    height: 45px;
+    margin: 10px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .link {
+    margin: 10px 20px;
+  }
+
+  .anchor:hover {
+    color: var(--col2_2);
+  }
+
+  .link::after {
+    top: 2em;
+    height: 3px;
+    width: 100%;
+    background-color: var(--col_2_1);
+    opacity: 1;
+    transform: scale(0, 1.5);
+    transition: all 200ms ease-in-out;
+    transform-origin: left;
+  }
+
+  .link:hover::after {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--col1_2);
+    transform: scale(1, 1);
+  }
+
+  .nav {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+
+  .frontarrow {
+    display: none;
+  }
+  
+  .backarrow {
+    display: none;
+  }
+}
