@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {BrowserRouter} from 'react-router-dom';
 
-import NavHeader from './components/NavHeader/NavHeader';
+import NavHeader from '../components/NavHeader/NavHeader';
 function App() {
   return (
     <BrowserRouter>
