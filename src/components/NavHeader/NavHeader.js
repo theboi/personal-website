@@ -30,10 +30,6 @@ const NavHeader = (props) => {
         hamIsOpen = !hamIsOpen;
     }
 
-    if (window.innerWidth > "768px") {
-        hamIsOpen = true;
-    }
-
     // navlistState
     const [navlistState, updateNavlist] = useState(content.NavLinks);
     let newNavlistState;
