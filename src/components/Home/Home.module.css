@@ -22,3 +22,18 @@
 .s1 .w600 {
     font-weight: 600;
 }
+
+/* s2 */
+.s2 {
+  height: 100vh;
+  background-color: var(--col1_7);
+}
+.viewProjects {
+  padding: 15px;
+  background-color: var(--col2_1);
+  color: var(--col1_9);
+}
+
+.viewProjects:hover {
+  background-color: var(--col1_1);
+}

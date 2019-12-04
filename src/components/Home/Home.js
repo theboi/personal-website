@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import style from './Home.module.css'
-import S1Line from './S1Line/S1Line'
+import style from './Home.module.css';
+import S1Line from './S1Line/S1Line';
 
 const Home = () => {
 
@@ -26,6 +27,9 @@ const Home = () => {
                 <S1Line weight="w800" screenState={screenState}/>
                 <S1Line weight="w700" screenState={screenState}/>
                 <S1Line weight="w600" screenState={screenState}/>
+            </section>
+            <section className={style.s2}>
+                <Link className={style.viewProjects} to="projects">My work</Link>
             </section>
         </div>
     )
