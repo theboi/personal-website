@@ -3,10 +3,10 @@
     height: 100vh;
     font-size: 25px;
     line-height: 60px;
+    margin: 10vh 0 0 8vw;
+
 }
-.s1 .lines {
-    margin-left: 8vw;
-}
+
 .s1 .w900 {
     font-weight: 900;
 }

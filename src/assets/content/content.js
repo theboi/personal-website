@@ -19,6 +19,10 @@ const content = {
         { name: 'Email', link: 'mailto:ryan.theodore.2006@gmail.com', icon: 'far fa-envelope' }
     ],
 
+    Home: [
+        
+    ],
+
 
     Projects: [
         {

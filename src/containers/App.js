@@ -17,7 +17,10 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/home" component={Home} />
+          {/* <Route path="/timeline" component={Timeline} /> */}
           <Route path="/projects" component={Projects} />
+          {/* <Route path="/experience" component={Experience} /> */}
+          {/* <Route path="/print" component={Print} /> */}
           <Route path="/" component={Error404} />
         </Switch>
         <NavFooter />
