@@ -24,7 +24,7 @@ const content = {
         {
             header: { 
                 title: "InnoScience Challenge", 
-                subject: "ChangeMakers Programme", 
+                subtitle: "ChangeMakers Programme", 
                 date: "13/07/19 - 29/08/19", 
                 tags: ["SST", "Design"], 
                 image: "/ChangeMakers Programme/01.jpg"
@@ -32,8 +32,7 @@ const content = {
             // type: paragraph, quote, link, button, iframe
             body: [ 
                 { type: "paragraph", value: "The InnoScience Challenge 2019 is an intra-school competiton held by my secondary school, SST, together with 3M Singapore. In teams of three to four, teams had to come up with a product to solve a real world problem, regarding the year's theme: Safety and Transport." }, 
-                { type: "image", value: "/ChangeMakers Programme/03.jpg" }, 
-
+                { type: "image", value: "https://unsplash.it/200", meta: "3M InnoScience Logo" }, 
             ]
         }
     ]

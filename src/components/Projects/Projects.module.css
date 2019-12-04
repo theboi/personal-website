@@ -1,0 +1,97 @@
+/* /////////////////////////////////////////////////////////////////////////////
+MOBILE
+//////////////////////////////////////////////////////////////////////////////*/
+.header {
+  height: 250px;
+  width: 100%;
+  padding: 60px 40px;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-size: cover;
+}
+
+.header > * {
+  margin: 5px 0;
+}
+
+.headerTitle {
+  font-size: 30px;
+  color: var(--col1_9);
+}
+
+.headerSubtitle {
+  font-size: 18px;
+  color: var(--col1_6);
+}
+
+.headerDate {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--col1_6);
+}
+
+/* Body */
+.body {
+  margin: 50px 30px;
+}
+
+.bodyElement {
+  margin: 40px 0;
+}
+/* ////////// Paragraph ////////// */
+.paragraphP {
+  font-weight: 500;
+  max-width: 700px;
+}
+
+/* ////////// Image ////////// */
+.imageImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.imageCaption {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 7px;
+  text-align: center;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+DESKTOP
+//////////////////////////////////////////////////////////////////////////////*/
+@media screen and (min-width: 768px) {
+  .header {
+    height: 400px;
+    padding: 110px 70px;
+  }
+
+  .header > * {
+    margin: 10px 0;
+  }
+
+  .headerTitle {
+    font-size: 40px;
+  }
+  
+  .headerSubtitle {
+    font-size: 25px;
+  }
+  
+  .headerDate {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  /* ////////// Body ////////// */
+  .body {
+    margin: 150px 100px;
+  }
+
+  /* ////////// Image ////////// */
+  .imageFig {
+    max-width: 700px;
+  }
+}
