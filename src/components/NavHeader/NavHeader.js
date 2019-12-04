@@ -12,23 +12,34 @@ const NavHeader = (props) => {
     // hamState
     const [hamState, updateHam] = useState([style.ham]);
     let newHamState;
+    let savedHamIsOpen;
+
+    const rerenderHam = () => {
+        if (window.innerWidth > 768) {
+            savedHamIsOpen = hamIsOpen;
+        } else {
+            hamIsOpen = savedHamIsOpen;
+        }
+    }
+
     const toggleHam = () => {
         if (window.innerWidth > 768) {
-            hamIsOpen = true;
+        } else {
+            if (hamIsOpen) {
+                newHamState = [...hamState];
+                newHamState.pop();
+                updateHam(newHamState);
+                setNavlistState();
+            } else if (!hamIsOpen) {
+                newHamState = [...hamState];
+                newHamState.push(style.cross);
+                updateHam(newHamState);
+            }
+            hamIsOpen = !hamIsOpen;
         }
-        
-        if (hamIsOpen) {
-            newHamState = [...hamState];
-            newHamState.pop();
-            updateHam(newHamState);
-            setNavlistState();
-        } else if (!hamIsOpen) {
-            newHamState = [...hamState];
-            newHamState.push(style.cross);
-            updateHam(newHamState);
-        }
-        hamIsOpen = !hamIsOpen;
     }
+    
+    window.addEventListener('resize', rerenderHam);
 
     // navlistState
     const [navlistState, updateNavlist] = useState(content.NavHeaderLinks);
