@@ -2,11 +2,6 @@
 MOBILE
 //////////////////////////////////////////////////////////////////////////////*/
 
-body {
-  background-color: grey;
-  height: 300vh;
-}
-
 .navclickarea {
   position: absolute;
   left: 0;

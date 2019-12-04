@@ -1,0 +1,57 @@
+.navfooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40vh;
+  background-color: var(--col2_1);
+}
+
+.navfooter::after {
+  content: 'Ryan Theodore The | 2019';
+  font-weight: 600; 
+  background-color: var(--col1_2);
+  color: var(--col1_4);
+  display: block;
+  width: 100%;
+  height: 50px;
+  display: grid;
+  place-items: center;
+}
+
+.navbox {
+  height: 40vh;
+}
+
+.linklist {
+  display: grid;
+  grid-template-columns: 70px 70px 70px 70px;
+  grid-template-rows: 70px;
+  grid-gap: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+}
+
+.anchor {
+  display: grid;
+  place-items: center;
+  border-radius: 25px;
+  height: 70px;
+  background-color: var(--col1_1);
+}
+
+.anchor:hover {
+  background-color: var(--col1_7);
+  transform: translate(0, -5px);
+  transition: all 250ms ease-in-out;
+}
+
+.anchor:hover .icon {
+  color: var(--col1_1);
+}
+
+.icon {
+  font-size: 37px;
+  color: var(--col1_7);
+}

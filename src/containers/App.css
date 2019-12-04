@@ -60,7 +60,7 @@ ul {
 blockquote {
 	quotes: none;
 }
-blockquote:before, blockquote:after {
+blockquote::before, blockquote::after {
 	content: none;
 }
 del {
@@ -73,7 +73,6 @@ table {
 a img { border: none; }
 
 html {
-	height: 100%;
 	box-sizing: border-box;
 }
 

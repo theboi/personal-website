@@ -31,14 +31,14 @@ const NavHeader = (props) => {
     }
 
     // navlistState
-    const [navlistState, updateNavlist] = useState(content.NavLinks);
+    const [navlistState, updateNavlist] = useState(content.NavHeaderLinks);
     let newNavlistState;
     const setNavlistState = (index) => {
         if (index != null) {
-            newNavlistState = [...content.NavLinks[index].branch];
+            newNavlistState = [...content.NavHeaderLinks[index].branch];
             newNavlistState.unshift({ name: "Back" });
         } else {
-            newNavlistState = content.NavLinks;
+            newNavlistState = content.NavHeaderLinks;
         }
         updateNavlist(newNavlistState);
     }
