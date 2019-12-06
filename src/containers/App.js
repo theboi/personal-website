@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import NavFooter from '../components/NavFooter/NavFooter';
 import NavHeader from '../components/NavHeader/NavHeader';
@@ -15,10 +15,10 @@ function App() {
       <div className="App">
         <NavHeader />
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Redirect from="/" exact to="/home" />
           <Route path="/home" component={Home} />
           {/* <Route path="/timeline" component={Timeline} /> */}
-          <Route path="/projects" component={Projects} />
+          <Route path="/portfolio/projects" component={Projects} />
           {/* <Route path="/experience" component={Experience} /> */}
           {/* <Route path="/print" component={Print} /> */}
           <Route path="/" component={Error404} />
