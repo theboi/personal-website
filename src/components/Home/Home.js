@@ -11,7 +11,7 @@ const Home = () => {
     let newScreenState;
     const setScreenMode = () => {
         newScreenState = [...screenState];
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 965) {
             newScreenState = "desktop";
         } else {
             newScreenState = "mobile";
