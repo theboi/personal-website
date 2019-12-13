@@ -5,7 +5,6 @@ import style from '../NavFooter.module.css';
 
 const NavFooter = (props) => {
     const cont = props.cont;
-    console.log(cont.icon);
 
     return (
         <li className={style.link}>

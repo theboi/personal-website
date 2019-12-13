@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
@@ -10,6 +10,11 @@ import Error404 from '../components/Error404/Error404';
 
 
 function App() {
+  // screenWidth
+  const [screenWidth, updateScreenWidth] = useState(window.innerWidth)
+  window.addEventListener('resize', () => {updateScreenWidth(window.innerWidth)});
+  console.log(screenWidth)
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -30,3 +35,4 @@ function App() {
 }
 
 export default App;
+export let screenWidth;
