@@ -16,11 +16,11 @@ function App() {
         <NavHeader />
         <Switch>
           <Redirect from="/" exact to="/home" />
-          <Route path="/home" component={Home} />
-          {/* <Route path="/timeline" component={Timeline} /> */}
-          <Route path="/portfolio/projects" component={Projects} />
-          {/* <Route path="/experience" component={Experience} /> */}
-          {/* <Route path="/print" component={Print} /> */}
+          <Route path="/home/" exact component={Home} />
+          {/* <Route path="/timeline/" exact component={Timeline} /> */}
+          <Route path="/portfolio/projects/" exact component={Projects} />
+          {/* <Route path="/experience/" exact component={Experience} /> */}
+          {/* <Route path="/print/" exact component={Print} /> */}
           <Route path="/" component={Error404} />
         </Switch>
         <NavFooter />
