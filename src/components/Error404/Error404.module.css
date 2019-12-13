@@ -1,6 +1,9 @@
+/* /////////////////////////////////////////////////////////////////////////////
+MOBILE
+//////////////////////////////////////////////////////////////////////////////*/
 .error404 {
   display: grid;
-  grid-gap: 15px;
+  gap: 4vw;
   place-items: center;
   margin: 70px 0;
 }
@@ -23,11 +26,26 @@
 
 .link {
   padding: 20px;
-  background-color: var(--col2_1);
-  color: var(--col1_9);
+  background-color: var(--col1_9);
+  color: var(--col2_1);
+  font-weight: 600;
+  border: 2px solid var(--col2_1);
   border-radius: 20px;
+  transition: all 250ms ease-in-out;
 }
 
 .link:link, .link:hover {
-  background-color: var(--col1_1)
+  background-color: var(--col1_1);
+  color: var(--col1_9);
 }
+
+/* /////////////////////////////////////////////////////////////////////////////
+DESKTOP
+//////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (min-width: 768px)  {
+  .error404 {
+    gap: 35px;
+  }
+}
+
