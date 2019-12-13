@@ -4,10 +4,11 @@ MOBILE
 /* listItem */
 .listItem {
   display: flex;
-  border: 0.5px solid var(--col1_6);
+  border-top: 0.5px solid var(--col1_6);
   place-items: center;
   color: var(--col2_1);
   background-color: var(--col1_8);
+  margin: 10px 0;
 }
 
 .listItem:link, .listItem:hover {
@@ -22,6 +23,7 @@ MOBILE
 .listItemImg {
   width: 70px;
   height: 70px;
+  border-radius: 10px;
 }
 /* /////////////////////////////////////////////////////////////////////////////
 DESKTOP

@@ -11,6 +11,7 @@ const ProjectSelectList = () => {
           return (
             <ProjectSelectItem 
             content={content}
+            key={index}
             index={index} />
           )
         })}
