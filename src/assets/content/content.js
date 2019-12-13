@@ -31,7 +31,7 @@ const content = {
                 subtitle: "ChangeMakers Programme", 
                 date: "13/07/19 - 29/08/19", 
                 tags: ["SST", "Design"], 
-                image: "/ChangeMakers Programme/01.jpg"
+                image: "https://unsplash.it/200"
             },
             // type: paragraph, quote, link, button, iframe
             body: [ 

@@ -1,8 +1,7 @@
 import React from 'react';
 
-import style from '../Projects.module.css';
-
 const ProjectBody = (props) => {
+  const style = props.style;
   const currentCont = props.cont;
   let returnOutput;
   return (
