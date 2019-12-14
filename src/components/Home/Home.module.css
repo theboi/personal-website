@@ -1,39 +1,52 @@
+/* /////////////////////////////////////////////////////////////////////////////
+MOBILE
+//////////////////////////////////////////////////////////////////////////////*/
 /* s1 */
 .s1 {
-    height: 100vh;
-    font-size: 25px;
-    line-height: 60px;
-    margin: 10vh 0 0 11vw;
+  height: 100vh;
+  font-size: 25px;
+  line-height: 60px;
+  margin: 15vh 0 0 8vw;
 
 }
 
 .s1 .w900 {
-    font-weight: 900;
+  font-weight: 900;
 }
 
 .s1 .w800 {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .s1 .w700 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .s1 .w600 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 /* s2 */
 .s2 {
-  height: 100vh;
-  background-color: var(--col1_7);
+height: 100vh;
+background-color: var(--col1_7);
 }
 .viewProjects {
-  padding: 15px;
-  background-color: var(--col2_1);
-  color: var(--col1_9);
+padding: 15px;
+background-color: var(--col2_1);
+color: var(--col1_9);
 }
 
 .viewProjects:hover {
-  background-color: var(--col1_1);
+background-color: var(--col1_1);
 }
+
+/* /////////////////////////////////////////////////////////////////////////////
+DESKTOP
+//////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (min-width: 965px)  {
+
+}
+
+
