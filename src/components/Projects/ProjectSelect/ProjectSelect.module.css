@@ -6,29 +6,38 @@ MOBILE
   display: flex;
   border-top: 0.5px solid var(--col1_6);
   place-items: center;
-  color: var(--col2_1);
+  color: var(--col1_1);
   background-color: var(--col1_8);
-  margin: 10px 0;
+  height: 65px;
 }
 
-.listItem:link, .listItem:hover {
-  background-color: var(--col1_7);
+.listItemVertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.listItemSubtitle {
+  color: var(--col1_4);
 }
 
 .listItem > * {
-  margin: 10px 20px;
+  max-width: calc(100% - 120px);
+  margin: 0 20px;
   font-weight: 500;
+  overflow: hidden;
 }
 
 .listItemImg {
-  width: 70px;
-  height: 70px;
-  border-radius: 10px;
+  margin: 0;
+  height: 100%;
 }
+
 /* /////////////////////////////////////////////////////////////////////////////
 DESKTOP
 //////////////////////////////////////////////////////////////////////////////*/
 
 @media screen and (min-width: 768px)  {
-
+  .listItem:link, .listItem:hover {
+    background-color: var(--col1_7);
+  }
 }

@@ -8,7 +8,6 @@ const S1Line = (props) => {
     let newScreenState;
     const setScreenMode = () => {
         newScreenState = window.innerWidth;
-        console.log(newScreenState)
         setScreen(newScreenState);
     }
     window.addEventListener('resize', setScreenMode);
