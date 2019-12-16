@@ -46,7 +46,7 @@ MOBILE
   justify-content: right;
 }
 
-.listItem:link, .listItem:hover {
+.listItem:hover {
   background-color: var(--col1_8);
 }
 

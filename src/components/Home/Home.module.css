@@ -82,7 +82,6 @@ MOBILE
   text-align: center;
 }
 
-.sIntro .links > *:link,
 .sIntro .links > *:hover {
   background-color: var(--col2_2);
 }
