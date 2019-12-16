@@ -19,7 +19,8 @@ const Home = () => {
                 <div className={style.cont}>
                     <img className={style.img} src={require("../../assets/images/me.jpg")} alt="Me" />
                     <p className={style.introText}>
-                        Hi! I'm Ryan, a student at the School of Science and Technology, Singapore. <br /><br />
+                        Hi! I'm <span className={style.name}>Ryan The</span>, 
+                        a student at the School of Science and Technology, Singapore. <br /><br />
                         I am passionate about coding, robotics and designing. Learn more about me
                         using the links below!
                     </p>

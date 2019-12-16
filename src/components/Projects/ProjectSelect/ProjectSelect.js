@@ -42,7 +42,7 @@ const ProjectSelect = () => {
 
   return (
     <div>
-      <h1 className={style.searchText}>Projects</h1>
+      <h1 className={style.header}>Projects</h1>
       <input className={style.searchBar} type="text" placeholder="Search" onChange={(event) => {textboxChange(event)}} />
       <ProjectSelectList content={outputList} />
     </div>

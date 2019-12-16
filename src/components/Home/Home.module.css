@@ -54,6 +54,11 @@ MOBILE
   max-width: 500px;
 }
 
+.sIntro .name {
+  color: var(--col2_3);
+  font-weight: 700;
+}
+
 .sIntro .links {
   display: flex;
   flex-direction: column;
