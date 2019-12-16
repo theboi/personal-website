@@ -55,20 +55,20 @@ const NavHeader = (props) => {
     }
 
     return (
-        <div className={style.navheader}>
+        <div className={style.navHeader}>
             <div className={style.bar + " " + (hamIsOpen ? style.open : style.close)}>
-                <Link to="home">
+                <Link className={style.iconBox} to="/home">
                     <img className={style.icon} src={require('../../assets/images/icon.png')} alt="icon" />
                 </Link>
-                <div className={style.hamarea} onClick={toggleHam}>
+                <div className={style.hamArea} onClick={toggleHam}>
                     <span className={hamState.join(' ')} />
                 </div>
             </div>
-            <nav className={style.navbox} >
+            <nav className={style.navBox} >
                 <div
-                    className={style.navclickarea + " " + (hamIsOpen ? style.open : style.close)}
+                    className={style.navClickArea + " " + (hamIsOpen ? style.open : style.close)}
                     onClick={() => toggleHam()} />
-                <div className={style.navlistbg + " " + (hamIsOpen ? style.open : style.close)}>
+                <div className={style.navListBg + " " + (hamIsOpen ? style.open : style.close)}>
                     <NavHeaderList
                         toggleHam={toggleHam}
                         hamIsOpen={hamIsOpen}

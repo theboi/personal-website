@@ -2,7 +2,7 @@
 MOBILE
 //////////////////////////////////////////////////////////////////////////////*/
 
-.navclickarea {
+.navClickCrea {
   position: absolute;
   left: 0;
   right: 0;
@@ -12,11 +12,11 @@ MOBILE
   transition: all 250ms ease-in-out;
 }
 
-.navclickarea.open {
+.navClickArea.open {
   display: block;
 }
 
-.navheader {
+.navHeader {
   z-index: 1;
   position: fixed;
   top: 0;
@@ -24,7 +24,7 @@ MOBILE
   height: 65px;
 }
 
-.navlistbg {
+.navListBg {
   position: absolute;
   top: 65px;
   transition: all 250ms ease-in-out;
@@ -33,7 +33,7 @@ MOBILE
   height: 0;
 }
 
-.navlistbg.open {
+.navListBg.open {
   height: 250px;
 }
 
@@ -49,6 +49,7 @@ MOBILE
 }
 
 .icon {
+  z-index: 2;
   position: absolute;
   left: 0;
   height: 37px;
@@ -57,7 +58,7 @@ MOBILE
 }
 
 /* Ham */
-.hamarea {
+.hamArea {
   height: 65px;
   width: 70px;
   float: right;
@@ -122,11 +123,11 @@ MOBILE
   padding: 15px 0 15px 20px;
 }
 
-.anchor:global(.active) {  /* global prevents active class from being modified when rendered by css modules */
+.anchor:global(.active) {  /* global prevents active class from being modified when rendered by css modules, active class provided by react-router*/
   color: var(--col2_3);
 }
 
-.linklist {
+.linkList {
   list-style: none;
 }
 
@@ -163,7 +164,7 @@ MOBILE
   transform: scale(1, 1);
 }
 
-.frontarrow {
+.frontArrow {
   position: absolute;
   left: 45vw;
   top: 50%;
@@ -177,7 +178,7 @@ MOBILE
   pointer-events: none;
 }
 
-.backarrow {
+.backArrow {
   position: absolute;
   left: 43vw;
   top: 50%;
@@ -196,11 +197,11 @@ DESKTOP
 //////////////////////////////////////////////////////////////////////////////*/
 
 @media screen and (min-width: 768px)  {
-  .navclickarea.open {
+  .navClickArea.open {
     display: none;
   }
 
-  .navlistbg {
+  .navListBg {
     top: 0;
   }
 
@@ -212,11 +213,11 @@ DESKTOP
     display: none;
   }
 
-  .hamarea {
+  .hamArea {
     display: none;
   }
 
-  .linklist {
+  .linkList {
     height: 45px;
     margin: 10px 50px;
     display: flex;
@@ -264,11 +265,11 @@ DESKTOP
     background-color: transparent;
   }
 
-  .frontarrow {
+  .frontArrow {
     display: none;
   }
   
-  .backarrow {
+  .backArrow {
     display: none;
   }
 }

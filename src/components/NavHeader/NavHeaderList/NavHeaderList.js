@@ -6,7 +6,7 @@ import style from '../NavHeader.module.css';
 const NavHeaderList = (props) => {
     return (
         <div className={style.nav + " " + (props.hamIsOpen ? style.open : style.close)}>
-            <ul className={style.linklist}>
+            <ul className={style.linkList}>
                 {props.content.map((cont, index) => {
                     return <NavHeaderLink
                         cont={cont}

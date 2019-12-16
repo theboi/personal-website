@@ -9,7 +9,7 @@ const NavHeaderLink = (props) => {
     if (cont.name === "Back") {
         return (
             <li className={style.link}>
-                <div className={style.backarrow} />
+                <div className={style.backArrow} />
                 <div className={style.anchor} onClick={() => props.update()}>{cont.name}</div>
             </li>
         )
@@ -20,7 +20,7 @@ const NavHeaderLink = (props) => {
     } else {
         return (
             <li className={style.link}>
-                <div className={style.frontarrow} />
+                <div className={style.frontArrow} />
                 <div className={style.anchor} onClick={() => props.update(props.index)}>{cont.name}</div>
             </li>
         )
