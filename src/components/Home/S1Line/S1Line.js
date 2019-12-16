@@ -22,9 +22,11 @@ const S1Line = (props) => {
             returnOutput = "developer."
         } else if (props.weight === "w600") {
             returnOutput = "designer."
+        } else if (props.weight === "w500") {
+            returnOutput = "roboticist."
         }
     } else {
-        returnOutput = "student. hobbyist. developer. designer."
+        returnOutput = "student. hobbyist. developer. designer." // roboticist. (??)
     }
 
 
