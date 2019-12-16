@@ -2,7 +2,7 @@
 MOBILE
 //////////////////////////////////////////////////////////////////////////////*/
 
-.navClickCrea {
+.navClickArea {
   position: absolute;
   left: 0;
   right: 0;
@@ -79,8 +79,8 @@ MOBILE
   display: block;
   background-color: var(--col2_1);
   height: 2px;
-  width: 2em;
-  transition: transform ease-in-out 250ms;
+  width: 25px;
+  transition: transform ease-in-out 200ms;
 }
 
 .ham::before,
@@ -89,11 +89,11 @@ MOBILE
 }
 
 .ham::before {
-  bottom: 9px;
+  bottom: 7px;
 }
 
 .ham::after {
-  top: 9px;
+  top: 7px;
 }
 
 /* Cross */
