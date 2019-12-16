@@ -36,7 +36,7 @@
 .anchor {
   display: grid;
   place-items: center;
-  border-radius: 25px;
+  border-radius: 20px;
   height: 70px;
   background-color: var(--col1_1);
 }
