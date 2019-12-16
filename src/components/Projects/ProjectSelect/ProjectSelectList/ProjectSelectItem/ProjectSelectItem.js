@@ -38,7 +38,6 @@ const ProjectSelectItem = (props) => {
             <p className={style.listItemSubtitle}>{currentContent.header.subtitle}</p>
           </div>
           <p className={style.listItemDate}>{currentContent.header.date}</p>
-          <p className={style.listItemTags}>{currentContent.header.tags}</p>
         </Link>
       </li>
     )

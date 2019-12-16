@@ -8,7 +8,7 @@ const content = {
                 { name: 'Experience', link: '/portfolio/experience' },
             ]
         },
-        { name: 'Print', link: '/print' }
+        { name: 'Contact', link: '/contact' }
     ],
 
 
@@ -55,10 +55,10 @@ const content = {
         },
         {
             header: { 
-                title: "Blah blah blah", 
-                subtitle: "dijqwdwajkdnjkawndjkawndjkndnwajkdnwajk", 
+                title: "InnoFest", 
+                subtitle: "daidjawidja wiojdiowajdiodj awodjajndj", 
                 date: "13/07/19 - 29/08/19", 
-                tags: ["dkjawndkj", "nd akd"], 
+                tags: ["Tag1", "Tag2"], 
                 image: "https://unsplash.it/200"
             },
             // type: paragraph, quote, link, button, iframe

@@ -1,13 +1,15 @@
 import React from 'react';
 
-import content from '../../../../assets/content/content';
+import style from '../ProjectSelect.module.css';
 import ProjectSelectItem from './ProjectSelectItem/ProjectSelectItem';
 
-const ProjectSelectList = () => {
+const ProjectSelectList = (props) => {
+  const cont = props.content;
+  
   return (
     <div>
-      <ul>
-        {content.Projects.map((content, index) => {
+      <ul className={style.listItemBox}>
+        {cont.map((content, index) => {
           return (
             <ProjectSelectItem 
             content={content}
