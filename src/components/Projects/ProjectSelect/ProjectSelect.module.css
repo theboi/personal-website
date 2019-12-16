@@ -46,6 +46,14 @@ MOBILE
   justify-content: right;
 }
 
+.listItem:link, .listItem:hover {
+  background-color: var(--col1_8);
+}
+
+.listItem:active {
+  background-color: var(--col1_7);
+}
+
 .listItemVertical {
   display: flex;
   flex-direction: column;
@@ -87,14 +95,6 @@ DESKTOP
   /* listItem */
   .listItemBox {
     margin: 0 10vw;
-  }
-
-  .listItem:hover {
-    background-color: var(--col1_8);
-  }
-
-  .listItem:active {
-    background-color: var(--col1_7);
   }
 
   .listItemVertical {
