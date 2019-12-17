@@ -243,7 +243,7 @@ const content = {
                 display: 'SASMO 2015',
                 subtitle: 'Academics',
                 date: '06/04/15',
-                tags: ['Math'],
+                tags: ['Mathematics'],
                 link: 'https://sasmo.sg/sasmo-2015-results/',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -255,7 +255,7 @@ const content = {
                 display: 'SASMO 2016',
                 subtitle: 'Academics',
                 date: '06/04/16',
-                tags: ['Math'],
+                tags: ['Mathematics'],
                 link: 'https://sasmo.sg/sasmo-2016-results/',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -267,7 +267,7 @@ const content = {
                 display: 'SASMO 2017',
                 subtitle: 'Academics',
                 date: '06/04/17',
-                tags: ['Math'],
+                tags: ['Mathematics'],
                 link: 'https://sasmo.sg/sasmo-2017-results/',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -279,7 +279,7 @@ const content = {
                 display: 'SASMO 2018',
                 subtitle: 'Academics',
                 date: '06/04/18',
-                tags: ['Math'],
+                tags: ['Mathematics'],
                 link: 'https://sasmo.sg/sasmo-2018-results/',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -291,7 +291,7 @@ const content = {
                 display: 'SASMO 2019',
                 subtitle: 'Academics',
                 date: '06/04/19',
-                tags: ['Math'],
+                tags: ['Mathematics'],
                 link: 'https://sasmo.sg/sasmo-2019-results3/',
             },
             // type: paragraph, image, link, button, quote, iframe

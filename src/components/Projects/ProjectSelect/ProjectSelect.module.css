@@ -5,6 +5,7 @@ MOBILE
 .header {
   font-size: 21px;
   margin: 20px 0 10px 30px;
+  margin-bottom: 100px;
 }
 
 .searchBar {
@@ -33,6 +34,10 @@ MOBILE
 }
 
 /* listItem */
+.listItemBox {
+  margin-bottom: 150px;
+}
+
 .listItem {
   display: flex;
   border-top: 0.5px solid var(--col1_6);
@@ -95,6 +100,7 @@ DESKTOP
   /* listItem */
   .listItemBox {
     margin: 0 10vw;
+    margin-bottom: 150px;
   }
 
   .listItemVertical {
