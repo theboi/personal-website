@@ -20,7 +20,7 @@ const ProjectBody = (props) => {
           )
         } else {
           returnOutput = (
-            <p>An error has occured. Please inform the owner of this site (if you know the person). Thanks! </p>
+            <p>An error has occured. Please inform the owner of this site at ryan.theodore.2006@gmail.com. Thanks! </p>
           )
         }
         return (

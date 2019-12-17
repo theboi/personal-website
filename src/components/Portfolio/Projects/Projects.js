@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import style from './Projects.module.css';
 import content from '../../../assets/content/content';
 import ProjectSelectList from './ProjectSelectList/ProjectSelectList';
+import TabSelector from '../TabSelector/TabSelector';
 
 const ProjectSelect = () => {
   const cont = content.Projects;
@@ -42,11 +43,12 @@ const ProjectSelect = () => {
 
   return (
     <div className={style.projects}>
+      <TabSelector current="projects" />
       <h1 className={style.header}>Projects</h1>
       <input className={style.searchBar} type="text" placeholder="Search" onChange={(event) => {textboxChange(event)}} />
       <ProjectSelectList content={outputList} />
     </div>
-  )
+  );
 }
 
 export default ProjectSelect;
