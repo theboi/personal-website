@@ -5,7 +5,7 @@ import style from '../../ProjectSelect.module.css';
 
 const ProjectSelectItem = (props) => {
   const currentContent = props.content;
-  let currentLink = props.content.header.title.replace(" ", "-").toLowerCase();
+  let currentLink = props.content.header.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase();
 
   // screenState
   const [screenWidth, setScreen] = useState(window.innerWidth);
@@ -22,7 +22,7 @@ const ProjectSelectItem = (props) => {
         <Link to={"/portfolio/projects/" + currentLink} className={style.listItem}>
           <img className={style.listItemImg} src={currentContent.header.image} alt={currentContent.header.title} />
           <div className={style.listItemVertical}>
-            <p className={style.listItemTitle}>{currentContent.header.title}</p>
+            <p className={style.listItemTitle}>{currentContent.header.display}</p>
             <p className={style.listItemSubtitle}>{currentContent.header.subtitle}</p>
           </div>
         </Link>
