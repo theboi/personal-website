@@ -13,7 +13,7 @@ import Error404 from '../components/Error404/Error404';
 const App = () => {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <NavHeader />
         <Switch>
