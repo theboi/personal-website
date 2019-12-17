@@ -48,7 +48,7 @@ const content = {
                 display: 'IDE Series 2019',
                 subtitle: 'Robotics CCA',
                 date: '21/03/19',
-                tags: 'EV3',
+                tags: ['EV3'],
                 link: 'http://ideseries.org/',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -60,7 +60,7 @@ const content = {
                 display: 'APYRC 2019',
                 subtitle: 'Robotics CCA',
                 date: '26/07/19',
-                tags: 'EV3',
+                tags: ['EV3'],
                 link: 'https://www.apyrc.com/',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -72,7 +72,7 @@ const content = {
                 display: 'NPGCC 2016',
                 subtitle: 'Robotics CCA',
                 date: '22/06/16',
-                tags: 'Scratch',
+                tags: ['Scratch'],
                 link: 'https://npgcc.org/?p=628',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -84,7 +84,7 @@ const content = {
                 display: 'RoboRAVE Kaga 2019',
                 subtitle: 'Robotics CCA',
                 date: '10/11/19',
-                tags: 'C++, Arduino',
+                tags: ['C++', 'Arduino'],
                 link: 'http://www.roborave-kaga.com/contents-in-english/',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -96,7 +96,7 @@ const content = {
                 display: 'NRC 2017',
                 subtitle: 'Robotics CCA',
                 date: '08/09/19',
-                tags: 'EV3',
+                tags: ['EV3'],
                 link: 'http://www.nrc.sg/',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -108,7 +108,7 @@ const content = {
                 display: 'Original Personal Website',
                 subtitle: 'Personal Projects',
                 date: '12/07/19',
-                tags: 'HTML, CSS, JavaScript, Web',
+                tags: ['HTML', 'CSS', 'JavaScript', 'Web'],
             },
             // type: paragraph, image, link, button, quote, iframe
             body: []
@@ -119,7 +119,7 @@ const content = {
                 display: 'Updated Personal Website',
                 subtitle: 'Personal Projects',
                 date: '17/12/19',
-                tags: 'HTML, CSS, JavaScript (React.js), Web',
+                tags: ['HTML', 'CSS', 'JavaScript', 'React', 'Web'],
             },
             // type: paragraph, image, link, button, quote, iframe
             body: []
@@ -130,7 +130,7 @@ const content = {
                 display: 'Personal Logo Design',
                 subtitle: 'Personal Projects',
                 date: '03/02/19',
-                tags: 'Design',
+                tags: ['Design'],
             },
             // type: paragraph, image, link, button, quote, iframe
             body: []
@@ -141,7 +141,7 @@ const content = {
                 display: 'Thunkable November Hackathon 2019',
                 subtitle: 'Personal Competitions',
                 date: '30/11/19',
-                tags: 'Thunkable',
+                tags: ['Thunkable'],
                 link: 'https://medium.com/@JimmyCH/october-gaming-hackathon-cdd35ac39fb0',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -153,7 +153,7 @@ const content = {
                 display: 'What\'s Your Story 2019',
                 subtitle: 'Personal Competitions',
                 date: '29/09/19',
-                tags: 'Design',
+                tags: ['Design'],
                 link: 'https://whatsyourstory.trendmicro.com.sg/',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -165,7 +165,7 @@ const content = {
                 display: 'Total Defence Logo Design Competiton 2019',
                 subtitle: 'Personal Competitions',
                 date: '28/09/19',
-                tags: 'Design',
+                tags: ['Design'],
                 link: 'https://www.mindef.gov.sg/oms/imindef/mindef_websites/topics/totaldefence/total-defence-logo-competition.html',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -177,7 +177,7 @@ const content = {
                 display: 'ADMT Icon Design',
                 subtitle: 'ChangeMakers Programme',
                 date: '16/02/19',
-                tags: 'Design',
+                tags: ['Design'],
             },
             // type: paragraph, image, link, button, quote, iframe
             body: []
@@ -188,7 +188,7 @@ const content = {
                 display: 'ADMT Poster Design',
                 subtitle: 'ChangeMakers Programme',
                 date: '03/04/19',
-                tags: 'Design',
+                tags: ['Design'],
             },
             // type: paragraph, image, link, button, quote, iframe
             body: []
@@ -199,7 +199,7 @@ const content = {
                 display: 'ADMT Product Design',
                 subtitle: 'ChangeMakers Programme',
                 date: '17/07/19',
-                tags: 'Design',
+                tags: ['Design'],
             },
             // type: paragraph, image, link, button, quote, iframe
             body: []
@@ -210,7 +210,7 @@ const content = {
                 display: 'ADMT Badge Design',
                 subtitle: 'ChangeMakers Programme',
                 date: '06/08/19',
-                tags: 'Design',
+                tags: ['Design'],
             },
             // type: paragraph, image, link, button, quote, iframe
             body: []
@@ -221,7 +221,7 @@ const content = {
                 display: 'ICT SSTuino (Arduino)',
                 subtitle: 'ChangeMakers Programme',
                 date: '30/09/19',
-                tags: 'C++, Arduino',
+                tags: ['C++', 'Arduino'],
             },
             // type: paragraph, image, link, button, quote, iframe
             body: []
@@ -232,7 +232,7 @@ const content = {
                 display: 'InnoScience Challenge 2019',
                 subtitle: 'ChangeMakers Programme',
                 date: '14/10/19',
-                tags: 'C++, Arduino, Design',
+                tags: ['C++', 'Arduino', 'Design'],
             },
             // type: paragraph, image, link, button, quote, iframe
             body: []
@@ -243,7 +243,7 @@ const content = {
                 display: 'SASMO 2015',
                 subtitle: 'Academics',
                 date: '06/04/15',
-                tags: 'Math',
+                tags: ['Math'],
                 link: 'https://sasmo.sg/sasmo-2015-results/',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -255,7 +255,7 @@ const content = {
                 display: 'SASMO 2016',
                 subtitle: 'Academics',
                 date: '06/04/16',
-                tags: 'Math',
+                tags: ['Math'],
                 link: 'https://sasmo.sg/sasmo-2016-results/',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -267,7 +267,7 @@ const content = {
                 display: 'SASMO 2017',
                 subtitle: 'Academics',
                 date: '06/04/17',
-                tags: 'Math',
+                tags: ['Math'],
                 link: 'https://sasmo.sg/sasmo-2017-results/',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -279,7 +279,7 @@ const content = {
                 display: 'SASMO 2018',
                 subtitle: 'Academics',
                 date: '06/04/18',
-                tags: 'Math',
+                tags: ['Math'],
                 link: 'https://sasmo.sg/sasmo-2018-results/',
             },
             // type: paragraph, image, link, button, quote, iframe
@@ -291,7 +291,7 @@ const content = {
                 display: 'SASMO 2019',
                 subtitle: 'Academics',
                 date: '06/04/19',
-                tags: 'Math',
+                tags: ['Math'],
                 link: 'https://sasmo.sg/sasmo-2019-results3/',
             },
             // type: paragraph, image, link, button, quote, iframe
