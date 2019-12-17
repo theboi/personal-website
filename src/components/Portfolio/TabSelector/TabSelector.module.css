@@ -1,0 +1,57 @@
+/* /////////////////////////////////////////////////////////////////////////////
+MOBILE
+//////////////////////////////////////////////////////////////////////////////*/
+.header {
+  font-size: 21px;
+  margin: 20px 0 10px 30px;
+  margin-bottom: 100px;
+}
+
+.flex {
+  display: flex;
+  justify-content: stretch;
+  margin: 10px 0 -11px 3vw;
+  padding-left: 10px;
+  transition: all 250ms ease-in-out;
+  flex-wrap: wrap-reverse;
+}
+
+.box {
+  padding: 10px 15px;
+  margin-left: -1px;
+  background-color: var(--col1_9);
+  border: 0.5px var(--col1_6) solid;
+  border-bottom: none;
+  font-size: 16px;
+  color: var(--col1_3);
+  height: 40px;
+}
+
+.box:global(.active) {
+  color: var(--col2_1);
+  border-color: var(--col2_1);
+  z-index: 0;
+}
+
+.box:nth-child(1) {
+  border-top-left-radius: 5px;
+}
+
+.box:nth-last-child(1) {
+  border-top-right-radius: 5px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+DESKTOP
+//////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (min-width: 768px) {
+  .header {
+    margin: 30px 0 20px 50px;
+  }
+
+  .flex {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+}

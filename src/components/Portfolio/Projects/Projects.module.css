@@ -6,11 +6,6 @@ MOBILE
 }
 
 /* search */
-.header {
-  font-size: 21px;
-  margin: 20px 0 10px 30px;
-  margin-bottom: 100px;
-}
 
 .searchBar {
   margin: 10px;
@@ -21,6 +16,9 @@ MOBILE
   font-size: 16px;
   color: var(--col1_1);
   transition: all 250ms ease-in-out;
+  position: relative;
+  z-index: 3; /* for TabSelector */
+
 }
 
 .searchBar:focus {
@@ -94,9 +92,6 @@ DESKTOP
 
 @media screen and (min-width: 768px) {
   /* search */
-  .header {
-    margin: 30px 0 20px 50px;
-  }
   .searchBar {
     width: 80vw;
     margin: 10px 10vw;
