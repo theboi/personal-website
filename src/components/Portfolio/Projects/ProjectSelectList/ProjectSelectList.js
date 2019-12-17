@@ -1,6 +1,6 @@
 import React from 'react';
 
-import style from '../ProjectSelect.module.css';
+import style from '../Projects.module.css';
 import ProjectSelectItem from './ProjectSelectItem/ProjectSelectItem';
 
 const ProjectSelectList = (props) => {

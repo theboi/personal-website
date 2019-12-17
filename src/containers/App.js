@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import NavFooter from '../components/NavFooter/NavFooter';
 import NavHeader from '../components/NavHeader/NavHeader';
 import Home from '../components/Home/Home';
-import Projects from '../components/Projects/Projects';
+import Projects from '../components/Portfolio/Projects/Projects';
 import Experience from '../components/Experience/Experience';
 import Error404 from '../components/Error404/Error404';
 

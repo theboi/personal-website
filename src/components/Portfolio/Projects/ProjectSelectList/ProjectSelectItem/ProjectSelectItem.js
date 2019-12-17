@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import style from '../../ProjectSelect.module.css';
+import style from '../../Projects.module.css';
 
 const ProjectSelectItem = (props) => {
   const currentContent = props.content;
