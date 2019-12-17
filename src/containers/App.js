@@ -11,13 +11,14 @@ import Timeline from '../components/Portfolio/Timeline/Timeline';
 import Error404 from '../components/Error404/Error404';
 
 const App = () => {
-
+  const urlParams = URLSearchParams(window.location.search);
+  console.log(urlParams + "HELLO");
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <NavHeader />
         <Switch>
-          <Redirect from="/" exact to="/home" />
+          {/* <Redirect from="/" exact to="/home" /> */}
           <Route path="/home/" exact component={Home} />
           <Redirect from="/portfolio/" exact to="/portfolio/projects" />
           <Route path="/portfolio/timeline/" exact component={Timeline} />
