@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectBody from './ProjectBody/ProjectBody';
 
 import style from './ProjectContent.module.css';
-import cont from '../../../assets/content/content';
+import cont from '../../../../assets/content/content';
 
 const ProjectContent = (props) => {
   const currentCont = cont.Projects[0];

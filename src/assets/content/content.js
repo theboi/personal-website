@@ -1,13 +1,7 @@
 const content = {
     NavHeaderLinks: [
         { name: 'Home', link: '/home' },
-        {
-            name: 'Portfolio', link: '/portfolio', branch: [
-                { name: 'Projects', link: '/portfolio/projects' },
-                { name: 'Timeline', link: '/portfolio/timeline' },
-                { name: 'Experience', link: '/portfolio/experience' },
-            ]
-        },
+        { name: 'Portfolio', link: '/portfolio' },
         { name: 'Contact', link: '/contact' }
     ],
 

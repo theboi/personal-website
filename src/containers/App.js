@@ -18,6 +18,7 @@ const App = () => {
         <Switch>
           <Redirect from="/" exact to="/home" />
           <Route path="/home/" exact component={Home} />
+          <Redirect from="/portfolio/" exact to="/portfolio/projects" />
           {/* <Route path="/timeline/" exact component={Timeline} /> */}
           <Route path="/portfolio/projects/" exact component={Projects} />
           <Route path="/portfolio/experience/" exact component={Experience} />
