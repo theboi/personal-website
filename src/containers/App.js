@@ -11,7 +11,7 @@ import Timeline from '../components/Portfolio/Timeline/Timeline';
 import Error404 from '../components/Error404/Error404';
 
 const App = () => {
-  const urlParams = URLSearchParams(window.location.search);
+  const urlParams = new URLSearchParams(window.location.search);
   console.log(urlParams + "HELLO");
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
