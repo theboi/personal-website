@@ -12,13 +12,25 @@ import Error404 from '../components/Error404/Error404';
 
 const App = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  console.log(urlParams + "HELLO");
+  const linkParam = urlParams.get("link");
+  let returnOutput;
+
+  if (linkParam !== undefined) {
+    returnOutput = (
+      <Redirect from="/" exact to={"/" + linkParam} />
+    );
+  } else {
+    returnOutput = (
+      <Redirect from="/" exact to="/home" />
+    )
+  }
+  
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <NavHeader />
         <Switch>
-          {/* <Redirect from="/" exact to="/home" /> */}
+          {returnOutput}
           <Route path="/home/" exact component={Home} />
           <Redirect from="/portfolio/" exact to="/portfolio/projects" />
           <Route path="/portfolio/timeline/" exact component={Timeline} />
