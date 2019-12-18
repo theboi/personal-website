@@ -15,7 +15,7 @@ const App = () => {
   const linkParam = urlParams.get("link");
   let returnOutput;
 
-  if (linkParam !== undefined) {
+  if (linkParam !== null) {
     returnOutput = (
       <Redirect from="/" exact to={"/" + linkParam} />
     );
