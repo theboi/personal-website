@@ -21,7 +21,7 @@ const Home = () => {
                     <p className={style.introText}>
                         Hi! I'm <span className={style.name}>Ryan The</span>, 
                         a student at the School of Science and Technology, Singapore. <br /><br />
-                        I am passionate about coding, robotics and designing. Learn more about me
+                        I am passionate about coding, robotics and design. Learn more about me
                         using the links below!
                     </p>
                     <div className={style.links}>
