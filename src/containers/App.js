@@ -14,9 +14,7 @@ const App = () => {
   const urlParams = new URLSearchParams(window.location.search);
   const linkParam = urlParams.get("link");
   let returnOutput;
-
-  console.log(urlParams);
-  console.log(linkParam);
+  
   if (linkParam !== null) {
     returnOutput = (
       <Redirect from="/" exact to={"/" + linkParam} />
