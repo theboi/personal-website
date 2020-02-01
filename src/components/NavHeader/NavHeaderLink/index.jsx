@@ -1,8 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import style from '../../NavHeader.module.css';
-
+import style from '../NavHeader.module.css';
 
 export const NavHeaderLink = (props) => {
     const cont = props.cont;
