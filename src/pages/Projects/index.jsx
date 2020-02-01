@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import style from './Projects.module.css';
-import content from '../../../assets/content/content';
-import ProjectSelectList from './ProjectSelectList/ProjectSelectList';
-import TabSelector from '../TabSelector/TabSelector';
+import {content} from '../../assets/content/content';
+import ProjectSelectList from '../../components/Portfolio/Projects/ProjectSelectList/ProjectSelectList';
+import TabSelector from '../../components/Portfolio/TabSelector/TabSelector';
 
-const ProjectSelect = () => {
+export const Projects = () => {
   const cont = content.Projects;
   let textboxValue;
 
@@ -49,5 +49,3 @@ const ProjectSelect = () => {
     </div>
   );
 }
-
-export default ProjectSelect;

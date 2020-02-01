@@ -2,7 +2,7 @@ import React from 'react';
 
 import style from '../NavFooter.module.css';
 
-const NavFooter = (props) => {
+export const NavFooterLink = (props) => {
     const cont = props.cont;
 
     return (
@@ -19,5 +19,3 @@ const NavFooter = (props) => {
         </li>
     )
 }
-
-export default NavFooter;

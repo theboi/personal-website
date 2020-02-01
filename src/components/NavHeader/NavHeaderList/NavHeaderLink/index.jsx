@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import style from '../../NavHeader.module.css';
 
 
-const NavHeaderLink = (props) => {
+export const NavHeaderLink = (props) => {
     const cont = props.cont;
     if (cont.name === "Back") {
         return (
@@ -30,5 +30,3 @@ const NavHeaderLink = (props) => {
 
 
 }
-
-export default NavHeaderLink;

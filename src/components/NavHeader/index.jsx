@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import NavHeaderList from './NavHeaderList/NavHeaderList';
-import content from '../../assets/content/content';
+import {NavHeaderList} from './NavHeaderList';
+import {content} from '../../assets/content/content';
 import style from './NavHeader.module.css';
 
 let hamIsOpen = false;
 
-const NavHeader = (props) => {
+export const NavHeader = (props) => {
 
     // hamState
     const [hamState, updateHam] = useState([style.ham]);
@@ -79,5 +79,3 @@ const NavHeader = (props) => {
         </div>
     );
 }
-
-export default NavHeader;

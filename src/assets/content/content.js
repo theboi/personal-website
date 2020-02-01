@@ -1,8 +1,9 @@
-const content = {
+export const content = {
     NavHeaderLinks: [
         { name: 'Home', link: '/home' },
         { name: 'Portfolio', link: '/portfolio' },
-        { name: 'Contact', link: '/contact' }
+        { name: 'Resume', link: '/resume' },
+        { name: 'Contact', link: '/contact' },
     ],
 
 
@@ -299,5 +300,3 @@ const content = {
     ]
 
 };
-
-export default content;

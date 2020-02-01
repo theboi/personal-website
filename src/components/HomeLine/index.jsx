@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import style from '../Home.module.css'
+import style from './HomeLine.module.css'
 
-const S1Line = (props) => {
+export const HomeLine = (props) => {
     // screenState
     const [screenWidth, setScreen] = useState(window.innerWidth);
     let newScreenState;
@@ -38,5 +38,3 @@ const S1Line = (props) => {
 }
 
 //////////////// TO ADD ANIMATION ////////////////////^^^^^
-
-export default S1Line;

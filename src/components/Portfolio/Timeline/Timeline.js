@@ -2,7 +2,7 @@ import React from 'react';
 
 import TabSelector from '../TabSelector/TabSelector';
 import style from './Timeline.module.css';
-import content from '../../../assets/content/content';
+import {content} from '../../../assets/content/content';
 
 const Timeline = () => {
   return (

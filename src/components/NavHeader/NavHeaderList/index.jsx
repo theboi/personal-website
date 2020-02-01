@@ -1,9 +1,9 @@
 import React from 'react';
 
-import NavHeaderLink from './NavHeaderLink/NavHeaderLink';
+import {NavHeaderLink} from './NavHeaderLink';
 import style from '../NavHeader.module.css';
 
-const NavHeaderList = (props) => {
+export const NavHeaderList = (props) => {
     return (
         <div className={style.nav + " " + (props.hamIsOpen ? style.open : style.close)}>
             <ul className={style.linkList}>
@@ -19,5 +19,3 @@ const NavHeaderList = (props) => {
         </div>
     )
 }
-
-export default NavHeaderList
