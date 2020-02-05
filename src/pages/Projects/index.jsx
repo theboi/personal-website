@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import style from "./Projects.module.css";
 import { content } from "../../assets/content/content";
-import { ProjectSelectList } from "../../components/Projects/ProjectSelectList";
-import { TabSelector } from "../../components/TabSelector";
+import { ProjectList } from "../../components/Card/ProjectList";
+import { SearchBar } from "../../components/SearchBar";
 
 export const Projects = () => {
   const cont = content.Projects;
@@ -47,7 +47,7 @@ export const Projects = () => {
 
   return (
     <div className={style.projects}>
-      <TabSelector current="Projects" />
+      <SearchBar current="Projects" />
       <input
         className={style.searchBar}
         type="text"
@@ -56,7 +56,7 @@ export const Projects = () => {
           textboxChange(event);
         }}
       />
-      <ProjectSelectList content={outputList} />
+      <ProjectList content={outputList} />
     </div>
   );
 };

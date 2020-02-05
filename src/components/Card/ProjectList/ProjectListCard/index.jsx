@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import style from '../../Projects.module.css';
+import style from '../Projects.module.css';
 
-export const ProjectSelectItem = (props) => {
+export const ProjectListCard = (props) => {
   const currentContent = props.content;
   let currentLink = props.content.header.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase();
 

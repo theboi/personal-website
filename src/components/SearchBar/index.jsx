@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import style from '../TabSelector/TabSelector.module.css';
 
-export const TabSelector = (props) => {
+export const SearchBar = (props) => {
   const tabs = ["Projects", "Timeline", "Experience"]
   return (
     <div className={style.tabSelector}>
