@@ -1,8 +1,8 @@
 import React from "react";
 
 import style from "./NavFooter.module.css";
-import {content} from "../../assets/content/content";
-import { NavFooterLink } from "./NavFooterLink";
+import {content} from "../../../assets/content/content";
+import {NavFooterLink} from "./NavFooterLink";
 
 export const NavFooter = () => {
   return (

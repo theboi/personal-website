@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { NavHeaderList } from "./NavHeaderList";
-import { content } from "../../assets/content/content";
+import { content } from "../../../assets/content/content";
 import style from "./NavHeader.module.css";
 
 let hamIsOpen = false;
@@ -59,7 +59,7 @@ export const NavHeader = props => {
         <Link className={style.iconBox} to="/home">
           <img
             className={style.icon}
-            src={require("../../assets/images/icon.png")}
+            src={require("../../../assets/images/icon.png")}
             alt="icon"
           />
         </Link>

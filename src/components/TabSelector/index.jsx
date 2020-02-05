@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import style from '../TabSelector/TabSelector.module.css';
 
-const TabSelector = (props) => {
+export const TabSelector = (props) => {
   const tabs = ["Projects", "Timeline", "Experience"]
   return (
     <div className={style.tabSelector}>
@@ -23,5 +23,3 @@ const TabSelector = (props) => {
     </div>
   )
 }
-
-export default TabSelector;

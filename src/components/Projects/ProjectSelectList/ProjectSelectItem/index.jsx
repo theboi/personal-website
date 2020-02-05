@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import style from '../../Projects.module.css';
 
-const ProjectSelectItem = (props) => {
+export const ProjectSelectItem = (props) => {
   const currentContent = props.content;
   let currentLink = props.content.header.title.replace(/\s/g, '-').replace(/[^a-zA-Z0-9-]/g, '').toLowerCase();
 
@@ -44,5 +44,3 @@ const ProjectSelectItem = (props) => {
   }
 
 }
-
-export default ProjectSelectItem;
