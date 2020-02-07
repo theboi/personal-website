@@ -2,7 +2,7 @@
 MOBILE
 //////////////////////////////////////////////////////////////////////////////*/
 .projects {
-  min-height: calc(100vh - 65px - 250px - 30px);
+  min-height: calc(100vh - 65px - 250px);
 }
 
 /* listItem */

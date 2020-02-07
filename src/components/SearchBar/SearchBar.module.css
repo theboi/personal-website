@@ -5,7 +5,7 @@ MOBILE
 .flex {
   display: flex;
   justify-content: stretch;
-  margin: 10px 0 -11px 3vw;
+  margin: 10px 0 -11px 0;
   padding-left: 10px;
   transition: all 250ms ease-in-out;
   flex-wrap: wrap-reverse;
@@ -74,12 +74,11 @@ DESKTOP
 
   .flex {
     width: 80vw;
-    margin-left: 10vw;
   }
 
   /* search */
   .searchBar {
     width: 80vw;
-    margin: 10px 10vw;
+    margin: 10px 0;
   }
 }

@@ -8,12 +8,11 @@ export const SearchBar = (props) => {
 
   let textboxValue;
 
-
   // search algorithm
   const textboxChange = event => {
     textboxValue = event.target.value
       .replace(/\s/g, "")
-      .replace(/[^a-zA-Z0-9!@#$%^&*'" ]/g, "")
+      .replace(/[^a-zA-Z0-9!@#$%^&'" ]/g, "")
       .toLowerCase();
     console.log(textboxValue);
     let searchResultsArr = [];
