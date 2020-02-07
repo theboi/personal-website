@@ -1,6 +1,6 @@
 import React from "react";
 
-import style from "./Projects.module.css";
+import style from "./ProjectList.module.css";
 import { ProjectListCard } from "./ProjectListCard";
 
 export const ProjectList = props => {

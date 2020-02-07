@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
-import { NavFooter } from '../components/PageNavigation/NavFooter';
-import { NavHeader } from '../components/PageNavigation/NavHeader';
+import { NavFooter } from '../components/Page/NavFooter';
+import { NavHeader } from '../components/Page/NavHeader';
 import { Home } from '../pages/Home';
 import { Projects } from '../pages/Projects';
 // import Experience from '../components/Portfolio/Experience/Experience';

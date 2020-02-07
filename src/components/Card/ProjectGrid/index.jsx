@@ -1,10 +1,10 @@
 import React from 'react';
-import style from '../ProjectCard.module.css';
+import style from './ProjectGrid.module.css';
 
-export const ProjectGridCard = () => {
+import { ProjectGridCard } from './ProjectGridCard';
+
+export const ProjectGrid = () => {
   return (
-    <div style={style.card}>
-      <h1 style={style.title}>Title</h1>
-    </div>
+    <ProjectGridCard />
   )
 }

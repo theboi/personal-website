@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import style from '../Projects.module.css';
+import style from '../ProjectList.module.css';
 
 export const ProjectListCard = (props) => {
   const currentContent = props.content;
