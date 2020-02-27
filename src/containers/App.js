@@ -32,9 +32,14 @@ const App = () => {
         <Switch>
           {returnOutput}
           <Route path="/home/" exact component={Home} />
-          <Redirect from="/portfolio/" exact to="/portfolio/projects" />
+          <Redirect from="/portfolio/" exact to="/portfolio/all" />
           {/* <Route path="/portfolio/timeline/" exact component={Timeline} /> */}
-          <Route path="/portfolio/projects/" exact component={Projects} />
+          <Route path="/portfolio/all/" exact component={Projects} />
+          <Route path="/portfolio/code/" exact component={Projects} />
+          <Route path="/portfolio/design/" exact component={Projects} />
+          <Route path="/portfolio/robot/" exact component={Projects} />
+          <Route path="/portfolio/others/" exact component={Projects} />
+
           {/* <Route path="/portfolio/experience/" exact component={Experience} /> */}
           {/* <Route path="/print/" exact component={Print} /> */}
           <Route path="/" component={Error404} />
