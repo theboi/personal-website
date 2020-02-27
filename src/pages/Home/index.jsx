@@ -29,9 +29,7 @@ export const Home = () => {
             about me using the links below!
           </p>
           <div className={style.links}>
-            <Link to="/portfolio/projects">Projects</Link>
-            <Link to="/portfolio/timeline">Timeline</Link>
-            <Link to="/portfolio/experience">Experience</Link>
+            <Link to="/portfolio/all">Portfolio</Link>
           </div>
         </div>
       </section>
