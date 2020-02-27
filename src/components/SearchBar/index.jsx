@@ -1,69 +1,58 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-import style from './SearchBar.module.css';
+import style from "./SearchBar.module.css";
 
-export const SearchBar = (props) => {
-  const tabs = ["Projects", "Timeline", "Experience"]
+export const SearchBar = props => {
+  window.addEventListener("resize", props.updateDevice);
 
-  let textboxValue;
-
-  // search algorithm
-  const textboxChange = event => {
-    textboxValue = event.target.value
-      .replace(/\s/g, "")
-      .replace(/[^a-zA-Z0-9!@#$%^&'" ]/g, "")
-      .toLowerCase();
-    console.log(textboxValue);
-    let searchResultsArr = [];
-    if (textboxValue !== "") {
-      props.cont.map(value => {
-        const titleLC = value.header.title.replace(/\s/g, "").toLowerCase();
-        const subtitleLC = value.header.subtitle
-          .replace(/\s/g, "")
-          .toLowerCase();
-        const tagsLC = value.header.tags.map(value => {
-          return value.replace(/\s/g, "").toLowerCase();
-        });
-
-        if (
-          RegExp(textboxValue).test(titleLC) === true ||
-          RegExp(textboxValue).test(subtitleLC) === true ||
-          RegExp(textboxValue).test(tagsLC.map(value => value)) === true
-        ) {
-          searchResultsArr.push(value);
-        }
-        return null;
-      });
-      props.updateListValue(props.searchResultsArr);
-    } else {
-      props.updateListValue(props.cont);
-    }
-    return null;
-  };
+  const tabs = ["All", "Code", "Design", "Robot", "Others"];
 
   return (
     <div className={style.tabSelector}>
-      <div className={style.flex}>
-        {tabs.map((value, index) => {
-          return (
-            <NavLink
-              to={`/portfolio/${value.toLowerCase()}`}
-              className={style.box}
-              key={index} >
-              {value}
-            </NavLink>
-          )
-        })}
+      {props.device === "desktop" ? (
+        <div className={style.flex}>
+          {tabs.map((value, index) => {
+            return (
+              <NavLink
+                to={`/portfolio/${value.toLowerCase()}`}
+                className={style.box}
+                key={index}
+              >
+                {value}
+              </NavLink>
+            );
+          })}
+        </div>
+      ) : (
+        <div className={style.dropdownBox}>
+          <select name="Genre" className={style.dropdownBar}>
+            {tabs.map((value, index) => {
+              return (
+                <option value={value} key={index}>
+                  {value}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+      )}
+      <div className={style.searchBox}>
+        <input
+          className={style.searchBar}
+          type="text"
+          placeholder="Search"
+          onChange={event => {
+            props.updateDisplayContent(event.target.value);
+          }}
+        />
+        <i className={`fas fa-filter ${style.filterIcon}`} />
+        {props.displayModeIsGrid === true ? (
+          <i onClick={props.toggleDisplayMode} className={`fas fa-th-large ${style.filterIcon}`} />
+        ) : (
+          <i onClick={props.toggleDisplayMode} className={`fas fa-th-list ${style.filterIcon}`} />
+        )}
       </div>
-      <input
-        className={style.searchBar}
-        type="text"
-        placeholder="Search"
-        onChange={event => {
-          textboxChange(event);
-        }}
-      />
     </div>
-  )
-}
+  );
+};

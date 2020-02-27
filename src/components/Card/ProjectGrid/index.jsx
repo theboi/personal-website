@@ -3,8 +3,14 @@ import style from './ProjectGrid.module.css';
 
 import { ProjectGridCard } from './ProjectGridCard';
 
-export const ProjectGrid = () => {
+export const ProjectGrid = (props) => {
   return (
-    <ProjectGridCard />
+    <div>
+      {props.content.map((content, index) => {
+        return (
+          <ProjectGridCard content={content} key={index}/>
+        )
+      })}
+    </div>
   )
 }

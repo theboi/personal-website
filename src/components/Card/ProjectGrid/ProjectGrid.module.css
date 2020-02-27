@@ -1,5 +1,7 @@
 .card {
-  border: var(--col1_1);
+  border: 0.5px var(--col1_6) solid;
+  border-radius: 5px;
+  
 }
 
 .title {

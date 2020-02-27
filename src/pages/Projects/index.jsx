@@ -1,28 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
+import { connect } from "react-redux";
 
-import { content } from "../../assets/content/content";
 import style from "./Projects.module.css";
 import { ProjectList } from "../../components/Card/ProjectList";
 import { ProjectGrid } from "../../components/Card/ProjectGrid";
 import { SearchBar } from "../../components/SearchBar";
 import { PageTemplateDiv } from "../../components/Page/PageTemplateDiv";
+import { Filter } from "../../components/Filter";
 
-export const Projects = () => {
-  const cont = content.Projects;
-
-  const [outputList, updateListValue] = useState(cont);
-
+export const ProjectsC = props => {
   return (
     <div className={style.projects}>
       <PageTemplateDiv>
-        <SearchBar
-          current="Projects"
-          updateListValue={updateListValue}
-          cont={cont}
-        />
-        {/* <ProjectList content={outputList} /> */}
-        <ProjectGrid content={outputList} />
+        <SearchBar {...props} current="Projects" />
+        <Filter />
+        {props.displayModeIsGrid ? (
+          <ProjectGrid {...props} content={props.display} />
+        ) : (
+          <ProjectList {...props} content={props.display} />
+        )}
       </PageTemplateDiv>
     </div>
   );
 };
+
+const mapStateToProps = state => {
+  return {
+    device: state.device,
+    display: state.displayContent,
+    displayModeIsGrid: state.displayModeIsGrid,
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    updateDevice: () => dispatch({ type: "UPDATE_DEVICE" }),
+    updateDisplayContent: display =>
+      dispatch({ type: "UPDATE_DISPLAY_CONTENT", display: display }),
+    toggleDisplayMode: () => dispatch({ type: "TOGGLE_DISPLAY_MODE" }),
+  };
+};
+export const Projects = connect(mapStateToProps, mapDispatchToProps)(ProjectsC);
