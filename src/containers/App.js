@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import { NavFooter } from '../components/Page/NavFooter';
 import { NavHeader } from '../components/Page/NavHeader';
@@ -12,7 +13,7 @@ import { PageTemplate } from '../pages/PageTemplate';
 // import Timeline from '../components/Portfolio/Timeline/Timeline';
 import { Error404 } from '../pages/Error404';
 
-const App = () => {
+const App = props => {
   const urlParams = new URLSearchParams(window.location.search);
   const linkParam = urlParams.get("link");
   let returnOutput;
@@ -26,6 +27,8 @@ const App = () => {
       <Redirect from="/" exact to="/home" />
     )
   }
+
+  window.addEventListener("resize", props.updateDevice);
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -42,7 +45,7 @@ const App = () => {
           <Route path="/portfolio/design/" exact component={Projects} />
           <Route path="/portfolio/robot/" exact component={Projects} />
           <Route path="/portfolio/others/" exact component={Projects} />
-          
+
           <Route path="/portfolio/projects/" component={PageTemplate} />
 
           {/* <Route path="/portfolio/experience/" exact component={Experience} /> */}
@@ -55,4 +58,9 @@ const App = () => {
   );
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  return {
+    updateDevice: () => dispatch({ type: "UPDATE_DEVICE" }),
+  }
+}
+export default connect(null, mapDispatchToProps)(App);

@@ -4,8 +4,6 @@ import { NavLink } from "react-router-dom";
 import style from "./SearchBar.module.css";
 
 export const SearchBar = props => {
-  window.addEventListener("resize", props.updateDevice);
-
   const tabs = ["All", "Code", "Design", "Robot", "Others"];
 
   return (

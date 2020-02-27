@@ -34,7 +34,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    updateDevice: () => dispatch({ type: "UPDATE_DEVICE" }),
     updateDisplayContent: display =>
       dispatch({ type: "UPDATE_DISPLAY_CONTENT", display: display }),
     toggleDisplayMode: () => dispatch({ type: "TOGGLE_DISPLAY_MODE" }),
