@@ -38,6 +38,7 @@ const mapDispatchToProps = dispatch => {
     updateDisplayContent: display =>
       dispatch({ type: "UPDATE_DISPLAY_CONTENT", display: display }),
     toggleDisplayMode: () => dispatch({ type: "TOGGLE_DISPLAY_MODE" }),
+    setCurrentDisplayPage: (current) => dispatch({ type: "SET_CURRENT_DISPLAY_PAGE", current: current}),
   };
 };
 export const Projects = connect(mapStateToProps, mapDispatchToProps)(ProjectsC);

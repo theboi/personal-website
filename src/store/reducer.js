@@ -3,7 +3,36 @@ import { content } from '../assets/content/content';
 const initalState = {
   device: window.innerWidth > 768 ? "desktop" : "mobile",
   displayContent: content.Projects,
-  displayModeIsGrid: true
+  displayModeIsGrid: true,
+  currentDisplayPage: {
+    header: {
+      display: "Thunkable November Hackathon 2019",
+      title: "Total Defence Logo Design Competiton 2019",
+      subtitle: "ChangeMakers Programme",
+      date: "29/08/19",
+      tags: ["SST", "Design"],
+      image: "https://unsplash.it/200",
+      link: "https://npgcc.org/?p=628",
+    },
+    // type: paragraph, image, link, button, quote, iframe
+    body: [
+      {
+        type: "paragraph",
+        value:
+          "The InnoScience Challenge 2019 is an intra-school competiton held by my secondary school, SST, together with 3M Singapore. In teams of three to four, teams had to come up with a product to solve a real world problem, regarding the year's theme: Safety and Transport.",
+      },
+      {
+        type: "image",
+        value: "https://unsplash.it/200",
+        meta: "3M InnoScience Logo",
+      },
+      {
+        type: "link",
+        value: "https://npgcc.org/?p=628",
+        meta: "NPGCC 2016 Website",
+      },
+    ],
+  },
 }
 
 export const reducer = (state = initalState, action) => {
@@ -50,6 +79,12 @@ export const reducer = (state = initalState, action) => {
         ...state,
         displayModeIsGrid: !state.displayModeIsGrid
       }
+    case 'SET_CURRENT_DISPLAY_PAGE':
+      console.log(action.current)
+        return {
+          ...state,
+          currentDisplayPage: action.current
+        }
     default:
       return state
   }
