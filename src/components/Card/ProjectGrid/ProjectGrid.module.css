@@ -1,9 +1,32 @@
+.gridBox {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
 .card {
-  border: 0.5px var(--col1_6) solid;
+  transition: all 250ms ease-in-out;
+  border: 0.5px solid var(--col1_6);
   border-radius: 5px;
-  
+  height: 200px;
 }
 
 .title {
-  color: red;
+  color: var(--col1_1);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.subtitle {
+  color: var(--col1_4);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.card:hover {
+  background-color: var(--col1_8);
+}
+
+.card:active {
+  background-color: var(--col1_7);
 }

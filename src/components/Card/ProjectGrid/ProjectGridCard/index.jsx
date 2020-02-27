@@ -4,7 +4,9 @@ import style from '../ProjectGrid.module.css';
 export const ProjectGridCard = (props) => {
   return (
     <div className={style.card}>
-      <h1 className={style.title}>{props.content.header.title}</h1>
+      <p className={style.title}>{props.content.header.title}</p>
+      <p className={style.subtitle}>{props.content.header.subtitle}</p>
+
     </div>
   )
 }

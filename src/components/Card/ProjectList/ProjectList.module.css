@@ -8,6 +8,7 @@ MOBILE
 }
 
 .listItem {
+  transition: all 250ms ease-in-out;
   display: flex;
   border-top: 0.5px solid var(--col1_6);
   place-items: center;
@@ -61,7 +62,6 @@ DESKTOP
 
   /* listItem */
   .listItemBox {
-    margin: 0 10vw;
     margin-bottom: 150px;
   }
 

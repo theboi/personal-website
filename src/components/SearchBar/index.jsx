@@ -46,11 +46,11 @@ export const SearchBar = props => {
             props.updateDisplayContent(event.target.value);
           }}
         />
-        <i className={`fas fa-filter ${style.filterIcon}`} />
+        <i className={`fas fa-filter ${style.icon}`} />
         {props.displayModeIsGrid === true ? (
-          <i onClick={props.toggleDisplayMode} className={`fas fa-th-large ${style.filterIcon}`} />
+          <i onClick={props.toggleDisplayMode} className={`fas fa-th-large ${style.icon}`} />
         ) : (
-          <i onClick={props.toggleDisplayMode} className={`fas fa-th-list ${style.filterIcon}`} />
+          <i onClick={props.toggleDisplayMode} className={`fas fa-th-list ${style.icon}`} />
         )}
       </div>
     </div>

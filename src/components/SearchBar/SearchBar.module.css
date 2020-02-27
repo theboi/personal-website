@@ -1,7 +1,6 @@
 /* /////////////////////////////////////////////////////////////////////////////
 MOBILE
 //////////////////////////////////////////////////////////////////////////////*/
-
 .flex {
   display: flex;
   justify-content: stretch;
@@ -38,7 +37,7 @@ MOBILE
 
 /* search */
 .searchBar {
-  margin: 10px;
+  margin: 10px 5px 10px 10px;
   padding: 10px 15px;
   border: 0.5px var(--col1_6) solid;
   border-radius: 5px;
@@ -69,18 +68,25 @@ MOBILE
   display: flex;
 }
 
-.searchBar ~ i {
-  transition: all 250ms ease-in-out;
-  z-index: 3;
+.icon {
+  transition: all 100ms ease-in-out;
   color: var(--col1_3);
   width: 30px;
-  margin-right: -5px;
   font-size: 20px;
-  margin-top: 20px;
+  line-height: 40px;
+  margin: 10px 3px;
+  border: 0.5px transparent solid;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
 }
 
-.searchBar ~ .filterIcon {
-  margin-left: 5px;
+.icon:hover {
+  background-color: var(--col1_8);
+}
+
+.icon:active {
+  background-color: var(--col1_7);
 }
 
 .dropdownBox {
@@ -98,7 +104,6 @@ MOBILE
   color: var(--col1_1);
 }
 
-
 /* /////////////////////////////////////////////////////////////////////////////
 DESKTOP
 //////////////////////////////////////////////////////////////////////////////*/
@@ -112,11 +117,11 @@ DESKTOP
   /* search */
   .searchBar {
     width: 80vw;
-    margin: 10px 0;
+    margin: 10px 10px 10px 0;
   }
 
-  .searchBar ~ .filterIcon {
-    margin-left: 20px;
+  .icon {
+    margin: 10px 3px;
   }
 
   .dropdownBar {
