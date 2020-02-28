@@ -1,0 +1,58 @@
+/* /////////////////////////////////////////////////////////////////////////////
+MOBILE
+//////////////////////////////////////////////////////////////////////////////*/
+
+.headerBox {
+  background-image: inherit 0.5;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  position: relative;
+  z-index: -2;
+  margin: -35px -3vw;
+  padding: 35px 5.5vw;
+}
+
+.headerBox::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.title {
+  color: var(--col1_9)
+
+}
+
+.subtitle {
+  color: var(--col1_6);
+}
+
+.date {
+  color: var(--col1_6);
+}
+
+.bodyBox {
+  margin-top: calc(35px * 2);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+DESKTOP
+//////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (min-width: 768px)  {
+  .headerBox {
+    margin: -70px -10vw;
+    padding: 70px 10vw;
+  }
+
+  .bodyBox {
+    margin-top: calc(70px * 2);
+  }
+}
