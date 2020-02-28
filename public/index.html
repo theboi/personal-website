@@ -6,7 +6,12 @@
     <!-- <link rel="icon" href="%PUBLIC_URL%/favicon-dark.png" id="favicon" /> -->
     <link rel="icon" id="favicon" />
     <link rel="apple-touch-icon" id="apple-touch-icon" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
 
     <script>
       if (window.matchMedia("(prefers-color-scheme:light)").matches) {
@@ -58,5 +63,29 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDYPO7Mr4BjsGqzNOf_3_K79f2odV21R24",
+        authDomain: "personal-website-4e84d.firebaseapp.com",
+        databaseURL: "https://personal-website-4e84d.firebaseio.com",
+        projectId: "personal-website-4e84d",
+        storageBucket: "personal-website-4e84d.appspot.com",
+        messagingSenderId: "287984432647",
+        appId: "1:287984432647:web:7c07b9ff7a173f61901ca2",
+        measurementId: "G-BC92KCJQFT",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
   </body>
 </html>
