@@ -6,6 +6,7 @@ MOBILE
   gap: 4vw;
   place-items: center;
   margin: 70px 0;
+  min-height: calc(100vh - 65px - 250px - 70px*2);
 }
 
 .icon {
