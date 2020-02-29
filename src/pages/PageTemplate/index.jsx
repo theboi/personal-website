@@ -8,15 +8,15 @@ import { PageTemplateDiv } from "../../components/Page/PageTemplateDiv";
 const PageTemplateC = props => {
   let display;
   const pathName = props.location.pathname.replace("/portfolio/projects/", "");
-  content.Projects.map((value) => {
+  content.Projects.map(value => {
     let linkToCheck = value.header.title
       .replace(/\s/g, "-")
       .replace(/[^a-zA-Z0-9-]/g, "")
       .toLowerCase();
     if (linkToCheck === pathName) {
-      display = value
+      display = value;
     }
-    console.log(value)
+    console.log(value);
   });
 
   let pageElement;
@@ -33,27 +33,30 @@ const PageTemplateC = props => {
       </div>
       <div className={style.bodyBox}>
         {display.body.map((value, index) => {
-          if (value.type === "paragraph") {
-            pageElement = <p className={style.paragraphP}>{value.value}</p>;
-          } else if (value.type === "image") {
-            pageElement = (
-              <figure className={style.imageFig}>
-                <img
-                  className={style.imageImg}
-                  src={value.value}
-                  alt={value.meta}
-                />
-                <figcaption className={style.imageCaption}>
-                  {value.meta}
-                </figcaption>
-              </figure>
-            );
-          } else {
-            pageElement = (
-              <p>
-                ERROR: Invalid element name. Please inform ryan.theodore.2006@gmail.com.
-              </p>
-            );
+          switch (value.type) {
+            case "paragraph":
+              pageElement = <p className={style.paragraphP}>{value.value}</p>;
+              break;
+            case "image":
+              pageElement = (
+                <figure className={style.imageFig}>
+                  <img
+                    className={style.imageImg}
+                    src={value.value}
+                    alt={value.meta}
+                  />
+                  <figcaption className={style.imageCaption}>
+                    {value.meta}
+                  </figcaption>
+                </figure>
+              );
+              break;
+              case "link":
+                pageElement = <a href={value.value}>{value.meta}</a>
+                break;
+            default:
+              pageElement = <p>ERROR: Invalid element name.</p>;
+              break;
           }
           return <div className={style.bodyElement}>{pageElement}</div>;
         })}

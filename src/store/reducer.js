@@ -3,7 +3,7 @@ import { content } from '../assets/content/content';
 const initalState = {
   device: window.innerWidth > 768 ? "desktop" : "mobile",
   displayContent: content.Projects,
-  displayModeIsGrid: true,
+  displayModeIsGrid: false,
   currentTab: 'all',
   searchBarInput: '',
   dropdownTabIsOpen: false
@@ -22,7 +22,7 @@ export const reducer = (state = initalState, action) => {
     
     console.log(elimArray)
     elimArray.map((value, index) => {
-      if (!value.header.genre.includes(state.currentTab)) {
+      if (state.currentTab !== 'all' && !value.header.genre.includes(state.currentTab)) {
         elimArray.splice(index, 1)
         console.log("splice1")
         return null;

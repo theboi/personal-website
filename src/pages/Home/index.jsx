@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import style from "./Home.module.css";
+import style from "./HomeOld.module.css";
 import { HomeLine } from "../../components/HomeLine";
 
 export const Home = () => {
@@ -33,6 +33,11 @@ export const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* <section className={style.}>
+
+      </section> */}
     </div>
   );
 };
+

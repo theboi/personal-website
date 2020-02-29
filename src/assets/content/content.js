@@ -28,16 +28,16 @@ export const content = {
                 date: "83/123/42",
                 tags: [],
                 image: "https://unsplash.it/1000/1000",
-                genre: ["all", "design"]
+                genre: ["code", "design"]
             },
             // type: paragraph, image, link, button, quote, iframe
             body: [
-                { type: "paragraph", value: "The InnoScience Challenge 2019 is an intra-school competiton held by my secondary school, SST, together with 3M Singapore. In teams of three to four, teams had to come up with a product to solve a real world problem, regarding the year's theme: Safety and Transport." },
+                { type: "paragraph", value: "This website is the website you are viewing right now." },
                 { type: "image", value: "https://unsplash.it/200", meta: "3M InnoScience Logo" },
-                { type: "link", value: "https://npgcc.org/?p=628", meta: "NPGCC 2016 Website" },
+                { type: "link", value: "https://ryanthe.com", meta: "My Website" },
             ]
         },
-        
+
     ],
 
 
