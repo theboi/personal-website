@@ -30,19 +30,20 @@ const mapStateToProps = state => {
     displayContent: state.displayContent,
     displayModeIsGrid: state.displayModeIsGrid,
     currentTab: state.currentTab,
-    searchBarInput: state.searchBarInput
+    searchBarInput: state.searchBarInput,
+    dropdownTabIsOpen: state.dropdownTabIsOpen,
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    updateDisplayContent: () =>
-      dispatch({ type: "UPDATE_DISPLAY_CONTENT" }),
+    updateDisplayContent: () => dispatch({ type: "UPDATE_DISPLAY_CONTENT" }),
     toggleDisplayMode: () => dispatch({ type: "TOGGLE_DISPLAY_MODE" }),
-    setCurrentTab: (current) =>
-      dispatch({ type: "SET_CURRENT_TAB", current: current}),
-      setSearchBarInput: input =>
+    setCurrentTab: current =>
+      dispatch({ type: "SET_CURRENT_TAB", current: current }),
+    setSearchBarInput: input =>
       dispatch({ type: "SET_SEARCH_BAR_INPUT", input: input }),
+    toggleDropdownTab: () => dispatch({ type: "TOGGLE_DROPDOWN_TAB" }),
   };
 };
 export const Projects = connect(mapStateToProps, mapDispatchToProps)(ProjectsC);

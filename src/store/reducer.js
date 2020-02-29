@@ -5,7 +5,8 @@ const initalState = {
   displayContent: content.Projects,
   displayModeIsGrid: true,
   currentTab: 'all',
-  searchBarInput: ''
+  searchBarInput: '',
+  dropdownTabIsOpen: false
 }
 
 export const reducer = (state = initalState, action) => {
@@ -72,6 +73,13 @@ export const reducer = (state = initalState, action) => {
         currentTab: action.current,
         displayContent: searchAlgo(),
       }
+      case 'TOGGLE_DROPDOWN_TAB':
+        console.log("da")
+
+        return {
+          ...state,
+          dropdownTabIsOpen: !state.dropdownTabIsOpen
+        }
     case 'SET_SEARCH_BAR_INPUT':
       return {
         ...state,

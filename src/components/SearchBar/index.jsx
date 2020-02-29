@@ -24,12 +24,15 @@ export const SearchBar = props => {
         </div>
       ) : (
         <div className={style.dropdownBox}>
-          <div className={style.dropdownBar}>{props.currentTab}</div>
-          <div className={style.dropdownTab}>
+          <div className={style.dropdownBar} onClick={() => props.toggleDropdownTab()}>{props.currentTab}</div>
+          <div className={`${style.dropdownTab} ${props.dropdownTabIsOpen ? style.open : style.close}`}>
             {tabs.map((value, index) => {
               return (
                 <NavLink
-                onClick={() => props.setCurrentTab(value.toLowerCase())}
+                onClick={() => {
+                  props.setCurrentTab(value.toLowerCase())
+                  props.toggleDropdownTab()
+                }}
                 to={`/portfolio/${value.toLowerCase()}`}
                 className={style.dropdownElement}
                 key={index}

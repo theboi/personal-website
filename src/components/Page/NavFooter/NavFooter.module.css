@@ -6,7 +6,7 @@
 }
 
 .navfooter::after {
-  content: 'Ryan Theodore The | 2019 | v1.5';
+  content: 'Ryan Theodore The | 2019 | v1.6';
   font-weight: 600; 
   background-color: var(--col1_1);
   color: var(--col1_3);

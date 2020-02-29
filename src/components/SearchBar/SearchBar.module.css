@@ -102,6 +102,7 @@ MOBILE
   border-radius: 5px;
   font-size: 16px;
   color: var(--col1_1);
+  text-transform: capitalize;
 }
 
 .dropdownTab {
@@ -112,6 +113,16 @@ MOBILE
   border-radius: 5px;
   font-size: 16px;
   color: var(--col1_1);
+}
+
+.dropdownTab.open {
+  height: 197px;
+  opacity: 1;
+}
+
+.dropdownTab.close {
+  height: 10px;
+  opacity: 0;
 }
 
 .dropdownElement {
