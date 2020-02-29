@@ -125,23 +125,26 @@ MOBILE
   opacity: 0;
 }
 
-.dropdownElement {
+.dropdownTab.open .dropdownElement {
   transition: all 200ms ease-in-out;
   padding: 10px 15px;
   display: block;
   color: var(--col1_3);
 }
 
-.dropdownElement + .dropdownElement { /* excludes first element*/
+.dropdownTab.open .dropdownElement + .dropdownElement { /* excludes first element*/
   border-top: 0.5px var(--col1_6) solid;
 }
 
-.dropdownElement:global(.active) {
+.dropdownTab.open .dropdownElement:global(.active) {
   color: var(--col2_1);
   background-color: var(--col1_7);
   z-index: 0;
 }
 
+.dropdownTab.close .dropdownElement {
+  display: none;
+}
 /* /////////////////////////////////////////////////////////////////////////////
 DESKTOP
 //////////////////////////////////////////////////////////////////////////////*/
