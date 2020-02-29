@@ -6,9 +6,9 @@ import { ProjectGridCard } from './ProjectGridCard';
 export const ProjectGrid = (props) => {
   return (
     <div className={style.gridBox}>
-      {props.content.map((content, index) => {
+      {props.content.map((value, index) => {
         return (
-          <ProjectGridCard content={content} key={index}/>
+          <ProjectGridCard content={value} key={index}/>
         )
       })}
     </div>

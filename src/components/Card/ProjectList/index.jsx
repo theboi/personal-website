@@ -9,11 +9,11 @@ export const ProjectList = props => {
   return (
     <div>
       <ul className={style.listItemBox}>
-        {cont.map((content, index) => {
+        {cont.map((value, index) => {
           return (
             <ProjectListCard
               {...props}
-              content={content}
+              content={value}
               key={index}
               index={index}
             />

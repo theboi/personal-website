@@ -17,7 +17,6 @@ export const ProjectListCard = props => {
           <Link
             to={"/portfolio/projects/" + currentLink}
             className={style.listItem}
-            onClick={() => props.setCurrentDisplayPage(props.content)}
           >
             <img
               className={style.listItemImg}
@@ -40,7 +39,6 @@ export const ProjectListCard = props => {
           <Link
             to={"/portfolio/projects/" + currentLink}
             className={style.listItem}
-            onClick={() => props.setCurrentDisplayPage(props.content)}
           >
             <img
               className={style.listItemImg}

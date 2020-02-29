@@ -5,7 +5,6 @@ import style from "./SearchBar.module.css";
 
 export const SearchBar = props => {
   const tabs = ["All", "Code", "Design", "Robot", "Others"];
-
   return (
     <div className={style.tabSelector}>
       {props.device === "desktop" ? (
@@ -13,6 +12,7 @@ export const SearchBar = props => {
           {tabs.map((value, index) => {
             return (
               <NavLink
+                onClick={() => props.setCurrentTab(value.toLowerCase())}
                 to={`/portfolio/${value.toLowerCase()}`}
                 className={style.box}
                 key={index}
@@ -24,15 +24,21 @@ export const SearchBar = props => {
         </div>
       ) : (
         <div className={style.dropdownBox}>
-          <select name="Genre" className={style.dropdownBar}>
+          <div className={style.dropdownBar}>{props.currentTab}</div>
+          <div className={style.dropdownTab}>
             {tabs.map((value, index) => {
               return (
-                <option value={value} key={index}>
-                  {value}
-                </option>
-              );
+                <NavLink
+                onClick={() => props.setCurrentTab(value.toLowerCase())}
+                to={`/portfolio/${value.toLowerCase()}`}
+                className={style.dropdownElement}
+                key={index}
+              >
+                {value}
+              </NavLink>
+              )
             })}
-          </select>
+          </div>
         </div>
       )}
       <div className={style.searchBox}>
@@ -41,14 +47,21 @@ export const SearchBar = props => {
           type="text"
           placeholder="Search"
           onChange={event => {
-            props.updateDisplayContent(event.target.value);
+            props.setSearchBarInput(event.target.value)
+            props.updateDisplayContent();
           }}
         />
         <i className={`fas fa-filter ${style.icon}`} />
         {props.displayModeIsGrid === true ? (
-          <i onClick={props.toggleDisplayMode} className={`fas fa-th-large ${style.icon}`} />
+          <i
+            onClick={props.toggleDisplayMode}
+            className={`fas fa-th-large ${style.icon}`}
+          />
         ) : (
-          <i onClick={props.toggleDisplayMode} className={`fas fa-th-list ${style.icon}`} />
+          <i
+            onClick={props.toggleDisplayMode}
+            className={`fas fa-th-list ${style.icon}`}
+          />
         )}
       </div>
     </div>

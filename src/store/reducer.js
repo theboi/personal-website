@@ -4,38 +4,52 @@ const initalState = {
   device: window.innerWidth > 768 ? "desktop" : "mobile",
   displayContent: content.Projects,
   displayModeIsGrid: true,
-  currentDisplayPage: {
-    header: {
-      display: "Thunkable November Hackathon 2019",
-      title: "Total Defence Logo Design Competiton 2019",
-      subtitle: "ChangeMakers Programme",
-      date: "29/08/19",
-      tags: ["SST", "Design"],
-      image: "https://unsplash.it/200",
-      link: "https://npgcc.org/?p=628",
-    },
-    // type: paragraph, image, link, button, quote, iframe
-    body: [
-      {
-        type: "paragraph",
-        value:
-          "The InnoScience Challenge 2019 is an intra-school competiton held by my secondary school, SST, together with 3M Singapore. In teams of three to four, teams had to come up with a product to solve a real world problem, regarding the year's theme: Safety and Transport.",
-      },
-      {
-        type: "image",
-        value: "https://unsplash.it/200",
-        meta: "3M InnoScience Logo",
-      },
-      {
-        type: "link",
-        value: "https://npgcc.org/?p=628",
-        meta: "NPGCC 2016 Website",
-      },
-    ],
-  },
+  currentTab: 'all',
+  searchBarInput: ''
 }
 
 export const reducer = (state = initalState, action) => {
+  const searchAlgo = () => {
+    if (action.type === 'SET_CURRENT_TAB') {
+      state.currentTab = action.current
+    }
+    const textboxValue = state.searchBarInput
+      .replace(/\s/g, "")
+      .replace(/[^a-zA-Z0-9!@#$%^&'" ]/g, "")
+      .toLowerCase();
+    let elimArray = [...content.Projects];
+    
+    console.log(elimArray)
+    elimArray.map((value, index) => {
+      if (!value.header.genre.includes(state.currentTab)) {
+        elimArray.splice(index, 1)
+        console.log("splice1")
+        return null;
+      }
+      if (textboxValue !== "") {
+        const titleLC = value.header.title.replace(/\s/g, "").toLowerCase();
+        const subtitleLC = value.header.subtitle
+          .replace(/\s/g, "")
+          .toLowerCase();
+        const tagsLC = value.header.tags.map(value => {
+          return value.replace(/\s/g, "").toLowerCase();
+        });
+
+        if (
+          !(RegExp(textboxValue).test(titleLC) === true ||
+          RegExp(textboxValue).test(subtitleLC) === true ||
+          RegExp(textboxValue).test(tagsLC.map(value => value)) === true)) {
+          elimArray.splice(index, 1)
+          console.log(index)
+
+          return null;
+        }
+      }
+
+    })
+    return elimArray;
+  }
+
   switch (action.type) {
     case 'UPDATE_DEVICE':
       return {
@@ -43,48 +57,26 @@ export const reducer = (state = initalState, action) => {
         device: window.innerWidth > 768 ? "desktop" : "mobile"
       }
     case 'UPDATE_DISPLAY_CONTENT':
-      const textboxValue = action.display
-        .replace(/\s/g, "")
-        .replace(/[^a-zA-Z0-9!@#$%^&'" ]/g, "")
-        .toLowerCase();
-      let searchResults = [];
-      if (textboxValue !== "") {
-        content.Projects.map(value => {
-          const titleLC = value.header.title.replace(/\s/g, "").toLowerCase();
-          const subtitleLC = value.header.subtitle
-            .replace(/\s/g, "")
-            .toLowerCase();
-          const tagsLC = value.header.tags.map(value => {
-            return value.replace(/\s/g, "").toLowerCase();
-          });
-
-          if (
-            RegExp(textboxValue).test(titleLC) === true ||
-            RegExp(textboxValue).test(subtitleLC) === true ||
-            RegExp(textboxValue).test(tagsLC.map(value => value)) === true
-          ) {
-            searchResults.push(value);
-          }
-          return null;
-        });
-      } else {
-        searchResults = content.Projects
-      }
       return {
         ...state,
-        displayContent: searchResults
+        displayContent: searchAlgo()
       }
     case 'TOGGLE_DISPLAY_MODE':
       return {
         ...state,
         displayModeIsGrid: !state.displayModeIsGrid
       }
-    case 'SET_CURRENT_DISPLAY_PAGE':
-      console.log(action.current)
-        return {
-          ...state,
-          currentDisplayPage: action.current
-        }
+    case 'SET_CURRENT_TAB':
+      return {
+        ...state,
+        currentTab: action.current,
+        displayContent: searchAlgo(),
+      }
+    case 'SET_SEARCH_BAR_INPUT':
+      return {
+        ...state,
+        searchBarInput: action.input,
+      }
     default:
       return state
   }

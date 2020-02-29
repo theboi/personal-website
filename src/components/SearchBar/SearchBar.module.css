@@ -95,13 +95,40 @@ MOBILE
 
 .dropdownBar {
   transition: all 250ms ease-in-out;
+  border: 0.5px var(--col1_6) solid;
   width: 90vw;
   margin: 0 10px;
   padding: 10px 15px;
-  border: 0.5px var(--col1_6) solid;
   border-radius: 5px;
   font-size: 16px;
   color: var(--col1_1);
+}
+
+.dropdownTab {
+  transition: all 250ms ease-in-out;
+  border: 0.5px var(--col1_6) solid;
+  width: 90vw;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: var(--col1_1);
+}
+
+.dropdownElement {
+  transition: all 200ms ease-in-out;
+  padding: 10px 15px;
+  display: block;
+  color: var(--col1_3);
+}
+
+.dropdownElement + .dropdownElement { /* excludes first element*/
+  border-top: 0.5px var(--col1_6) solid;
+}
+
+.dropdownElement:global(.active) {
+  color: var(--col2_1);
+  background-color: var(--col1_7);
+  z-index: 0;
 }
 
 /* /////////////////////////////////////////////////////////////////////////////

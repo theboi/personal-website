@@ -3,7 +3,6 @@ MOBILE
 //////////////////////////////////////////////////////////////////////////////*/
 
 .headerBox {
-  background-image: inherit 0.5;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -21,8 +20,14 @@ MOBILE
   left: 0;
   right: 0;
   display: block;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: -1;
+}
+
+.genre {
+  color: var(--col1_6);
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .title {
@@ -35,7 +40,7 @@ MOBILE
 }
 
 .date {
-  color: var(--col1_6);
+  color: var(--col1_5);
 }
 
 .bodyBox {

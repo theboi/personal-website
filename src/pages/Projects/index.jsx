@@ -15,9 +15,9 @@ export const ProjectsC = props => {
         <SearchBar {...props} current="Projects" />
         <Filter />
         {props.displayModeIsGrid ? (
-          <ProjectGrid {...props} content={props.display} />
+          <ProjectGrid {...props} content={props.displayContent} />
         ) : (
-          <ProjectList {...props} content={props.display} />
+          <ProjectList {...props} content={props.displayContent} />
         )}
       </PageTemplateDiv>
     </div>
@@ -27,17 +27,22 @@ export const ProjectsC = props => {
 const mapStateToProps = state => {
   return {
     device: state.device,
-    display: state.displayContent,
+    displayContent: state.displayContent,
     displayModeIsGrid: state.displayModeIsGrid,
+    currentTab: state.currentTab,
+    searchBarInput: state.searchBarInput
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    updateDisplayContent: display =>
-      dispatch({ type: "UPDATE_DISPLAY_CONTENT", display: display }),
+    updateDisplayContent: () =>
+      dispatch({ type: "UPDATE_DISPLAY_CONTENT" }),
     toggleDisplayMode: () => dispatch({ type: "TOGGLE_DISPLAY_MODE" }),
-    setCurrentDisplayPage: (current) => dispatch({ type: "SET_CURRENT_DISPLAY_PAGE", current: current}),
+    setCurrentTab: (current) =>
+      dispatch({ type: "SET_CURRENT_TAB", current: current}),
+      setSearchBarInput: input =>
+      dispatch({ type: "SET_SEARCH_BAR_INPUT", input: input }),
   };
 };
 export const Projects = connect(mapStateToProps, mapDispatchToProps)(ProjectsC);
