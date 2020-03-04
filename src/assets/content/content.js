@@ -37,6 +37,40 @@ export const content = {
                 { type: "link", value: "https://ryanthe.com", meta: "My Website" },
             ]
         },
+        {
+            header: {
+                display: "Personal Website (Old)",
+                title: "My Personal Portfolio Website (Old)",
+                subtitle: "Personal Projects",
+                date: "83/123/42",
+                tags: [],
+                image: "https://unsplash.it/1000/1000",
+                genre: ["code", "design"]
+            },
+            // type: paragraph, image, link, button, quote, iframe
+            body: [
+                { type: "paragraph", value: "This website is the website you are viewing right now." },
+                { type: "image", value: "https://unsplash.it/200", meta: "3M InnoScience Logo" },
+                { type: "link", value: "https://ryanthe.com", meta: "My Website" },
+            ]
+        },
+        {
+            header: {
+                display: "RoboRAVE Kaga 2020",
+                title: "RoboRAVE Kaga 2020",
+                subtitle: "Robotics CCA",
+                date: "83/123/42",
+                tags: [],
+                image: "https://unsplash.it/1000/1000",
+                genre: ["code", "robot"]
+            },
+            // type: paragraph, image, link, button, quote, iframe
+            body: [
+                { type: "paragraph", value: "This website is the website you are viewing right now." },
+                { type: "image", value: "https://unsplash.it/200", meta: "3M InnoScience Logo" },
+                { type: "link", value: "https://ryanthe.com", meta: "My Website" },
+            ]
+        },
 
     ],
 

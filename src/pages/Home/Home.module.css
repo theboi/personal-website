@@ -6,10 +6,9 @@ MOBILE
 }
 
 .section1 {
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
+  height: 300vh;
   position: relative;
+  overflow-x: hidden;
 }
 
 .text {
@@ -18,9 +17,8 @@ MOBILE
   font-weight: 900;
   font-style: italic;
   width: max-content;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
+  margin-left: 10px;
 }
 
 .text3 {
@@ -45,6 +43,35 @@ MOBILE
   -webkit-text-stroke: 1px var(--col2_1);
 }
 
+/* intro section */
+
+.introS {
+  height: 350px;
+  position: absolute;
+  bottom: 0;
+  color: var(--col2_1);
+  padding: 50px 20px;
+}
+
+.links a {
+  transition: all 250ms ease-in-out;
+  padding: 15px;
+  margin: 15px;
+  margin-left: 0;
+  background-color: var(--col1_1);
+  border-radius: 5px;
+  display: inline-block;
+  color: var(--col1_9);
+}
+
+.links a:hover {
+  background-color: var(--col2_2);
+}
+
+.name {
+  color: var(--col2_3);
+  font-weight: 700;
+}
 /* /////////////////////////////////////////////////////////////////////////////
 DESKTOP
 //////////////////////////////////////////////////////////////////////////////*/

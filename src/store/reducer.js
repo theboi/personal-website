@@ -2,6 +2,8 @@ import { content } from '../assets/content/content';
 
 const initalState = {
   device: window.innerWidth > 768 ? "desktop" : "mobile",
+  deviceWidth: window.innerWidth,
+  deviceHeight: window.innerHeight,
   displayContent: content.Projects,
   displayModeIsGrid: false,
   currentTab: 'all',
@@ -55,7 +57,9 @@ export const reducer = (state = initalState, action) => {
     case 'UPDATE_DEVICE':
       return {
         ...state,
-        device: window.innerWidth > 768 ? "desktop" : "mobile"
+        device: window.innerWidth > 768 ? "desktop" : "mobile",
+        deviceWidth: window.innerWidth,
+        deviceHeight: window.innerHeight
       }
     case 'UPDATE_DISPLAY_CONTENT':
       return {
