@@ -32,7 +32,7 @@ export const content = {
             },
             // type: paragraph, image, link, button, quote, iframe
             body: [
-                { type: "paragraph", value: "This website is the website you are viewing right now." },
+                { type: "paragraph", value: "My personal website" },
                 { type: "image", value: "https://unsplash.it/200", meta: "3M InnoScience Logo" },
                 { type: "link", value: "https://ryanthe.com", meta: "My Website" },
             ]
@@ -66,7 +66,7 @@ export const content = {
             },
             // type: paragraph, image, link, button, quote, iframe
             body: [
-                { type: "paragraph", value: "This website is the website you are viewing right now." },
+                { type: "paragraph", value: "RoboRAVE Kaga 2019 is a robotics competition held in Kaga, Japan." },
                 { type: "image", value: "https://unsplash.it/200", meta: "3M InnoScience Logo" },
                 { type: "link", value: "https://ryanthe.com", meta: "My Website" },
             ]

@@ -8,12 +8,7 @@ import style from "./Home.module.css";
 import { HomeLine } from "../../components/HomeLine";
 
 const HomeC = props => {
-  const landingText = [false, false, false, true, true, true, true];
-  console.log(props.deviceHeight);
-  for (let i = 0; i < (props.deviceHeight - 65) / 50 - 7; i++) {
-    landingText.push(false);
-  }
-
+  const landingText = ["student. ", "hobbyist. ", "developer. ", "designer. "];
   return (
     <div className={style.home}>
       <Controller>
@@ -26,48 +21,34 @@ const HomeC = props => {
         >
           {progress => (
             <div className={style.section1}>
-              <Timeline totalProgress={progress/2} paused>
-                <Tween from={{ x: "0%" }} to={{ x: "-20%", opacity: 0 }}>
-                  {landingText.map((value, index) => {
-                    let returnString;
-                    switch ((index + 1) % 4) {
-                      case 3: //1
-                        returnString = "designer";
-                        break;
-                      case 2: //2
-                        returnString = "developer";
-                        break;
-                      case 1: //3
-                        returnString = "hobbyist";
-                        break;
-                      case 0: //4
-                        returnString = "student";
-                        break;
-                      default:
-                        returnString = "default";
-                    }
-                    return (
-                      <p
-                        className={`${
-                          style[`text${((index + 1) % 4).toString()}`]
-                        } ${style.text}`}
-                        style={{ top: `${index * 50}px` }}
-                        key={index}
-                      >
-                        <span className={value ? style.highlight : ""}>
-                          {`${returnString}`}{" "}
-                        </span>
-                        {`${returnString} ${returnString} ${returnString} ${returnString} ${returnString} ${returnString} `}
-                      </p>
-                    );
-                  })}
-                </Tween>
+              <div className={style.landingTextBox}>
+                <Timeline
+                  delay={1}
+                  target={landingText.map((value, index) => (
+                    <h1 key={index} className={style.landingText}>{value}</h1>
+                  ))}
+                >
+                  <Tween
+                    duration={1.5}
+                    from={{ opacity: 0, rotationX: 100 }}
+                    to={{ opacity: 1, rotationX: 0 }}
+                    delay={-0.7}
+                  />
+                  <Tween
+                    progress={progress-0.5}
+                    from={{ opacity: 1 }}
+                    to={{ opacity: 0 }} 
+                  />
+                </Timeline>
+              </div>
+              <Timeline totalProgress={progress / 2} paused>
                 <Timeline
                   target={
                     <section className={style.introS}>
-                        <h1>Hi there!</h1>
+                      <h1>Hi there!</h1>
                       <p>
-                        I'm <span className={style.name}>Ryan Theodore The</span>, a
+                        I'm{" "}
+                        <span className={style.name}>Ryan Theodore The</span>, a
                         student at the School of Science and Technology,
                         Singapore. <br />
                         <br />I am passionate about coding, robotics and design.
@@ -79,7 +60,12 @@ const HomeC = props => {
                     </section>
                   }
                 >
-                  <Tween delay={-10} duration={0.3} from={{ opacity: 0, top: 0}} to={{ opacity: 1 }} />
+                  <Tween
+                    delay={-10}
+                    duration={0.3}
+                    from={{ opacity: 0, top: 0 }}
+                    to={{ opacity: 1 }}
+                  />
                   <Tween to={{ x: "10%" }} />
                 </Timeline>
               </Timeline>
@@ -89,17 +75,6 @@ const HomeC = props => {
       </Controller>
     </div>
   );
-  // return (
-  //   <Controller>
-  //     <Scene indicators={true} duration={1000} pin>
-  //       <Timeline>
-  //       <Tween from={{ x: "100px" }}>
-  //         <div>This element gets tweened</div>
-  //       </Tween>
-  //       </Timeline>
-  //     </Scene>
-  //   </Controller>
-  // );
 };
 
 const mapStateToProps = state => {

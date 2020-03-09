@@ -11,32 +11,6 @@ MOBILE
   overflow-x: hidden;
 }
 
-.text {
-  font-size: 50px;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-style: italic;
-  width: max-content;
-  text-align: center;
-  margin-left: 10px;
-}
-
-.text3 {
-  top: 0;
-}
-
-.text2 {
-  top: 50px;
-}
-
-.text1 {
-  top: 100px;
-}
-
-.text0 {
-  top: 150px;
-}
-
 .highlight {
   color: var(--col2_1);
   -webkit-text-fill-color: transparent;
@@ -71,6 +45,18 @@ MOBILE
 .name {
   color: var(--col2_3);
   font-weight: 700;
+}
+
+.landingTextBox {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20vh;
+  text-align: center;
+}
+
+.landingText {
+  font-family: 'Oxanium', cursive;
 }
 /* /////////////////////////////////////////////////////////////////////////////
 DESKTOP
