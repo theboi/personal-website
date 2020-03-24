@@ -29,6 +29,7 @@ const App = props => {
   }
 
   window.addEventListener("resize", props.updateDevice);
+  // document.addEventListener('scroll', props.updateScrollPosition);
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -61,6 +62,7 @@ const App = props => {
 const mapDispatchToProps = dispatch => {
   return {
     updateDevice: () => dispatch({ type: "UPDATE_DEVICE" }),
+    updateScrollPosition: () => dispatch({type: 'UPDATE_SCROLL_POSITION'})
   }
 }
 export default connect(null, mapDispatchToProps)(App);

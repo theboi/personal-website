@@ -8,7 +8,8 @@ const initalState = {
   displayModeIsGrid: false,
   currentTab: 'all',
   searchBarInput: '',
-  dropdownTabIsOpen: false
+  dropdownTabIsOpen: false,
+  scrollPosition: 0
 }
 
 export const reducer = (state = initalState, action) => {
@@ -88,6 +89,11 @@ export const reducer = (state = initalState, action) => {
       return {
         ...state,
         searchBarInput: action.input,
+      }
+    case 'UPDATE_SCROLL_POSITION':
+      return {
+        ...state,
+        scrollPosition: document.documentElement.scrollTop || document.body.scrollTop
       }
     default:
       return state

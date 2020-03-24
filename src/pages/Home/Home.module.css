@@ -5,58 +5,33 @@ MOBILE
   min-height: calc(100vh - 65px - 250px);
 }
 
-.section1 {
-  height: 300vh;
-  position: relative;
-  overflow-x: hidden;
-}
-
-.highlight {
-  color: var(--col2_1);
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px var(--col2_1);
-}
-
-/* intro section */
-
-.introS {
-  height: 350px;
-  position: absolute;
-  bottom: 0;
-  color: var(--col2_1);
-  padding: 50px 20px;
-}
-
-.links a {
-  transition: all 250ms ease-in-out;
-  padding: 15px;
-  margin: 15px;
-  margin-left: 0;
-  background-color: var(--col1_1);
-  border-radius: 5px;
-  display: inline-block;
-  color: var(--col1_9);
-}
-
-.links a:hover {
-  background-color: var(--col2_2);
-}
-
-.name {
-  color: var(--col2_3);
-  font-weight: 700;
-}
-
-.landingTextBox {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 20vh;
-  text-align: center;
-}
-
 .landingText {
   font-family: 'Oxanium', cursive;
+  font-size: 30px;
+  text-align: center;
+  animation-name: landingText;
+  animation-duration: 1s;
+}
+
+.landingSection {
+  margin-top: 20vh;
+  height: 80vh;
+}
+
+@keyframes landingText {
+  from {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+.introSection {
+  height: 100vh;
+  background-color: black;
 }
 /* /////////////////////////////////////////////////////////////////////////////
 DESKTOP
