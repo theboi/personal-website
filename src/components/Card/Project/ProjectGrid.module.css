@@ -2,23 +2,15 @@
 MOBILE
 //////////////////////////////////////////////////////////////////////////////*/
 
-/* listItem */
-.listItemBox {
-  margin-bottom: 150px;
-}
-
+/* list */
 .listItem {
   transition: all 250ms ease-in-out;
-  display: flex;
-  border-top: 0.5px solid var(--col1_6);
-  place-items: center;
-  color: var(--col1_1);
-  background-color: var(--col1_9);
-  height: 85px;
-  padding: 7px;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: right;
+  border: 0.5px solid var(--col1_6);
+  border-radius: 5px;
+  height: 200px;
+  display: block;
+  overflow: hidden;
+  position: relative;
 }
 
 .listItem:hover {
@@ -30,28 +22,33 @@ MOBILE
 }
 
 .listItemVertical {
-  display: flex;
-  flex-direction: column;
-  margin-left: 15px;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--col1_9);
+  width: 100%;
+  padding: 10px 10px;
+}
+
+.listItemTitle {
+  color: var(--col1_1);
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .listItemSubtitle {
   color: var(--col1_4);
-}
-
-.listItem > * {
-  max-width: calc(100% - 130px);
-  margin: inherit 20px;
   font-weight: 500;
   font-size: 14px;
-  overflow: hidden;
 }
 
 .listItemImg {
-  border-radius: 7px;
-  margin: 0;
-  height: 100%;
-  width: 95px;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.listItemDate {
+  
 }
 
 /* /////////////////////////////////////////////////////////////////////////////
@@ -60,20 +57,19 @@ DESKTOP
 
 @media screen and (min-width: 768px) {
 
-  /* listItem */
+  /* list */
   .listItemBox {
     margin-bottom: 150px;
   }
 
   .listItemVertical {
-    margin-left: 1.6vw;
-  }
-
-  .listItem > * {
-    font-size: 14px;
+    padding-left: 1.6vw;
   }
 
   .listItemDate {
     margin: 0 10px 0 auto;
   }
+
+  /* grid */
+
 }

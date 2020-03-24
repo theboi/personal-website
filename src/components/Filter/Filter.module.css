@@ -12,6 +12,8 @@ MOBILE
   color: var(--col1_1);
   transition: all 250ms ease-in-out;
   position: relative;
+
+  margin-bottom: 30px;
 }
 
 /* /////////////////////////////////////////////////////////////////////////////
@@ -23,5 +25,7 @@ DESKTOP
   .pageOpen {
     width: 80vw;
     margin: 10px 0;
+
+    margin-bottom: 30px;
   }
 }

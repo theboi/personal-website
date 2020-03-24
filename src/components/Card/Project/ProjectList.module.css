@@ -1,16 +1,14 @@
 /* /////////////////////////////////////////////////////////////////////////////
 MOBILE
 //////////////////////////////////////////////////////////////////////////////*/
-.projects {
-  min-height: calc(100vh - 65px - 250px);
-}
 
-/* listItem */
+/* list */
 .listItemBox {
   margin-bottom: 150px;
 }
 
 .listItem {
+  transition: all 250ms ease-in-out;
   display: flex;
   border-top: 0.5px solid var(--col1_6);
   place-items: center;
@@ -56,20 +54,48 @@ MOBILE
   width: 95px;
 }
 
-/* for display grid of list */
-.listWrapper {
+/* grid */
+.gridBox {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
+
+.card {
+  transition: all 250ms ease-in-out;
+  border: 0.5px solid var(--col1_6);
+  border-radius: 5px;
+  height: 200px;
+}
+
+.title {
+  color: var(--col1_1);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.subtitle {
+  color: var(--col1_4);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.card:hover {
+  background-color: var(--col1_8);
+}
+
+.card:active {
+  background-color: var(--col1_7);
+}
+
 /* /////////////////////////////////////////////////////////////////////////////
 DESKTOP
 //////////////////////////////////////////////////////////////////////////////*/
 
 @media screen and (min-width: 768px) {
-  /* listItem */
+
+  /* list */
   .listItemBox {
-    margin: 0 10vw;
     margin-bottom: 150px;
   }
 
@@ -84,4 +110,7 @@ DESKTOP
   .listItemDate {
     margin: 0 10px 0 auto;
   }
+
+  /* grid */
+
 }

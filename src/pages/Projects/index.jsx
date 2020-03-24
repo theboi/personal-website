@@ -2,11 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 
 import style from "./Projects.module.css";
-import { ProjectList } from "../../components/Card/ProjectList";
-import { ProjectGrid } from "../../components/Card/ProjectGrid";
 import { SearchBar } from "../../components/SearchBar";
 import { PageTemplateDiv } from "../../components/Page/PageTemplateDiv";
 import { Filter } from "../../components/Filter";
+import { ProjectCard } from "../../components/Card/Project";
 
 export const ProjectsC = props => {
   return (
@@ -14,11 +13,21 @@ export const ProjectsC = props => {
       <PageTemplateDiv>
         <SearchBar {...props} current="Projects" />
         <Filter />
-        {props.displayModeIsGrid ? (
-          <ProjectGrid {...props} content={props.displayContent} />
-        ) : (
-          <ProjectList {...props} content={props.displayContent} />
-        )}
+        <div>
+          <ul className={props.displayModeIsGrid ? style.listWrapper : null}>
+            {props.displayContent.map((value, index) => {
+              return (
+                <ProjectCard
+                  {...props}
+                  displayModeIsGrid={props.displayModeIsGrid}
+                  content={value}
+                  key={index}
+                  index={index}
+                />
+              );
+            })}
+          </ul>
+        </div>
       </PageTemplateDiv>
     </div>
   );
