@@ -1,17 +1,16 @@
 import React from 'react';
-import './App.css';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { NavFooter } from '../components/Page/NavFooter';
-import { NavHeader } from '../components/Page/NavHeader';
-import { Home } from '../pages/Home';
-import { Projects } from '../pages/Projects';
-import { PageTemplate } from '../pages/PageTemplate';
+import { NavFooter } from './components/Page/NavFooter';
+import { NavHeader } from './components/Page/NavHeader';
+import { Home } from './pages/Home';
+import { Projects } from './pages/Projects';
+import { PageTemplate } from './pages/PageTemplate';
 
 // import Experience from '../components/Portfolio/Experience/Experience';
 // import Timeline from '../components/Portfolio/Timeline/Timeline';
-import { Error404 } from '../pages/Error404';
+import { Error404 } from './pages/Error404';
 
 const App = props => {
   const urlParams = new URLSearchParams(window.location.search);

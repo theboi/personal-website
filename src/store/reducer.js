@@ -5,7 +5,7 @@ const initalState = {
   deviceWidth: window.innerWidth,
   deviceHeight: window.innerHeight,
   displayContent: content.Projects,
-  displayModeIsGrid: false,
+  displayModeIsGrid: true,
   currentTab: 'all',
   searchBarInput: '',
   dropdownTabIsOpen: false,
@@ -22,14 +22,26 @@ export const reducer = (state = initalState, action) => {
       .replace(/[^a-zA-Z0-9!@#$%^&'" ]/g, "")
       .toLowerCase();
     let elimArray = [...content.Projects];
-    
-    console.log(elimArray)
     elimArray.map((value, index) => {
-      if (state.currentTab !== 'all' && !value.header.genre.includes(state.currentTab)) {
-        elimArray.splice(index, 1)
-        console.log("splice1")
-        return null;
+      console.log(elimArray)
+
+
+      // if (state.currentTab !== 'all' && !value.header.genre.includes(state.currentTab)) {
+      //   elimArray.splice(index, 1)
+      //   console.log("splice1")
+      //   return null;
+      // }
+
+
+      // genre handling
+      if (state.currentTab !== 'all') {
+        console.log(state.currentTab)
+        if (!value.header.genre.includes(state.currentTab)) {
+          elimArray.splice(index, 1)
+        }
       }
+
+      // filtering with search
       if (textboxValue !== "") {
         const titleLC = value.header.title.replace(/\s/g, "").toLowerCase();
         const subtitleLC = value.header.subtitle
@@ -41,15 +53,14 @@ export const reducer = (state = initalState, action) => {
 
         if (
           !(RegExp(textboxValue).test(titleLC) === true ||
-          RegExp(textboxValue).test(subtitleLC) === true ||
-          RegExp(textboxValue).test(tagsLC.map(value => value)) === true)) {
+            RegExp(textboxValue).test(subtitleLC) === true ||
+            RegExp(textboxValue).test(tagsLC.map(value => value)) === true)) {
           elimArray.splice(index, 1)
           console.log(index)
 
-          return null;
+          // return null;
         }
       }
-
     })
     return elimArray;
   }
@@ -78,13 +89,11 @@ export const reducer = (state = initalState, action) => {
         currentTab: action.current,
         displayContent: searchAlgo(),
       }
-      case 'TOGGLE_DROPDOWN_TAB':
-        console.log("da")
-
-        return {
-          ...state,
-          dropdownTabIsOpen: !state.dropdownTabIsOpen
-        }
+    case 'TOGGLE_DROPDOWN_TAB':
+      return {
+        ...state,
+        dropdownTabIsOpen: !state.dropdownTabIsOpen
+      }
     case 'SET_SEARCH_BAR_INPUT':
       return {
         ...state,
