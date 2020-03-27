@@ -14,11 +14,6 @@ export const content = {
         { name: 'Email', link: 'mailto:ryan.theodore.2006@gmail.com', icon: 'far fa-envelope' }
     ],
 
-    Home: [
-
-    ],
-
-
     Projects: [
         {
             header: {
@@ -81,7 +76,27 @@ export const content = {
 
 
     Experience: [
-
+        {
+            title: 'Coding', content: [
+                'HTML5 / CSS3',
+                'JavaScript / TypeScript',
+                'Dart',
+                'React',
+                'React Native / Flutter',
+                'Sketch',
+                'Version Control (GIT)'
+            ]
+        },
+        {
+            title: 'Design', content: [
+                'Sketch'
+            ]
+        },
+        {
+            title: 'Media', content: [
+                'Final Cut Pro X', 'Motion', 'iMovie'
+            ]
+        }
     ]
 
 };

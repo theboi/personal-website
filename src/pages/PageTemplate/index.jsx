@@ -5,7 +5,7 @@ import style from "./PageTemplate.module.css";
 import { content } from "../../assets/content/content";
 import { PageTemplateDiv } from "../../components/Page/PageTemplateDiv";
 
-const PageTemplateC = props => {
+const PageTemplatePageC = props => {
   let display;
   const pathName = props.location.pathname.replace("/portfolio/projects/", "");
   content.Projects.map(value => {
@@ -73,7 +73,7 @@ const mapDispatchToProps = dispatch => {
   return {};
 };
 
-export const PageTemplate = connect(
+export const PageTemplatePage = connect(
   mapStateToProps,
   mapDispatchToProps
-)(PageTemplateC);
+)(PageTemplatePageC);

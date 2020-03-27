@@ -4,7 +4,7 @@ import TabSelector from '../../components/TabSelector';
 import style from './Timeline.module.css';
 import {content} from '../../assets/content/content';
 
-const Timeline = () => {
+const TimelinePage = () => {
   return (
     <div className={style.experience}>
       <TabSelector current="Timeline" />
@@ -12,4 +12,4 @@ const Timeline = () => {
   )
 }
 
-export default Timeline;
+export default TimelinePage;

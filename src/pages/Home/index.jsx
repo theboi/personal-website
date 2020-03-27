@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import style from "./Home.module.css";
 
-const HomeC = props => {
+const HomePageC = props => {
   const landingText = ["student. ", "hobbyist. ", "developer. ", "designer. "];
   return (
     <div className={style.home}>
@@ -32,28 +32,29 @@ const HomeC = props => {
               duration={1000}
               target={
                 <section className={style.introSection}>
-                  <h1>Hello</h1>
+                  <h1>Hi there!</h1>
+                  <p>
+                    I'm <span className={style.name}>Ryan Theodore The</span>, a
+                    student at the School of Science and Technology, Singapore.{" "}
+                    <br />
+                    <br />I am passionate about coding, robotics and design.
+                    Learn more about me using the links below!
+                  </p>
+                  <div className={style.links}>
+                    <Link to="/portfolio/all#" className={style.link}>Portfolio</Link>
+                  </div>
                 </section>
               }
             >
-              
-              <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} duration={200} />
+              <Tween
+                from={{ opacity: 0 }}
+                to={{ opacity: 1 }}
+                duration={1000}
+              />
             </Timeline>
           </Timeline>
         </Scene>
       </Controller>
-      {/* <section className={style.introS}>
-        <h1>Hi there!</h1>
-        <p>
-          I'm <span className={style.name}>Ryan Theodore The</span>, a student
-          at the School of Science and Technology, Singapore. <br />
-          <br />I am passionate about coding, robotics and design. Learn more
-          about me using the links below!
-        </p>
-        <div className={style.links}>
-          <Link to="/portfolio/all">Portfolio</Link>
-        </div>
-      </section> */}
     </div>
   );
 };
@@ -68,6 +69,6 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {};
 };
-export const Home = connect(mapStateToProps, mapDispatchToProps)(HomeC);
+export const HomePage = connect(mapStateToProps, mapDispatchToProps)(HomePageC);
 
 //https://github.com/janpaepke/ScrollMagic/issues/64

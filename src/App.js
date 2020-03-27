@@ -4,13 +4,16 @@ import { connect } from 'react-redux';
 
 import { NavFooter } from './components/Page/NavFooter';
 import { NavHeader } from './components/Page/NavHeader';
-import { Home } from './pages/Home';
-import { Projects } from './pages/Projects';
-import { PageTemplate } from './pages/PageTemplate';
 
-// import Experience from '../components/Portfolio/Experience/Experience';
-// import Timeline from '../components/Portfolio/Timeline/Timeline';
-import { Error404 } from './pages/Error404';
+import { HomePage } from './pages/Home';
+import { ProjectsPage } from './pages/Projects';
+import { PageTemplatePage } from './pages/PageTemplate';
+import { Error404Page } from './pages/Error404';
+import { ExperiencePage } from './pages/Experience';
+import { ContactPage } from './pages/Contact';
+
+// import Timeline from '../components/Portfolio/Timeline';
+
 
 const App = props => {
   const urlParams = new URLSearchParams(window.location.search);
@@ -31,26 +34,27 @@ const App = props => {
   // document.addEventListener('scroll', props.updateScrollPosition);
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL} onUpdate={() => window.scrollTo(0, 0)}>
       <div className="App">
         <NavHeader />
         <Switch>
           {returnOutput}
-          <Route path="/home/" exact component={Home} />
+          <Route path="/home/" exact component={HomePage} />
           <Redirect from="/portfolio/" exact to="/portfolio/all" />
+          <Route path="/experience/" exact component={ExperiencePage} />
+          <Route path="/contact/" exact component={ContactPage} />
           {/* <Route path="/portfolio/timeline/" exact component={Timeline} /> */}
 
-          <Route path="/portfolio/all/" exact component={Projects} />
-          <Route path="/portfolio/code/" exact component={Projects} />
-          <Route path="/portfolio/design/" exact component={Projects} />
-          <Route path="/portfolio/robot/" exact component={Projects} />
-          <Route path="/portfolio/others/" exact component={Projects} />
-
-          <Route path="/portfolio/projects/" component={PageTemplate} />
+          <Route path="/portfolio/all/" exact component={ProjectsPage} />
+          <Route path="/portfolio/code/" exact component={ProjectsPage} />
+          <Route path="/portfolio/design/" exact component={ProjectsPage} />
+          <Route path="/portfolio/robot/" exact component={ProjectsPage} />
+          <Route path="/portfolio/others/" exact component={ProjectsPage} />
+          <Route path="/portfolio/projects/" component={PageTemplatePage} />
 
           {/* <Route path="/portfolio/experience/" exact component={Experience} /> */}
           {/* <Route path="/print/" exact component={Print} /> */}
-          <Route path="/" component={Error404} />
+          <Route path="/" component={Error404Page} />
         </Switch>
         <NavFooter />
       </div>
@@ -61,7 +65,7 @@ const App = props => {
 const mapDispatchToProps = dispatch => {
   return {
     updateDevice: () => dispatch({ type: "UPDATE_DEVICE" }),
-    updateScrollPosition: () => dispatch({type: 'UPDATE_SCROLL_POSITION'})
+    updateScrollPosition: () => dispatch({ type: 'UPDATE_SCROLL_POSITION' })
   }
 }
 export default connect(null, mapDispatchToProps)(App);

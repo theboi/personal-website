@@ -7,7 +7,7 @@ import { PageTemplateDiv } from "../../components/Page/PageTemplateDiv";
 import { Filter } from "../../components/Filter";
 import { ProjectCard } from "../../components/Card/Project";
 
-export const ProjectsC = props => {
+export const ProjectsPageC = props => {
   return (
     <div className={style.projects}>
       <PageTemplateDiv>
@@ -55,4 +55,4 @@ const mapDispatchToProps = dispatch => {
     toggleDropdownTab: () => dispatch({ type: "TOGGLE_DROPDOWN_TAB" }),
   };
 };
-export const Projects = connect(mapStateToProps, mapDispatchToProps)(ProjectsC);
+export const ProjectsPage = connect(mapStateToProps, mapDispatchToProps)(ProjectsPageC);

@@ -33,10 +33,40 @@ MOBILE
   height: 100vh;
   background-color: black;
 }
+
+.introSection {
+  color: var(--col1_9);
+  padding: 50px 20px;
+}
+
+.name {
+  color: var(--col2_3);
+  font-weight: 600;
+  background-color: var(--col1_9);
+  border-radius: 5px;
+  padding: 0 5px;
+  margin: 0 5px;
+}
+
+.links {
+  padding: 0 20px;
+  margin: 20px 0;
+  background-color: var(--col2_3);
+  border-radius: 20px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+}
+
+.link {
+  color: var(--col1_9);
+}
 /* /////////////////////////////////////////////////////////////////////////////
 DESKTOP
 //////////////////////////////////////////////////////////////////////////////*/
 
 @media screen and (min-width: 768px) {
-
+  .links {
+    width: 200px;
+  }
 }

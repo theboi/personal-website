@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import style from './Error404.module.css'
 
-export const Error404 = () => {
+export const Error404Page = () => {
   return (
     <div className={style.error404}>
       <img className={style.icon} src={require('../../assets/images/404Icon.png')} alt="404 Icon" />

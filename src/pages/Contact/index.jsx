@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import style from "./Experience.module.css";
+import style from "./Contact.module.css";
 import { content } from "../../assets/content/content";
 
-const ExperiencePageC = () => {
+const ContactPageC = () => {
   return (
     // <div className={style.experience}>
     //   <dl className={style.list}>
@@ -34,4 +34,4 @@ const mDispatch = () => {
   return {};
 };
 
-export const ExperiencePage = connect(mState, mDispatch)(ExperiencePageC);
+export const ContactPage = connect(mState, mDispatch)(ContactPageC);
