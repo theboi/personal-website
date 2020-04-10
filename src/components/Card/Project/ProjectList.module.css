@@ -5,15 +5,25 @@ MOBILE
   --projectUnderline: none;
 }
 
+.listItem::before {
+  content: ' ';
+  width: 90vw;
+  align-self: center;
+  height: 0.5px;
+  background-color: var(--col1_6);
+  margin-bottom: 10px;
+  position: absolute;
+  top: -20px;
+}
+
 .listItem {
+  position: relative;
   transition: all 250ms ease-in-out;
-  height: 400px;
   width: 100%;
   max-width: 800px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   border-radius: 5px;
 }
 
@@ -30,7 +40,8 @@ MOBILE
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 30px 0 10px 0;
+  margin: 10px 0 30px 0;
+  padding-left: 10px;
 }
 
 .listItemTitle {
@@ -78,12 +89,17 @@ DESKTOP
     height: 200px;
   }
 
+  .listItem::before {
+    content: none;
+  }
+
   .listItemImg {
     width: 300px;
     margin: 0 30px 0 0;
   }
 
   .listItemVertical {
+    margin: 30px 0 10px 0;
     width: 300px;
   }
 }
