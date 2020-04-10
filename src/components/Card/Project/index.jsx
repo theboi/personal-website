@@ -24,6 +24,9 @@ export const ProjectCard = props => {
           alt={currentContent.header.title}
         />
         <div className={style.listItemVertical}>
+          <p className={style.listItemGenre}>
+            {currentContent.header.genre.map(value => value.toLocaleUpperCase()).join(" | ")}
+          </p>
           <p className={style.listItemTitle}>{currentContent.header.display}</p>
           <p className={style.listItemSubtitle}>
             {currentContent.header.subtitle}

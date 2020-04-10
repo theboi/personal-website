@@ -1,28 +1,25 @@
 /* /////////////////////////////////////////////////////////////////////////////
 MOBILE
 //////////////////////////////////////////////////////////////////////////////*/
-
-/* list */
-.listItemBox {
-  margin-bottom: 150px;
+:root {
+  --projectUnderline: none;
 }
 
 .listItem {
   transition: all 250ms ease-in-out;
+  height: 400px;
+  width: 100%;
+  max-width: 800px;
   display: flex;
-  border-top: 0.5px solid var(--col1_6);
-  place-items: center;
-  color: var(--col1_1);
-  background-color: var(--col1_9);
-  height: 85px;
-  padding: 7px;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: right;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 .listItem:hover {
   background-color: var(--col1_8);
+  --projectUnderline: underline var(--col2_3);
 }
 
 .listItem:active {
@@ -30,87 +27,63 @@ MOBILE
 }
 
 .listItemVertical {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-left: 15px;
+  padding: 30px 0 10px 0;
+}
+
+.listItemTitle {
+  color: var(--col1_1);
+  font-weight: 600;
+  font-size: 26px;
+  text-decoration: var(--projectUnderline);
 }
 
 .listItemSubtitle {
   color: var(--col1_4);
+  font-weight: 500;
+  font-size: 16px;
+  flex-wrap: wrap;
 }
 
-.listItem > * {
-  max-width: calc(100% - 130px);
-  margin: inherit 20px;
+.listItemGenre {
+  color: var(--col2_2);
   font-weight: 500;
   font-size: 14px;
-  overflow: hidden;
+}
+
+.listItemDate {
+  color: var(--col2_2);
+  font-weight: 500;
+  font-size: 14px;
+  margin: 30px 30px 0 auto;
 }
 
 .listItemImg {
-  border-radius: 7px;
-  margin: 0;
-  height: 100%;
-  width: 95px;
-}
-
-/* grid */
-.gridBox {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  transition: all 250ms ease-in-out;
+  height: 200px;
+  width: 100%;
   border: 0.5px solid var(--col1_6);
   border-radius: 5px;
-  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
-
-.title {
-  color: var(--col1_1);
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.subtitle {
-  color: var(--col1_4);
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.card:hover {
-  background-color: var(--col1_8);
-}
-
-.card:active {
-  background-color: var(--col1_7);
-}
-
 /* /////////////////////////////////////////////////////////////////////////////
 DESKTOP
 //////////////////////////////////////////////////////////////////////////////*/
 
 @media screen and (min-width: 768px) {
+  .listItem {
+    flex-direction: row;
+    height: 200px;
+  }
 
-  /* list */
-  .listItemBox {
-    margin-bottom: 150px;
+  .listItemImg {
+    width: 300px;
+    margin: 0 30px 0 0;
   }
 
   .listItemVertical {
-    margin-left: 1.6vw;
+    width: 300px;
   }
-
-  .listItem > * {
-    font-size: 14px;
-  }
-
-  .listItemDate {
-    margin: 0 10px 0 auto;
-  }
-
-  /* grid */
-
 }

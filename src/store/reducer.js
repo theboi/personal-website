@@ -5,7 +5,7 @@ const initalState = {
   deviceWidth: window.innerWidth,
   deviceHeight: window.innerHeight,
   displayContent: content.Projects,
-  displayModeIsGrid: true,
+  displayModeIsGrid: false,
   currentTab: 'all',
   searchBarInput: '',
   dropdownTabIsOpen: false,

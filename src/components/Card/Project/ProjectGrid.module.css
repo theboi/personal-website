@@ -1,8 +1,6 @@
 /* /////////////////////////////////////////////////////////////////////////////
 MOBILE
 //////////////////////////////////////////////////////////////////////////////*/
-
-/* list */
 .listItem {
   transition: all 250ms ease-in-out;
   border: 0.5px solid var(--col1_6);
@@ -37,6 +35,18 @@ MOBILE
 
 .listItemSubtitle {
   color: var(--col1_4);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.listItemGenre {
+  color: var(--col2_3);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.listItemDate {
+  color: var(--col2_3);
   font-weight: 500;
   font-size: 14px;
 }

@@ -19,7 +19,7 @@ export const content = {
             header: {
                 display: `Personal Website`,
                 title: `My Personal Portfolio Website`,
-                subtitle: `Personal Projects`,
+                subtitle: `this. Yes, the website you are viewing right now. Made with <3 with React, JavaScript`,
                 date: `83/123/42`,
                 tags: [],
                 image: `https://unsplash.it/1000/1000`,
@@ -34,7 +34,7 @@ export const content = {
         },
         {
             header: {
-                display: `Personal Website (Old)`,
+                display: `Lost app`,
                 title: `My Personal Portfolio Website (Old)`,
                 subtitle: `Personal Projects`,
                 date: `83/123/42`,
@@ -51,9 +51,9 @@ export const content = {
         },
         {
             header: {
-                display: `RoboRAVE Kaga 2020`,
-                title: `RoboRAVE Kaga 2020`,
-                subtitle: `Robotics CCA`,
+                display: `RoboRAVE Kaga 2019`,
+                title: `RoboRAVE Kaga 2019`,
+                subtitle: `RoboRAVE Kaga 2019, an international robotics competition held for people experienced or not.`,
                 date: `83/123/42`,
                 tags: [],
                 image: `https://unsplash.it/1000/1000`,
