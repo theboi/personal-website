@@ -17,52 +17,42 @@ export const reducer = (state = initalState, action) => {
     if (action.type === 'SET_CURRENT_TAB') {
       state.currentTab = action.current
     }
+
     const textboxValue = state.searchBarInput
-      .replace(/\s/g, "")
-      .replace(/[^a-zA-Z0-9!@#$%^&'" ]/g, "")
-      .toLowerCase();
-    let elimArray = [...content.Projects];
-    elimArray.map((value, index) => {
-      console.log(elimArray)
+      .replace(/[^a-zA-Z0-9!@#$%^&'"]/g, "")
+      .toLowerCase()
+    let searchResults = [...content.Projects]
 
-
-      // if (state.currentTab !== 'all' && !value.header.genre.includes(state.currentTab)) {
-      //   elimArray.splice(index, 1)
-      //   console.log("splice1")
-      //   return null;
-      // }
-
-
-      // genre handling
+    content.Projects.map((value, index) => {
+      // genre filter algo
       if (state.currentTab !== 'all') {
-        console.log(state.currentTab)
         if (!value.header.genre.includes(state.currentTab)) {
-          elimArray.splice(index, 1)
+          searchResults = searchResults.filter(element => element.header.title !== value.header.title);
         }
       }
 
-      // filtering with search
+      // search filter algo
       if (textboxValue !== "") {
-        const titleLC = value.header.title.replace(/\s/g, "").toLowerCase();
-        const subtitleLC = value.header.subtitle
+        const title = value.header.title.replace(/\s/g, "").toLowerCase()
+        const display = value.header.display.replace(/\s/g, "").toLowerCase()
+        const subtitle = value.header.subtitle
           .replace(/\s/g, "")
-          .toLowerCase();
-        const tagsLC = value.header.tags.map(value => {
-          return value.replace(/\s/g, "").toLowerCase();
-        });
+          .toLowerCase()
+        const tags = value.header.tags.map(value => {
+          return value.replace(/\s/g, "").toLowerCase()
+        })
 
         if (
-          !(RegExp(textboxValue).test(titleLC) === true ||
-            RegExp(textboxValue).test(subtitleLC) === true ||
-            RegExp(textboxValue).test(tagsLC.map(value => value)) === true)) {
-          elimArray.splice(index, 1)
-          console.log(index)
-
-          // return null;
+          !(RegExp(textboxValue).test(title) ||
+            RegExp(textboxValue).test(display) ||
+            RegExp(textboxValue).test(subtitle) ||
+            RegExp(textboxValue).test(tags.map(value => value)))) {
+          searchResults = searchResults.filter(element => element.header.title !== value.header.title);
         }
       }
     })
-    return elimArray;
+
+    return searchResults;
   }
 
   switch (action.type) {

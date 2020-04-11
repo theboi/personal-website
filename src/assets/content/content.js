@@ -71,6 +71,7 @@ export const content = {
                 journey to Kaga, Japan to participate in an international robotics competition.` },
             ]
         },
+        
 
     ],
 

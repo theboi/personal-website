@@ -16,7 +16,7 @@ const PageTemplatePageC = props => {
     if (linkToCheck === pathName) {
       display = value;
     }
-    console.log(value);
+    return null;
   });
 
   let pageElement;

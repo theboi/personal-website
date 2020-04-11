@@ -49,7 +49,7 @@ const HomePageC = props => {
               <Tween
                 from={{ opacity: 0 }}
                 to={{ opacity: 1 }}
-                duration={1000}
+                duration={300}
               />
             </Timeline>
           </Timeline>
