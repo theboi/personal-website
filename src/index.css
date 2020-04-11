@@ -37,7 +37,7 @@ Reset
   font-family: 'Montserrat', sans-serif;
 }
 
-*:focus {
+*:not(input):focus-visible {
   outline: solid 3px rgba(0, 0, 0, 0.2) !important;
   z-index: 100;
 }
