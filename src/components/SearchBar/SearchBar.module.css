@@ -19,12 +19,17 @@ MOBILE
   font-size: 16px;
   color: var(--col1_3);
   height: 40px;
+  transition: background-color 250ms ease-in-out;
 }
 
 .box:global(.active) {
   color: var(--col2_1);
   border-color: var(--col2_1);
   z-index: 0;
+}
+
+.box:hover {
+  background-color: var(--col1_8);
 }
 
 .box:nth-child(1) {
@@ -47,7 +52,10 @@ MOBILE
   transition: all 250ms ease-in-out;
   position: relative;
   z-index: 3; /* for TabSelector */
+}
 
+.searchBar:hover {
+  background-color: var(--col1_8);
 }
 
 .searchBar:focus {
@@ -132,7 +140,8 @@ MOBILE
   color: var(--col1_3);
 }
 
-.dropdownTab.open .dropdownElement + .dropdownElement { /* excludes first element*/
+.dropdownTab.open .dropdownElement + .dropdownElement {
+  /* excludes first element*/
   border-top: 0.5px var(--col1_6) solid;
 }
 
@@ -150,7 +159,6 @@ DESKTOP
 //////////////////////////////////////////////////////////////////////////////*/
 
 @media screen and (min-width: 768px) {
-
   .flex {
     width: 80vw;
   }

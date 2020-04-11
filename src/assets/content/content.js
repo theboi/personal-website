@@ -35,7 +35,7 @@ export const content = {
         {
             header: {
                 display: `Lost app`,
-                title: `My Personal Portfolio Website (Old)`,
+                title: `My Personal Portfolio  (Old)`,
                 subtitle: `Personal Projects`,
                 date: `83/123/42`,
                 tags: [],

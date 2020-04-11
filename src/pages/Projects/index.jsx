@@ -7,7 +7,7 @@ import { PageTemplateDiv } from "../../components/Page/PageTemplateDiv";
 import { Filter } from "../../components/Filter";
 import { ProjectCard } from "../../components/Card/Project";
 
-export const ProjectsPageC = props => {
+const ProjectsPageC = props => {
   return (
     <div className={style.projects}>
       <PageTemplateDiv>
@@ -33,7 +33,7 @@ export const ProjectsPageC = props => {
   );
 };
 
-const mapStateToProps = state => {
+const mstp = state => {
   return {
     device: state.device,
     displayContent: state.displayContent,
@@ -44,7 +44,7 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mdtp = dispatch => {
   return {
     updateDisplayContent: () => dispatch({ type: "UPDATE_DISPLAY_CONTENT" }),
     toggleDisplayMode: () => dispatch({ type: "TOGGLE_DISPLAY_MODE" }),
@@ -55,4 +55,4 @@ const mapDispatchToProps = dispatch => {
     toggleDropdownTab: () => dispatch({ type: "TOGGLE_DROPDOWN_TAB" }),
   };
 };
-export const ProjectsPage = connect(mapStateToProps, mapDispatchToProps)(ProjectsPageC);
+export const ProjectsPage = connect(mstp, mdtp)(ProjectsPageC);

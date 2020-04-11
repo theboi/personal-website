@@ -14,6 +14,17 @@ import { ContactPage } from './pages/Contact';
 
 // import Timeline from '../components/Portfolio/Timeline';
 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 const App = props => {
   const urlParams = new URLSearchParams(window.location.search);
@@ -34,13 +45,14 @@ const App = props => {
   // document.addEventListener('scroll', props.updateScrollPosition);
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL} onUpdate={() => window.scrollTo(0, 0)}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <ScrollToTop />
       <div className="App">
         <NavHeader />
         <Switch>
           {returnOutput}
           <Route path="/home/" exact component={HomePage} />
-          <Redirect from="/portfolio/" exact to="/portfolio/all" />
+          <Redirect from="/portfolio/" exact to={`/portfolio/${props.currentTab}`} />
           <Route path="/experience/" exact component={ExperiencePage} />
           <Route path="/contact/" exact component={ContactPage} />
           {/* <Route path="/portfolio/timeline/" exact component={Timeline} /> */}
@@ -62,10 +74,16 @@ const App = props => {
   );
 }
 
-const mapDispatchToProps = dispatch => {
+const mstp = state => {
+  return {
+    currentTab: state.currentTab
+  }
+}
+
+const mdtp = dispatch => {
   return {
     updateDevice: () => dispatch({ type: "UPDATE_DEVICE" }),
     updateScrollPosition: () => dispatch({ type: 'UPDATE_SCROLL_POSITION' })
   }
 }
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mstp, mdtp)(App);
