@@ -34,7 +34,12 @@ Variables
 Reset
 //////////////////////////////////////////////////////////////////////////////*/
 * {
-	font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+*:focus {
+  outline: solid 3px rgba(0, 0, 0, 0.2) !important;
+  z-index: 100;
 }
 
 html, body, div, span, applet, object, iframe,
