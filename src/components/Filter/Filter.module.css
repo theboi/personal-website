@@ -5,11 +5,11 @@ MOBILE
 .pageOpen {
   margin: 0 10px;
   padding: 10px 15px;
-  border: 0.5px var(--col1_6) solid;
+  border: 0.5px rgb(var(--col1_6)) solid;
   border-radius: 5px;
   flex: 1;
   font-size: 16px;
-  color: var(--col1_1);
+  color: rgb(var(--col1_1));
   transition: all 250ms ease-in-out;
   position: relative;
 
@@ -24,8 +24,7 @@ DESKTOP
   /* search */
   .pageOpen {
     width: 80vw;
-    margin: 10px 0;
-
+    margin-top: 10px;
     margin-bottom: 30px;
   }
 }

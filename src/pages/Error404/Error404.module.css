@@ -27,17 +27,17 @@ MOBILE
 
 .link {
   padding: 20px;
-  background-color: var(--col1_9);
-  color: var(--col2_1);
+  background-color: rgb(var(--col1_9));
+  color: rgb(var(--col2_1));
   font-weight: 600;
-  border: 2px solid var(--col2_1);
+  border: 2px solid rgb(var(--col2_1));
   border-radius: 10px;
   transition: all 250ms ease-in-out;
 }
 
 .link:link, .link:hover {
-  background-color: var(--col1_1);
-  color: var(--col1_9);
+  background-color: rgb(var(--col1_1));
+  color: rgb(var(--col1_9));
 }
 
 /* /////////////////////////////////////////////////////////////////////////////

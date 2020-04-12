@@ -13,23 +13,23 @@ MOBILE
 .box {
   padding: 10px 15px;
   margin-left: -1px;
-  background-color: var(--col1_9);
-  border: 0.5px var(--col1_6) solid;
+  background-color: rgb(var(--col1_9));
+  border: 0.5px rgb(var(--col1_6)) solid;
   border-bottom: none;
   font-size: 16px;
-  color: var(--col1_3);
+  color: rgb(var(--col1_3));
   height: 40px;
   transition: background-color 250ms ease-in-out;
 }
 
 .box:global(.active) {
-  color: var(--col2_1);
-  border-color: var(--col2_1);
+  color: rgb(var(--col2_1));
+  border-color: rgb(var(--col2_1));
   z-index: 0;
 }
 
 .box:hover {
-  background-color: var(--col1_8);
+  background-color: rgb(var(--col1_8));
 }
 
 .box:nth-child(1) {
@@ -44,23 +44,23 @@ MOBILE
 .searchBar {
   margin: 10px 5px 10px 10px;
   padding: 10px 15px;
-  border: 0.5px var(--col1_6) solid;
+  border: 0.5px rgb(var(--col1_6)) solid;
   border-radius: 5px;
   flex: 1;
   font-size: 16px;
-  color: var(--col1_1);
+  color: rgb(var(--col1_1));
   transition: all 250ms ease-in-out;
   position: relative;
   z-index: 3; /* for TabSelector */
 }
 
 .searchBar:hover {
-  background-color: var(--col1_8);
+  background-color: rgb(var(--col1_8));
 }
 
 .searchBar:focus {
-  color: var(--col2_1);
-  border: 0.5px var(--col2_1) solid;
+  color: rgb(var(--col2_1));
+  border: 0.5px rgb(var(--col2_1)) solid;
 }
 
 .searchBar::placeholder {
@@ -69,7 +69,7 @@ MOBILE
 }
 
 .searchBar:focus::placeholder {
-  color: var(--col2_1);
+  color: rgb(var(--col2_1));
 }
 
 .searchBox {
@@ -78,7 +78,7 @@ MOBILE
 
 .icon {
   transition: all 200ms ease-in-out;
-  color: var(--col1_3);
+  color: rgb(var(--col1_3));
   width: 30px;
   font-size: 20px;
   line-height: 40px;
@@ -90,11 +90,11 @@ MOBILE
 }
 
 .icon:hover {
-  background-color: var(--col1_8);
+  background-color: rgb(var(--col1_8));
 }
 
 .icon:active {
-  background-color: var(--col1_7);
+  background-color: rgb(var(--col1_7));
 }
 
 .dropdownBox {
@@ -103,24 +103,24 @@ MOBILE
 
 .dropdownBar {
   transition: all 250ms ease-in-out;
-  border: 0.5px var(--col1_6) solid;
+  border: 0.5px rgb(var(--col1_6)) solid;
   width: 90vw;
   margin: 0 10px;
   padding: 10px 15px;
   border-radius: 5px;
   font-size: 16px;
-  color: var(--col1_1);
+  color: rgb(var(--col1_1));
   text-transform: capitalize;
 }
 
 .dropdownTab {
   transition: all 250ms ease-in-out;
-  border: 0.5px var(--col1_6) solid;
+  border: 0.5px rgb(var(--col1_6)) solid;
   width: 90vw;
   margin: 0 10px;
   border-radius: 5px;
   font-size: 16px;
-  color: var(--col1_1);
+  color: rgb(var(--col1_1));
 }
 
 .dropdownTab.open {
@@ -137,17 +137,17 @@ MOBILE
   transition: all 200ms ease-in-out;
   padding: 10px 15px;
   display: block;
-  color: var(--col1_3);
+  color: rgb(var(--col1_3));
 }
 
 .dropdownTab.open .dropdownElement + .dropdownElement {
   /* excludes first element*/
-  border-top: 0.5px var(--col1_6) solid;
+  border-top: 0.5px rgb(var(--col1_6)) solid;
 }
 
 .dropdownTab.open .dropdownElement:global(.active) {
-  color: var(--col2_1);
-  background-color: var(--col1_7);
+  color: rgb(var(--col2_1));
+  background-color: rgb(var(--col1_7));
   z-index: 0;
 }
 

@@ -19,26 +19,24 @@ const PageTemplatePageC = props => {
     return null;
   });
 
-  let pageElement;
   return (
     <PageTemplateDiv>
       <div
-        className={style.headerBox}
+        className={style.header}
         style={{ backgroundImage: `url(${display.header.image})` }}
       >
         <p className={style.genre}>{display.header.genre.join(" | ")}</p>
         <h1 className={style.title}>{display.header.title}</h1>
-        <h2 className={style.subtitle}>{display.header.subtitle}</h2>
         <h4 className={style.date}>{display.header.date}</h4>
       </div>
-      <div className={style.bodyBox}>
+      <div className={style.body}>
+        <h2 className={style.subtitle}>{display.header.subtitle}</h2>
         {display.body.map((value, index) => {
           switch (value.type) {
             case "paragraph":
-              pageElement = <p className={style.paragraphP}>{value.value}</p>;
-              break;
+              return <p className={style.paragraphP}>{value.value}</p>;
             case "image":
-              pageElement = (
+              return (
                 <figure className={style.imageFig}>
                   <img
                     className={style.imageImg}
@@ -50,15 +48,11 @@ const PageTemplatePageC = props => {
                   </figcaption>
                 </figure>
               );
-              break;
-              case "link":
-                pageElement = <a href={value.value}>{value.meta}</a>
-                break;
+            case "link":
+              return <a className={style.link} href={value.value}>{value.meta}</a>
             default:
-              pageElement = <p>ERROR: Invalid element name.</p>;
-              break;
+              return <p>ERROR: Invalid element name.</p>
           }
-          return <div className={style.bodyElement}>{pageElement}</div>;
         })}
       </div>
     </PageTemplateDiv>

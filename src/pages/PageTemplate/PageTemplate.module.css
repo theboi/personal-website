@@ -2,7 +2,7 @@
 MOBILE
 //////////////////////////////////////////////////////////////////////////////*/
 
-.headerBox {
+.header {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -12,7 +12,7 @@ MOBILE
   padding: 35px 5.5vw;
 }
 
-.headerBox::after {
+.header::after {
   content: '';
   position: absolute;
   top: 0;
@@ -24,27 +24,51 @@ MOBILE
   z-index: -1;
 }
 
+.body {
+  margin: calc(35px * 2) 2.5vw;
+  max-width: 700px;
+}
+
+.body > * {
+  margin-bottom: 20px;
+}
+
 .genre {
-  color: var(--col1_6);
+  color: rgb(var(--col1_7));
   text-transform: uppercase;
   font-weight: 500;
 }
 
 .title {
-  color: var(--col1_9)
+  color: rgb(var(--col1_9));
 
 }
 
 .subtitle {
-  color: var(--col1_6);
+  color: rgb(var(--col2_1));
+  margin-bottom: 25px;
 }
 
 .date {
-  color: var(--col1_5);
+  color: rgb(var(--col1_6));
+  font-weight: 500;
+  margin-top: 3px;
 }
 
-.bodyBox {
-  margin-top: calc(35px * 2);
+.imageImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.imageCaption {
+  text-align: center;
+}
+
+.link {
+  color: rgb(var(--col2_1));
+  background-color: rgba(var(--col2_3), 0.8);
 }
 
 /* /////////////////////////////////////////////////////////////////////////////
@@ -52,12 +76,25 @@ DESKTOP
 //////////////////////////////////////////////////////////////////////////////*/
 
 @media screen and (min-width: 768px)  {
-  .headerBox {
+  .header {
     margin: -70px -10vw;
     padding: 70px 10vw;
   }
 
-  .bodyBox {
-    margin-top: calc(70px * 2);
+  .body {
+    margin: calc(70px * 2) 0;
+  }
+
+  .body > * {
+    margin-bottom: 40px;
+  }
+
+  .subtitle {
+    margin-bottom: 50px;
+  }
+
+  .imageImg {
+    height: 400px;
+    margin-bottom: 5px;
   }
 }

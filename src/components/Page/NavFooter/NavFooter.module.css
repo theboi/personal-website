@@ -2,14 +2,14 @@
   bottom: 0;
   width: 100%;
   height: 200px;
-  background-color: var(--col1_2);
+  background-color: rgb(var(--col1_2));
 }
 
 .navfooter::after {
   content: 'Ryan Theodore The | 2019 | v0.7';
   font-weight: 600; 
-  background-color: var(--col1_1);
-  color: var(--col1_3);
+  background-color: rgb(var(--col1_1));
+  color: rgb(var(--col1_3));
   display: block;
   width: 100%;
   height: 50px;
@@ -38,20 +38,20 @@
   place-items: center;
   border-radius: 20px;
   height: 70px;
-  background-color: var(--col1_1);
+  background-color: rgb(var(--col1_1));
 }
 
 .anchor:hover {
-  background-color: var(--col1_7);
+  background-color: rgb(var(--col1_7));
   transform: translate(0, -5px);
   transition: all 250ms ease-in-out;
 }
 
 .anchor:hover .icon {
-  color: var(--col1_1);
+  color: rgb(var(--col1_1));
 }
 
 .icon {
   font-size: 37px;
-  color: var(--col1_7);
+  color: rgb(var(--col1_7));
 }

@@ -3,7 +3,7 @@ MOBILE
 //////////////////////////////////////////////////////////////////////////////*/
 .listItem {
   transition: all 250ms ease-in-out;
-  border: 0.5px solid var(--col1_6);
+  border: 0.5px solid rgb(var(--col1_6));
   border-radius: 5px;
   height: 200px;
   display: block;
@@ -12,41 +12,41 @@ MOBILE
 }
 
 .listItem:hover {
-  background-color: var(--col1_8);
+  background-color: rgb(var(--col1_8));
 }
 
 .listItem:active {
-  background-color: var(--col1_7);
+  background-color: rgb(var(--col1_7));
 }
 
 .listItemVertical {
   position: absolute;
   bottom: 0;
-  background-color: var(--col1_9);
+  background-color: rgb(var(--col1_9));
   width: 100%;
   padding: 10px 10px;
 }
 
 .listItemTitle {
-  color: var(--col1_1);
+  color: rgb(var(--col1_1));
   font-weight: 500;
   font-size: 14px;
 }
 
 .listItemSubtitle {
-  color: var(--col1_4);
+  color: rgb(var(--col1_4));
   font-weight: 500;
   font-size: 14px;
 }
 
 .listItemGenre {
-  color: var(--col2_3);
+  color: rgb(var(--col2_3));
   font-weight: 500;
   font-size: 14px;
 }
 
 .listItemDate {
-  color: var(--col2_3);
+  color: rgb(var(--col2_3));
   font-weight: 500;
   font-size: 14px;
 }
