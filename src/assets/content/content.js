@@ -7,12 +7,7 @@ export const content = {
     ],
 
 
-    NavFooterLinks: [
-        { name: 'Instagram', link: 'https://www.instagram.com/therealboi_io/', icon: 'fab fa-instagram' },
-        { name: 'Twitter', link: 'https://twitter.com/therealboi_io', icon: 'fab fa-twitter' },
-        { name: 'Email', link: 'https://github.com/theboi', icon: 'fab fa-github' },
-        { name: 'Email', link: 'mailto:ryan.theodore.2006@gmail.com', icon: 'far fa-envelope' }
-    ],
+    
 
     Projects: [
         {
@@ -34,9 +29,9 @@ export const content = {
         },
         {
             header: {
-                display: `Lost app`,
-                title: `My Personal Portfolio  (Old)`,
-                subtitle: `Personal Projects`,
+                display: `Lost App`,
+                title: `Project SF: Lost App`,
+                subtitle: `An app to for caregivers to track their family members with dementia.`,
                 date: `83/123/42`,
                 tags: [],
                 image: `https://unsplash.it/1000/1000`,
@@ -53,7 +48,7 @@ export const content = {
             header: {
                 display: `RoboRAVE Kaga 2019`,
                 title: `RoboRAVE Kaga 2019`,
-                subtitle: `RoboRAVE Kaga 2019, an international robotics competition held for people experienced or not.`,
+                subtitle: `An international robotics competition held for all ages & experience levels`,
                 date: `83/123/42`,
                 tags: [],
                 image: `https://unsplash.it/1000/1000`,
