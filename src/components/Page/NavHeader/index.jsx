@@ -2,12 +2,18 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { NavHeaderList } from "./NavHeaderList";
-import { content } from "../../../assets/content/content";
 import style from "./NavHeader.module.css";
 
 let hamIsOpen = false;
 
 export const NavHeader = props => {
+  const links = [
+    { name: 'Home', link: '/home' },
+    { name: 'Portfolio', link: '/portfolio' },
+    { name: 'Experience', link: '/experience' },
+    { name: 'Contact', link: '/contact' },
+  ]
+
   // hamState
   const [hamState, updateHam] = useState([style.ham]);
   let newHamState;
@@ -41,14 +47,14 @@ export const NavHeader = props => {
   window.addEventListener("resize", rerenderHam);
 
   // navlistState
-  const [navlistState, updateNavlist] = useState(content.NavHeaderLinks);
+  const [navlistState, updateNavlist] = useState(links);
   let newNavlistState;
   const setNavlistState = index => {
     if (index != null) {
-      newNavlistState = [...content.NavHeaderLinks[index].branch];
-      newNavlistState.unshift({ name: "Back" });
+      newNavlistState = [...links[index].branch]
+      newNavlistState.unshift({ name: "Back" })
     } else {
-      newNavlistState = content.NavHeaderLinks;
+      newNavlistState = links
     }
     updateNavlist(newNavlistState);
   };
@@ -59,7 +65,7 @@ export const NavHeader = props => {
         <Link className={style.iconBox} to="/home">
           <img
             className={style.icon}
-            src={require("../../../assets/images/icon.png")}
+            src={require("../../../assets/icons/icon.png")}
             alt="icon"
           />
         </Link>

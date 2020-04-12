@@ -13,7 +13,7 @@ MOBILE
 }
 
 .header::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -24,15 +24,6 @@ MOBILE
   z-index: -1;
 }
 
-.body {
-  margin: calc(35px * 2) 2.5vw;
-  max-width: 700px;
-}
-
-.body > * {
-  margin-bottom: 20px;
-}
-
 .genre {
   color: rgb(var(--col1_7));
   text-transform: uppercase;
@@ -41,12 +32,6 @@ MOBILE
 
 .title {
   color: rgb(var(--col1_9));
-
-}
-
-.subtitle {
-  color: rgb(var(--col2_1));
-  margin-bottom: 25px;
 }
 
 .date {
@@ -55,9 +40,31 @@ MOBILE
   margin-top: 3px;
 }
 
+.body {
+  margin: calc(35px * 2) 2.5vw;
+  max-width: 700px;
+}
+
+.body > * {
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.subtitle {
+  color: rgb(var(--col2_1));
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.headline {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
 .imageImg {
   width: 100%;
-  height: 200px;
+  height: 55vw;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -68,14 +75,33 @@ MOBILE
 
 .link {
   color: rgb(var(--col2_1));
-  background-color: rgba(var(--col2_3), 0.8);
+  background-color: rgba(var(--col2_3), 0.05);
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background-color: rgba(var(--col2_1), 0.4);
+}
+
+.link:hover {
+  background-color: rgba(var(--col2_3), 0.2);
+}
+
+.link:hover::after {
+  background-color: rgba(var(--col2_1), 1);
 }
 
 /* /////////////////////////////////////////////////////////////////////////////
 DESKTOP
 //////////////////////////////////////////////////////////////////////////////*/
 
-@media screen and (min-width: 768px)  {
+@media screen and (min-width: 768px) {
   .header {
     margin: -70px -10vw;
     padding: 70px 10vw;
@@ -87,14 +113,21 @@ DESKTOP
 
   .body > * {
     margin-bottom: 40px;
+    font-size: 16px;
+  }
+
+  .headline {
+    margin-bottom: 10px;
+    font-size: 30px;
   }
 
   .subtitle {
     margin-bottom: 50px;
+    font-size: 24px;
   }
 
   .imageImg {
     height: 400px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 }

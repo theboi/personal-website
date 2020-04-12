@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 
 import style from "./Experience.module.css";
-import { content } from "../../assets/content/content";
 
 const ExperiencePageC = () => {
   return (

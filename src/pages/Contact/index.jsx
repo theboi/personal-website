@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 
 import style from "./Contact.module.css";
-import { content } from "../../assets/content/content";
 
 const ContactPageC = () => {
   return (

@@ -5,7 +5,7 @@ import style from './Error404.module.css'
 export const Error404Page = () => {
   return (
     <div className={style.error404}>
-      <img className={style.icon} src={require('../../assets/images/404Icon.png')} alt="404 Icon" />
+      <img className={style.icon} src={require('../../assets/icons/404Icon.png')} alt="404 Icon" />
       <div>
         <h1 className={style.alertHeader}>Oops! That's a 404!</h1>
         <p className={style.alertP}>We couldn't find the page you were looking for...</p>

@@ -1,10 +1,10 @@
-import { content } from '../assets/content/content';
+import { data } from './data';
 
 const initalState = {
   device: window.innerWidth > 768 ? "desktop" : "mobile",
   deviceWidth: window.innerWidth,
   deviceHeight: window.innerHeight,
-  displayContent: content.Projects,
+  displayContent: data.projects,
   displayModeIsGrid: false,
   currentTab: 'all',
   searchBarInput: '',
@@ -21,9 +21,9 @@ export const reducer = (state = initalState, action) => {
     const textboxValue = state.searchBarInput
       .replace(/[^a-zA-Z0-9!@#$%^&'"]/g, "")
       .toLowerCase()
-    let searchResults = [...content.Projects]
+    let searchResults = [...data.projects]
 
-    content.Projects.map((value, index) => {
+    data.projects.map((value, index) => {
       // genre filter algo
       if (state.currentTab !== 'all') {
         if (!value.header.genre.includes(state.currentTab)) {

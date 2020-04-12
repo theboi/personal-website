@@ -1,25 +1,19 @@
-export const content = {
-    NavHeaderLinks: [
-        { name: 'Home', link: '/home' },
-        { name: 'Portfolio', link: '/portfolio' },
-        { name: 'Experience', link: '/experience' },
-        { name: 'Contact', link: '/contact' },
-    ],
-
-    Projects: [
+export const data = {
+    projects: [
         {
             header: {
                 display: `Personal Website`,
                 title: `My Personal Portfolio Website`,
-                subtitle: `this. Yes, the website you are viewing right now. Made with <3 with React, JavaScript`,
+                subtitle: `this. Yes, the website you are viewing right now. Built with <3 with JavaScript and React.`,
                 date: `83/123/42`,
                 tags: [],
                 image: `https://unsplash.it/id/237/200/200.jpg`,
                 genre: [`code`, `design`]
             },
-            // type: paragraph, image, link, quote
+            // type: header, paragraph, image, link, quote
             body: [
-                { type: `paragraph`, value: `My personal website` },
+                { type: `header`, value: `Purpose` },
+                { type: `paragraph`, value: `Around June 2019, I started off a project to create this website to showcase my projects and creations. Originally, built with vanilla HTML, CSS and JavaScript, it was more troublesome to manage due to the immense amount of pages there were. ` },
                 { type: `image`, value: `https://unsplash.it/id/237/200/200.jpg`, meta: `3M InnoScience Logo` },
                 { type: `link`, value: `https://ryanthe.com`, meta: `My Website` },
             ]
@@ -63,7 +57,7 @@ export const content = {
                 journey to Kaga, Japan to participate in an international robotics competition.` },
             ]
         },
-        
+
 
     ],
 

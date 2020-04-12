@@ -4,7 +4,7 @@ import style from "./NavFooter.module.css";
 import {NavFooterLink} from "./NavFooterLink";
 
 export const NavFooter = () => {
-  let links = [
+  const links = [
     { name: 'Instagram', link: 'https://www.instagram.com/therealboi_io/', icon: 'fab fa-instagram' },
     { name: 'Twitter', link: 'https://twitter.com/therealboi_io', icon: 'fab fa-twitter' },
     { name: 'Email', link: 'https://github.com/theboi', icon: 'fab fa-github' },

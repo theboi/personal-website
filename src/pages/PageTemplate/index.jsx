@@ -2,13 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 
 import style from "./PageTemplate.module.css";
-import { content } from "../../assets/content/content";
+import { data } from "../../store/data";
 import { PageTemplateDiv } from "../../components/Page/PageTemplateDiv";
 
 const PageTemplatePageC = props => {
   let display;
   const pathName = props.location.pathname.replace("/portfolio/projects/", "");
-  content.Projects.map(value => {
+  data.projects.map(value => {
     let linkToCheck = value.header.title
       .replace(/\s/g, "-")
       .replace(/[^a-zA-Z0-9-]/g, "")
@@ -34,10 +34,12 @@ const PageTemplatePageC = props => {
         {display.body.map((value, index) => {
           switch (value.type) {
             case "paragraph":
-              return <p className={style.paragraphP}>{value.value}</p>;
+              return <p className={style.paragraph}>{value.value}</p>;
+            case "header":
+              return <h1 className={style.headline}>{value.value}</h1>;
             case "image":
               return (
-                <figure className={style.imageFig}>
+                <figure className={style.imageFig} alt={value.meta}>
                   <img
                     className={style.imageImg}
                     src={value.value}
