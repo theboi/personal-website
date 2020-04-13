@@ -14,7 +14,7 @@ MOBILE
   padding: 10px 15px;
   margin-left: -1px;
   background-color: rgb(var(--col1_9));
-  border: 0.5px rgb(var(--col1_6)) solid;
+  border: 1px rgb(var(--col1_6)) solid;
   border-bottom: none;
   font-size: 16px;
   color: rgb(var(--col1_3));
@@ -44,7 +44,7 @@ MOBILE
 .searchBar {
   margin: 10px 5px 10px 10px;
   padding: 10px 15px;
-  border: 0.5px rgb(var(--col1_6)) solid;
+  border: 1px rgb(var(--col1_6)) solid;
   border-radius: 5px;
   flex: 1;
   font-size: 16px;
@@ -60,7 +60,7 @@ MOBILE
 
 .searchBar:focus {
   color: rgb(var(--col2_1));
-  border: 0.5px rgb(var(--col2_1)) solid;
+  border: 1px rgb(var(--col2_1)) solid;
 }
 
 .searchBar::placeholder {
@@ -83,7 +83,7 @@ MOBILE
   font-size: 20px;
   line-height: 40px;
   margin: 10px 3px;
-  border: 0.5px transparent solid;
+  border: 1px transparent solid;
   border-radius: 5px;
   display: inline-block;
   text-align: center;
@@ -103,7 +103,7 @@ MOBILE
 
 .dropdownBar {
   transition: all 250ms ease-in-out;
-  border: 0.5px rgb(var(--col1_6)) solid;
+  border: 1px rgb(var(--col1_6)) solid;
   width: 90vw;
   margin: 0 10px;
   padding: 10px 15px;
@@ -115,7 +115,7 @@ MOBILE
 
 .dropdownTab {
   transition: all 250ms ease-in-out;
-  border: 0.5px rgb(var(--col1_6)) solid;
+  border: 1px rgb(var(--col1_6)) solid;
   width: 90vw;
   margin: 0 10px;
   border-radius: 5px;
@@ -142,7 +142,7 @@ MOBILE
 
 .dropdownTab.open .dropdownElement + .dropdownElement {
   /* excludes first element*/
-  border-top: 0.5px rgb(var(--col1_6)) solid;
+  border-top: 1px rgb(var(--col1_6)) solid;
 }
 
 .dropdownTab.open .dropdownElement:global(.active) {

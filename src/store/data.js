@@ -5,34 +5,81 @@ export const data = {
                 display: `Personal Website`,
                 title: `My Personal Portfolio Website`,
                 subtitle: `this. Yes, the website you are viewing right now. Built with <3 with JavaScript and React.`,
-                date: `83/123/42`,
+                date: `19/06/19`,
                 tags: [],
-                image: `https://unsplash.it/id/237/200/200.jpg`,
+                image: `1-1`,
                 genre: [`code`, `design`]
             },
-            // type: header, paragraph, image, link, quote
+            // type: headline, subhead, paragraph, image, link, quote
             body: [
-                { type: `header`, value: `Purpose` },
-                { type: `paragraph`, value: `Around June 2019, I started off a project to create this website to showcase my projects and creations. Originally, built with vanilla HTML, CSS and JavaScript, it was more troublesome to manage due to the immense amount of pages there were. ` },
-                { type: `image`, value: `https://unsplash.it/id/237/200/200.jpg`, meta: `3M InnoScience Logo` },
-                { type: `link`, value: `https://ryanthe.com`, meta: `My Website` },
+                {
+                    type: `group`, value: [
+                        { type: `link`, value: `https://github.com/theboi/personal-website`, meta: `personal-website GitHub repository` },
+                        { type: `link`, value: `https://ryanthe.com`, meta: `My website` },
+                    ]
+                },
+                {
+                    type: `group`, value: [
+                        { type: `headline`, value: `Purpose` },
+                        { type: `paragraph`, value: `Around June 2019, I embarked on a journey to create a website to showcase my accomplishments and projects. This website would be then shown during interviews and applications, or for my Instagram bio. Apart from the primary goal being to produce a product, it was also a new start for me in the field of software development. I got to learn many tools and frameworks such as React, Node Package Manager (NPM), Modern JavaScript, Git, and many more.` },
+                        { type: `image`, value: `1-2`, meta: `My collection of portfolio content` },
+                    ]
+                },
+                {
+                    type: `group`, value: [
+                        { type: `headline`, value: `Journey` },
+                        { type: `subhead`, value: `The beginning` },
+                        { type: `paragraph`, value: `Originally, built with vanilla HTML, CSS and JavaScript, the website was troublesome to manage due to the immense amount of pages there were. As my know-how in web development expanded, I began to start exploring other frameworks beginning with jQuery. jQuery was an impressive library, allowing me to shorten code significantly. ` },
+                        { type: `image`, value: `1-1`, meta: `An earlier version of my website` },
+                        { type: `paragraph`, value: `That is until I started using React.` },
+                        { type: `subhead`, value: `Dynamic pages` },
+                        { type: `paragraph`, value: `When I started using React, it completely changed how I saw making web pages. It was dynamic, clean, and fast (oh, and don't forget cool). I never had to write lines of HTML repetitively for each page over and over again. Up till now, the webpage, as of April 2020, still uses React.` },
+                    ]
+                },
+                {
+                    type: `group`, value: [
+                        { type: `headline`, value: `Reflection` },
+                        { type: `paragraph`, value: `I believe this project will never actually end. Every time it seems finished, there is always something I would go back and improve. In fact, this website has been built from scratch twice.` },
+                        { type: `subhead`, value: `Learning Points` },
+                        { type: `list`, value: ['Using React and its ecosystem', 'Creating websites using vanilla HTML, CSS and JavaScript (first version of the website)', 'Using Git and GitHub to keep track of the project', 'Guiding teammates on the basics of React Native'], meta: `ul` },
+                    ]
+                },
             ]
         },
         {
             header: {
                 display: `Lost App`,
                 title: `Project SF: Lost App`,
-                subtitle: `An app to for caregivers to track their family members with dementia.`,
-                date: `83/123/42`,
+                subtitle: `Have family members with dementia who get lost easily? Lost can aid you in finding them easily!`,
+                date: `12/01/20`,
                 tags: [],
-                image: `https://unsplash.it/id/237/200/200.jpg`,
+                image: `https://unsplash.it/id/237/300/200.jpg`,
                 genre: [`code`, `design`]
             },
             // type: paragraph, image, link, button, quote, iframe
             body: [
-                { type: `paragraph`, value: `This website is the website you are viewing right now.` },
-                { type: `image`, value: `https://unsplash.it/id/237/200/200.jpg`, meta: `3M InnoScience Logo` },
-                { type: `link`, value: `https://ryanthe.com`, meta: `My Website` },
+                {
+                    type: `group`, value: [
+                        { type: `headline`, value: `Status` },
+                        { type: `paragraph`, value: `This project is currently in progress :D` },
+                    ]
+                },
+                // {
+                //     type: `group`, value: [
+                //         { type: `headline`, value: `Purpose` },
+                //         { type: `paragraph`, value: `Lost allows users ` },
+                //     ]
+                // },
+                // {
+                //     type: `group`, value: [
+                //         { type: `headline`, value: `Reflection` },
+                //         { type: `paragraph`, value: `This enlightening experience of building an application for a outside-of-school client in a team environment has truly taught me a lot.` },
+                //         { type: `subhead`, value: `Learning Points` },
+                //         { type: `list`, value: ['Leading a company, Exponential Inc, in delivering the app', 'Collaborative work using Git & GitHub', 'Guiding teammates on the basics of React Native'], meta: `ul` },
+                //     ]
+                // },
+                // { type: `image`, value: `https://unsplash.it/id/237/200/200.jpg`, meta: `3M InnoScience Logo` },
+                { type: `link`, value: `https://github.com/exponential-inc/lost-app`, meta: `lost-app GitHub repository` },
             ]
         },
         {
@@ -42,7 +89,7 @@ export const data = {
                 subtitle: `An international robotics competition held for all ages & experience levels`,
                 date: `83/123/42`,
                 tags: [],
-                image: `https://unsplash.it/id/237/200/200.jpg`,
+                image: `1-1`,
                 genre: [`code`, `robot`]
             },
             // type: paragraph, image, link, button, quote, iframe

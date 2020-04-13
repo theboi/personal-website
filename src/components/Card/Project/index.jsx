@@ -11,7 +11,7 @@ export const ProjectCard = props => {
     .replace(/\s/g, "-")
     .replace(/[^a-zA-Z0-9-]/g, "")
     .toLowerCase();
-  
+
   return (
     <li>
       <Link
@@ -20,7 +20,7 @@ export const ProjectCard = props => {
       >
         <img
           className={style.listItemImg}
-          src={currentContent.header.image}
+          src={(currentContent.header.image?.startsWith('http') ?? true) ? currentContent.header.image : require(`../../../assets/images/Projects/${currentContent.header.image}.jpg`)}
           alt={currentContent.header.title}
         />
         <div className={style.listItemVertical}>

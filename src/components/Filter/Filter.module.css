@@ -5,7 +5,7 @@ MOBILE
 .pageOpen {
   margin: 0 10px;
   padding: 10px 15px;
-  border: 0.5px rgb(var(--col1_6)) solid;
+  border: 1px rgb(var(--col1_6)) solid;
   border-radius: 5px;
   flex: 1;
   font-size: 16px;

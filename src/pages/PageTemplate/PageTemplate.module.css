@@ -46,20 +46,38 @@ MOBILE
 }
 
 .body > * {
-  margin-bottom: 20px;
   font-size: 17px;
+}
+
+.group {
+  margin: 32px 0;
+}
+
+.paragraph {
+  margin: 10px 0;
+  line-height: 23px;
+}
+
+.headline {
+  margin: 15px 0;
+  font-size: 29px;
+}
+
+.subhead {
+  margin: 12px 0;
+  font-size: 23px;
+  font-weight: 600;
 }
 
 .subtitle {
   color: rgb(var(--col2_1));
-  margin-bottom: 30px;
+  margin: 30px 0;
   font-weight: 600;
   font-size: 24px;
 }
 
-.headline {
-  margin-bottom: 10px;
-  font-size: 30px;
+.imageFig {
+  margin: 25px 0;
 }
 
 .imageImg {
@@ -67,6 +85,8 @@ MOBILE
   height: 55vw;
   object-fit: cover;
   border-radius: 5px;
+  border: 1px solid rgb(var(--col1_6));
+  display: block;
 }
 
 .imageCaption {
@@ -74,13 +94,15 @@ MOBILE
 }
 
 .link {
+  margin: 10px 0;
   color: rgb(var(--col2_1));
   background-color: rgba(var(--col2_3), 0.05);
   position: relative;
+  display: inline-block;
 }
 
 .link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -97,6 +119,13 @@ MOBILE
   background-color: rgba(var(--col2_1), 1);
 }
 
+.ulist {
+  list-style: disc inside none;
+}
+
+.olist {
+  list-style: decimal inside none;
+}
 /* /////////////////////////////////////////////////////////////////////////////
 DESKTOP
 //////////////////////////////////////////////////////////////////////////////*/
@@ -112,17 +141,29 @@ DESKTOP
   }
 
   .body > * {
-    margin-bottom: 40px;
     font-size: 16px;
+  }
+  
+  .group {
+    margin: 45px 0;
+  }
+
+  .paragraph {
+    margin: 10px 0;
   }
 
   .headline {
-    margin-bottom: 10px;
+    margin: 10px 0;
     font-size: 30px;
   }
 
+  .subhead {
+    margin: 10px 0;
+    font-size: 22px;
+  }
+
   .subtitle {
-    margin-bottom: 50px;
+    margin: 35px 0;
     font-size: 24px;
   }
 

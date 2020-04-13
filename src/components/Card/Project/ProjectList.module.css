@@ -74,7 +74,7 @@ MOBILE
 .listItemImg {
   height: 200px;
   width: 100%;
-  border: 0.5px solid rgb(var(--col1_6));
+  border: 1px solid rgb(var(--col1_6));
   border-radius: 5px;
   object-fit: cover;
   margin-bottom: 10px;
@@ -95,11 +95,10 @@ DESKTOP
 
   .listItemImg {
     width: 300px;
-    margin: 0 30px 0 0;
   }
 
   .listItemVertical {
-    margin: 30px 0 10px 0;
+    margin: 30px 0 10px 30px;
     width: 300px;
   }
 }
