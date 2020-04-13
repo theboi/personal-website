@@ -34,14 +34,17 @@ export const data = {
                         { type: `paragraph`, value: `That is until I started using React.` },
                         { type: `subhead`, value: `Dynamic pages` },
                         { type: `paragraph`, value: `When I started using React, it completely changed how I saw making web pages. It was dynamic, clean, and fast (oh, and don't forget cool). I never had to write lines of HTML repetitively for each page over and over again. Up till now, the webpage, as of April 2020, still uses React.` },
+                        { type: `paragraph`, value: `The pages created are stored in files of JavaScript objects, thus reducing repetition in the code. This modular code design, components, allows for parts of the code to be reused in similar pages as well.` },
+                        { type: `image`, value: `1-3`, meta: `My website as of April 2020` },
+                        { type: `iframe`, value: `https://ryanthe.com/`, meta: `Current website` },
                     ]
                 },
                 {
                     type: `group`, value: [
                         { type: `headline`, value: `Reflection` },
-                        { type: `paragraph`, value: `I believe this project will never actually end. Every time it seems finished, there is always something I would go back and improve. In fact, this website has been built from scratch twice.` },
+                        { type: `paragraph`, value: `Although the website finished, for the most part, I believe this project will never actually end. Every time it seems finished, there is always something I would go back and improve.` },
                         { type: `subhead`, value: `Learning Points` },
-                        { type: `list`, value: ['Using React and its ecosystem', 'Creating websites using vanilla HTML, CSS and JavaScript (first version of the website)', 'Using Git and GitHub to keep track of the project', 'Guiding teammates on the basics of React Native'], meta: `ul` },
+                        { type: `list`, value: ['Using React and its ecosystem', 'Creating websites using vanilla HTML, CSS and JavaScript (first version of the website)', 'Using Git and GitHub to keep track of the project', 'Guiding teammates on the basics of React Native', 'Designing a website'], meta: `ul` },
                     ]
                 },
             ]

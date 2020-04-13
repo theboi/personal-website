@@ -77,7 +77,7 @@ MOBILE
 }
 
 .icon {
-  transition: all 200ms ease-in-out;
+  transition: all 250ms ease-in-out;
   color: rgb(var(--col1_3));
   width: 30px;
   font-size: 20px;
@@ -134,7 +134,7 @@ MOBILE
 }
 
 .dropdownTab.open .dropdownElement {
-  transition: all 200ms ease-in-out;
+  transition: all 250ms ease-in-out;
   padding: 10px 15px;
   display: block;
   color: rgb(var(--col1_3));

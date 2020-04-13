@@ -1,3 +1,6 @@
+/* /////////////////////////////////////////////////////////////////////////////
+MOBILE
+//////////////////////////////////////////////////////////////////////////////*/
 .navfooter {
   bottom: 0;
   width: 100%;
@@ -6,8 +9,8 @@
 }
 
 .navfooter::after {
-  content: 'Ryan Theodore The | 2019 | v0.7';
-  font-weight: 600; 
+  content: "Ryan Theodore The | 2019 | v0.7";
+  font-weight: 600;
   background-color: rgb(var(--col1_1));
   color: rgb(var(--col1_3));
   display: block;
@@ -54,4 +57,33 @@
 .icon {
   font-size: 37px;
   color: rgb(var(--col1_7));
+}
+
+.topButton {
+  transition: all 250ms ease-in-out;
+  background-color: rgb(var(--col1_9));
+  position: absolute;
+  top: -50px;
+  height: 50px;
+  width: 60vw;
+  border: 1px solid rgb(var(--col1_6));
+  border-top-right-radius: 5px;
+  text-align: center;
+  padding-top: 13px;
+}
+
+.topButton:hover {
+  background-color: rgb(var(--col1_8));
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+DESKTOP
+//////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (min-width: 768px) {
+  .topButton {
+    border-top-left-radius: 5px;
+    width: 400px;
+    margin-left: 10vw;
+  }
 }

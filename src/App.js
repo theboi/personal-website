@@ -42,7 +42,6 @@ const App = props => {
   }
 
   window.addEventListener("resize", props.updateDevice);
-  // document.addEventListener('scroll', props.updateScrollPosition);
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>

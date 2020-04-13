@@ -81,11 +81,14 @@ const PageTemplatePageC = props => {
                   <ul className={style.ulist}>{value.value.map(value => <li>{value}</li>)}</ul>
                 )
             case "iframe":
-              return value.meta === 'ol' ? (
-                <ol className={style.olist}>{value.value.map(value => <li>{value}</li>)}</ol>
-              ) : (
-                  <ul className={style.ulist}>{value.value.map(value => <li>{value}</li>)}</ul>
-                )
+              return (
+                <figure className={style.imageFig} alt={value.meta}>
+                  <iframe className={style.imageImg} title={value.meta} src={value.value} frameborder="0"></iframe>
+                  <figcaption className={style.imageCaption}>
+                    {value.meta}
+                  </figcaption>
+                </figure>
+              );
             default:
               return <p>ERROR: Invalid element name.</p>
           }

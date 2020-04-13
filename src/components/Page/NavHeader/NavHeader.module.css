@@ -80,7 +80,7 @@ MOBILE
   background-color: rgb(var(--col2_1));
   height: 2px;
   width: 25px;
-  transition: transform ease-in-out 200ms;
+  transition: transform ease-in-out 250ms;
 }
 
 .ham::before,
@@ -155,7 +155,7 @@ MOBILE
   transform: scale(1, 0.5);
   transform-origin: top;
   opacity: 0;
-  transition: all 200ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 .nav.open {
@@ -244,7 +244,7 @@ DESKTOP
     background-color: rgb(var(--col_2_1));
     opacity: 1;
     transform: scale(0, 1.5);
-    transition: all 200ms ease-in-out;
+    transition: all 250ms ease-in-out;
     transform-origin: left;
   }
 

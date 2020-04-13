@@ -1,7 +1,24 @@
 import React from "react";
 
 import style from "./NavFooter.module.css";
-import {NavFooterLink} from "./NavFooterLink";
+
+const NavFooterLink = (props) => {
+  const value = props.value;
+
+  return (
+      <li className={style.link}>
+          <a
+              className={style.anchor}
+              href={value.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              alt={value.name}>
+
+              <i className={value.icon + " " + style.icon} />
+          </a>
+      </li>
+  )
+}
 
 export const NavFooter = () => {
   const links = [
@@ -19,6 +36,10 @@ export const NavFooter = () => {
             return <NavFooterLink value={value} key={index} />;
           })}
         </ul>
+        <div className={style.topButton} onClick={() => {window.scrollTo(0, 0)}}>
+          Back to top
+          <i style={{marginLeft: 10}} className="fas fa-chevron-up" />
+        </div>
       </nav>
     </div>
   );
