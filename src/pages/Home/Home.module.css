@@ -8,6 +8,7 @@ MOBILE
 .landingText {
   font-family: 'Oxanium', cursive;
   font-weight: 600;
+  font-style: normal;
   font-size: 30px;
   text-align: center;
   animation-name: landingText;
