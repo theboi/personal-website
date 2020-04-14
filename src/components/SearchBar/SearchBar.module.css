@@ -124,7 +124,7 @@ MOBILE
 }
 
 .dropdownTab.open {
-  height: 197px;
+  height: 200px;
   opacity: 1;
 }
 
@@ -138,6 +138,7 @@ MOBILE
   padding: 10px 15px;
   display: block;
   color: rgb(var(--col1_3));
+  height: 40px;
 }
 
 .dropdownTab.open .dropdownElement + .dropdownElement {
