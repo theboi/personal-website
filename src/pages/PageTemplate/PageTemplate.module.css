@@ -47,6 +47,8 @@ MOBILE
 
 .body > * {
   font-size: 17px;
+  line-height: 23px;
+  text-align: justify;
 }
 
 .group {
@@ -55,7 +57,6 @@ MOBILE
 
 .paragraph {
   margin: 10px 0;
-  line-height: 23px;
 }
 
 .headline {
@@ -74,6 +75,8 @@ MOBILE
   margin: 30px 0;
   font-weight: 600;
   font-size: 24px;
+  text-align: left;
+  line-height: unset;
 }
 
 .imageFig {
@@ -166,12 +169,12 @@ DESKTOP
   }
 
   .headline {
-    margin: 10px 0;
+    margin: 20px 0 15px 0;
     font-size: 30px;
   }
 
   .subhead {
-    margin: 10px 0;
+    margin: 20px 0 12px 0;
     font-size: 22px;
   }
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Oxanium:200,300,400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oxanium:600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900&display=swap');
 /* /////////////////////////////////////////////////////////////////////////////
 Variables
@@ -35,8 +35,6 @@ Reset
 //////////////////////////////////////////////////////////////////////////////*/
 * {
   font-family: 'Montserrat', sans-serif;
-  -moz-osx-font-smoothing: grayscale; /*(For Firefox)*/
-  -webkit-font-smoothing: antialiased; /*(For Chrome and Safari)*/
 }
 
 *:not(input):focus-visible {
@@ -58,10 +56,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
 	vertical-align: baseline;
 	background: transparent;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {

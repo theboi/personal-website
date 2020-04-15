@@ -63,6 +63,7 @@ const PageTemplatePageC = props => {
               return (
                 <figure className={style.imageFig} alt={value.meta}>
                   <img
+                  onClick={() => {console.log('full screen')}}
                     className={style.imageImg}
                     src={(value.value?.startsWith('http') ?? true) ? value.value : require(`../../assets/images/Projects/${value.value}.jpg`)}
                     alt={value.meta}

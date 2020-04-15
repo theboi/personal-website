@@ -36,7 +36,7 @@ export const NavFooter = () => {
             return <NavFooterLink value={value} key={index} />;
           })}
         </ul>
-        <div className={style.topButton} onClick={() => {window.scrollTo(0, 0)}}>
+        <div className={style.topButton} onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
           Back to top
           <i style={{marginLeft: 10}} className="fas fa-chevron-up" />
         </div>
