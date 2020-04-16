@@ -39,8 +39,8 @@ MOBILE
 
 .bar {
   height: 65px;
-  background: var(--grad_1);
-  background-color: #E2F2F3;
+  /* background: var(--grad_1); */
+  background-color: rgba(var(--col1_8), 0.8);
   transition: all 250ms ease-in-out;
 }
 
@@ -114,7 +114,8 @@ MOBILE
 /* Links */
 .anchor {
   cursor: pointer;
-  font-size: 19px;
+  font-size: 17px;
+  line-height: 19px;
   font-weight: 500;
   text-transform: uppercase;
   color: rgb(var(--col2_1));
@@ -124,6 +125,10 @@ MOBILE
 }
 
 .anchor:global(.active) {  /* global prevents active class from being modified when rendered by css modules, active class provided by react-router*/
+  color: rgb(var(--col2_3));
+}
+
+.anchor:global(.active):hover {  /* global prevents active class from being modified when rendered by css modules, active class provided by react-router*/
   color: rgb(var(--col2_3));
 }
 
@@ -222,11 +227,11 @@ DESKTOP
     margin: 10px 50px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .link {
-    margin: 10px 20px;
+    margin: 14px 20px;
   }
 
   .anchor {
@@ -238,22 +243,22 @@ DESKTOP
   }
 
   .link::after {
-    top: 2em;
+    top: 10px;
     height: 3px;
     width: 100%;
-    background-color: rgb(var(--col_2_1));
+    background-color: rgba(var(--col2_3), 0.3);
+    z-index: -1;
     opacity: 1;
-    transform: scale(0, 1.5);
-    transition: all 250ms ease-in-out;
+    transform: scale(0, 3);
+    transition: all 250ms ease-in-out; 
     transform-origin: left;
   }
 
   .link:hover::after {
     display: block;
-    height: 3px;
     width: 100%;
-    background-color: rgb(var(--col1_2));
-    transform: scale(1, 1);
+    background-color: rgba(var(--col2_3), 0.3);
+    transform: scale(1, 3);
   }
 
   .nav {

@@ -30,14 +30,15 @@ export const data = {
                     type: `group`, value: [
                         { type: `headline`, value: `Journey` },
                         { type: `subhead`, value: `The beginning` },
-                        { type: `paragraph`, value: `Originally, built with vanilla HTML, CSS and JavaScript, the website was troublesome to manage due to the immense amount of pages there were. As my know-how in web development expanded, I began to start exploring other frameworks beginning with jQuery. jQuery was an impressive library, allowing me to shorten code significantly. ` },
+                        { type: `paragraph`, value: `Originally, built with vanilla HTML, CSS and JavaScript, the website was troublesome to manage due to the immense amount of pages there were. ` },
+                        { type: `paragraph`, value: `As my know-how in web development expanded, I began to start exploring other frameworks beginning with jQuery. jQuery was an impressive library, allowing me to shorten code significantly.` },
                         { type: `image`, value: `1-1`, meta: `An earlier version of my website` },
                         { type: `paragraph`, value: `That is until I started using React.` },
                         { type: `subhead`, value: `Dynamic pages` },
-                        { type: `paragraph`, value: `When I started using React, it completely changed how I saw making web pages. It was dynamic, clean, and fast (oh, and don't forget cool). I never had to write lines of HTML repetitively for each page over and over again. Up till now, the webpage, as of April 2020, still uses React.` },
+                        { type: `paragraph`, value: `When I started using React, it completely changed how I made web pages. It was dynamic, clean, and fast (oh, and don't forget cool). I never had to write lines of HTML repetitively for each page over and over again. Up till now, the webpage as of April 2020 still uses React.` },
                         { type: `paragraph`, value: `The pages created are stored in files of JavaScript objects, thus reducing repetition in the code. This modular code design, components, allows for parts of the code to be reused in similar pages as well.` },
                         { type: `image`, value: `1-3`, meta: `My website as of April 2020` },
-                        { type: `iframe`, value: `https://ryanthe.com/`, meta: `Current website` },
+                        // { type: `iframe`, value: `https://ryanthe.com/`, meta: `Current website` },
                     ]
                 },
                 {
@@ -45,7 +46,7 @@ export const data = {
                         { type: `headline`, value: `Reflection` },
                         { type: `paragraph`, value: `Although the website finished, for the most part, I believe this project will never actually end. Every time it seems finished, there is always something I would go back and improve.` },
                         { type: `subhead`, value: `Learning Points` },
-                        { type: `list`, value: ['Using React and its ecosystem', 'Creating websites using vanilla HTML, CSS and JavaScript (first version of the website)', 'Using Git and GitHub to keep track of the project', 'Guiding teammates on the basics of React Native', 'Designing a website'], meta: `ul` },
+                        { type: `list`, value: ['Using React and its ecosystem', 'Creating websites using vanilla HTML, CSS and JavaScript (the first version of the site)', 'Using Git and GitHub to keep track of the project', 'Guiding teammates on the basics of React Native', 'Designing a website'], meta: `ul` },
                     ]
                 },
             ]

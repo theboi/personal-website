@@ -26,6 +26,10 @@ Variables
   --col3_2: 236, 85, 75;
   --col3_3: 255, 160, 154;
 
+  /* col3 - Others */
+  --colYellow: 255, 226, 0;
+  --colBeige: 255, 179, 0;
+
   /* grad - Gradient */
   --grad_1: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
 }
