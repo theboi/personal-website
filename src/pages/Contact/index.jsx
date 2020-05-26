@@ -2,26 +2,20 @@ import React from "react";
 import { connect } from "react-redux";
 
 import style from "./Contact.module.css";
+import { data } from '../../store/data';
+import { PageTemplateDiv } from '../../components/Page/PageTemplateDiv';
 
 const ContactPageC = () => {
   return (
-    // <div className={style.experience}>
-    //   <dl className={style.list}>
-    //     {content.Experience.map(value => {
-    //       return (
-    //         <div>
-    //           <dt className={style.listHeader}>{value.title}</dt>
-    //           {value.content.map((value, index) => (
-    //             <dd key={index} className={style.listItem}>
-    //               {value}
-    //             </dd>
-    //           ))}
-    //         </div>
-    //       );
-    //     })}
-    //   </dl>
-    // </div>
-    <div style={{textAlign: "center", padding: 50}}>In Progress :)</div>
+    <PageTemplateDiv className={style.contact}>
+      <div className={style.flex}>
+        <form action="" className={style.form}>
+          <input type="text" placeholder='Title' className={style.title}/>
+          <input type="text" placeholder='Message' className={style.message}/>
+          <input type="submit" placeholder='Send' className={style.submit}/>
+        </form>
+      </div>
+    </PageTemplateDiv>
   );
 };
 

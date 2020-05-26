@@ -1,27 +1,30 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import { data } from '../../store/data';
 import style from "./Experience.module.css";
+import { PageTemplateDiv } from '../../components/Page/PageTemplateDiv';
 
 const ExperiencePageC = () => {
   return (
-    // <div className={style.experience}>
-    //   <dl className={style.list}>
-    //     {content.Experience.map(value => {
-    //       return (
-    //         <div>
-    //           <dt className={style.listHeader}>{value.title}</dt>
-    //           {value.content.map((value, index) => (
-    //             <dd key={index} className={style.listItem}>
-    //               {value}
-    //             </dd>
-    //           ))}
-    //         </div>
-    //       );
-    //     })}
-    //   </dl>
-    // </div>
-    <div style={{textAlign: "center", padding: 50}}>In Progress :)</div>
+    <PageTemplateDiv className={style.experience}>
+      <dl className={style.list}>
+        {data.experience.map(value => {
+          return (
+            <div className={style.listElement}>
+              <dt className={style.listHeader}>{value.title}</dt>
+              <div className={style.listContentDiv}>
+              {value.content.map((value, index) => (
+                <dd key={index} className={style.listContent}>
+                  {value}
+                </dd>
+              ))}
+              </div>
+            </div>
+          );
+        })}
+      </dl>
+    </PageTemplateDiv>
   );
 };
 

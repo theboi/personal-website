@@ -141,7 +141,7 @@ export const data = {
     ],
 
 
-    Experience: [
+    experience: [
         {
             title: 'Coding', content: [
                 'HTML5 / CSS3',

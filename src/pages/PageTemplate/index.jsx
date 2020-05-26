@@ -58,7 +58,7 @@ const PageTemplatePageC = props => {
             case "headline":
               return <h1 className={style.headline}>{value.value}</h1>;
             case "subhead":
-              return <h3 className={style.subhead}>{value.value}</h3>;
+              return <h2 className={style.subhead}>{value.value}</h2>;
             case "image":
               return (
                 <figure className={style.imageFig} alt={value.meta}>

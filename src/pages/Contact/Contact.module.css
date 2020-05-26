@@ -1,0 +1,40 @@
+/* /////////////////////////////////////////////////////////////////////////////
+MOBILE
+//////////////////////////////////////////////////////////////////////////////*/
+.flex {
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+}
+
+.form > * {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 0.5px rgb(var(--col1_8));
+  transition: all 250ms ease-in-out;
+}
+
+.submit {
+  background-color: rgb(var(--col4_1));
+  color: rgb(var(--col1_9));
+  font-weight: 600;
+}
+
+.submit:hover {
+  background-color: rgb(var(--col4_2));
+}
+
+.submit:active {
+  background-color: rgb(var(--col4_3));
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+DESKTOP
+//////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (min-width: 768px)  {
+
+}

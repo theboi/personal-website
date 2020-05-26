@@ -8,7 +8,7 @@ MOBILE
   background-position: center;
   position: relative;
   z-index: -2;
-  margin: -35px -3vw;
+  margin: -35px -5.5vw;
   padding: 35px 5.5vw;
 }
 
@@ -41,12 +41,12 @@ MOBILE
 }
 
 .body {
-  margin: calc(35px * 2) 2.5vw;
+  margin: calc(35px * 2) 0;
   max-width: 700px;
 }
 
 .body > * {
-  font-size: 17px;
+  /* font-size: 17px; */
   line-height: 23px;
   text-align: justify;
 }
